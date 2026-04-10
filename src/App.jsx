@@ -4,6 +4,7 @@ import { pageVariants } from './styles/motion.js';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 import Home from './pages/Home.jsx';
+import Historia from './pages/Historia.jsx';
 import CiudadanoPage from './features/ciudadano/CiudadanoPage.jsx';
 import TurismoPage from './features/turismo/TurismoPage.jsx';
 import InstitucionalPage from './features/institucional/InstitucionalPage.jsx';
@@ -36,6 +37,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { path: '/',              element: <Home /> },
+      { path: '/historia',      element: <Historia /> },
       { path: '/ciudadano',     element: <CiudadanoPage /> },
       { path: '/turismo',       element: <TurismoPage /> },
       { path: '/institucional', element: <InstitucionalPage /> },

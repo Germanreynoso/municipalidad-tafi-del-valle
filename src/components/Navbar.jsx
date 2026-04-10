@@ -8,7 +8,7 @@ const navLinks = [
     label: 'Municipio',
     submenu: [
       { label: 'Autoridades', to: '#' },
-      { label: 'Historia', to: '#' },
+      { label: 'Historia', to: '/historia' },
       { label: 'Ordenanzas', to: '#' },
     ],
   },
