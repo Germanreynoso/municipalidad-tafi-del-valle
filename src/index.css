@@ -1,20 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;600&display=swap');
 @import "tailwindcss";
 
-:root {
-  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color-scheme: light dark;
-  color: rgba(0, 0, 0, 0.87);
-  background-color: #ffffff;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@theme {
+  /* Colores */
+  --color-primary:        #2D5016;
+  --color-primary-mid:    #4A7C2F;
+  --color-primary-light:  #E8F0E0;
+  --color-stone-dark:     #3A3A3A;
+  --color-stone:          #6B6B6B;
+  --color-stone-light:    #F0EEEA;
+  --color-earth:          #8C6A3F;
+  --color-sky:            #2563A8;
+  --color-white-warm:     #FAFAF7;
+  --color-emergency:      #C0392B;
+
+  /* Tipografía */
+  --font-heading: "Montserrat", system-ui, sans-serif;
+  --font-body:    "Inter", system-ui, sans-serif;
+
+  /* Sombras */
+  --shadow-card:  0 4px 24px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.14);
+  --shadow-nav:   0 1px 8px rgba(0, 0, 0, 0.06);
 }
 
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
+@layer base {
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    font-family: var(--font-body);
+    background-color: var(--color-white-warm);
+    color: var(--color-stone-dark);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
 }
