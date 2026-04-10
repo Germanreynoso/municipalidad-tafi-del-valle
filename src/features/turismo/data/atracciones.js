@@ -55,4 +55,5 @@ export const eventoDestacado = {
   fecha: 'Febrero 2027',
   descripcion: 'La celebración más importante del Valle con música, gastronomía y artesanías.',
   image: 'https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=1200&q=80',
+  url: '#',
 };

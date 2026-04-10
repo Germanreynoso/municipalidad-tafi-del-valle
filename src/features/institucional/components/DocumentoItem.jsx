@@ -1,8 +1,5 @@
 import { FileText, Download } from 'lucide-react';
-
-function formatFecha(isoDate) {
-  return new Date(isoDate).toLocaleDateString('es-AR', { day: 'numeric', month: 'long', year: 'numeric' });
-}
+import { formatFecha } from '../../../utils/formatFecha.js';
 
 export default function DocumentoItem({ nombre, tipo, fecha, url }) {
   return (
