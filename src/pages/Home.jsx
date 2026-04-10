@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, MapPin, Users, Mountain, Camera } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { fadeUp, stagger, slideLeft } from '../styles/motion.js';
 import PortalCard from '../components/PortalCard.jsx';
 import { noticias } from '../features/institucional/data/noticias.js';
@@ -104,7 +104,7 @@ export default function Home() {
 
       {/* Portal Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <motion.div
+        <Motion.div
           className="text-center mb-16"
           variants={fadeUp}
           initial="hidden"
@@ -117,8 +117,8 @@ export default function Home() {
           <h2 className="text-4xl sm:text-5xl font-black text-stone-dark font-heading">
             ¿Qué necesitás?
           </h2>
-        </motion.div>
-        <motion.div
+        </Motion.div>
+        <Motion.div
           className="grid grid-cols-1 md:grid-cols-3 gap-6"
           variants={stagger}
           initial="hidden"
@@ -126,17 +126,17 @@ export default function Home() {
           viewport={{ once: true, margin: '-60px' }}
         >
           {portals.map((portal) => (
-            <motion.div key={portal.to} variants={fadeUp}>
+            <Motion.div key={portal.to} variants={fadeUp}>
               <PortalCard {...portal} />
-            </motion.div>
+            </Motion.div>
           ))}
-        </motion.div>
+        </Motion.div>
       </section>
 
       {/* Stats Bar */}
       <section className="bg-stone-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <motion.div
+          <Motion.div
             className="grid grid-cols-2 md:grid-cols-4 gap-8"
             variants={stagger}
             initial="hidden"
@@ -144,15 +144,15 @@ export default function Home() {
             viewport={{ once: true }}
           >
             {stats.map((stat) => (
-              <motion.div key={stat.label} variants={slideLeft} className="flex flex-col items-center text-center gap-2">
+              <Motion.div key={stat.label} variants={slideLeft} className="flex flex-col items-center text-center gap-2">
                 <div className="w-10 h-10 rounded-full flex items-center justify-center mb-2 bg-primary-light text-primary">
                   {stat.icono}
                 </div>
                 <p className="text-3xl font-black text-primary font-heading">{stat.valor}</p>
                 <p className="text-sm text-stone font-body">{stat.label}</p>
-              </motion.div>
+              </Motion.div>
             ))}
-          </motion.div>
+          </Motion.div>
         </div>
       </section>
 
@@ -175,7 +175,7 @@ export default function Home() {
           </Link>
         </div>
 
-        <motion.div
+        <Motion.div
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
           variants={stagger}
           initial="hidden"
@@ -183,7 +183,7 @@ export default function Home() {
           viewport={{ once: true, margin: '-60px' }}
         >
           {noticiasRecientes.map((noticia) => (
-            <motion.div key={noticia.id} variants={fadeUp}>
+            <Motion.div key={noticia.id} variants={fadeUp}>
               <article
                 className="group overflow-hidden rounded-2xl border border-stone-light transition-all duration-300 hover:-translate-y-1 cursor-pointer bg-white"
                 style={{ boxShadow: 'var(--shadow-card)' }}
@@ -206,9 +206,9 @@ export default function Home() {
                   <p className="text-xs text-stone font-body">{formatFecha(noticia.fecha)}</p>
                 </div>
               </article>
-            </motion.div>
+            </Motion.div>
           ))}
-        </motion.div>
+        </Motion.div>
 
         <div className="mt-8 text-center md:hidden">
           <Link

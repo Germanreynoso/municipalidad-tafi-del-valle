@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider, Outlet, useLocation } from 'react-router-dom';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import { pageVariants } from './styles/motion.js';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';

@@ -28,9 +28,10 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handler);
   }, []);
 
+  // Close mobile menu when location changes
   useEffect(() => {
     setMobileOpen(false);
-  }, [location]);
+  }, [location.pathname]);
 
   return (
     <>
