@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider, Outlet, useLocation } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
+import { pageVariants } from './styles/motion.js';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 import Home from './pages/Home.jsx';
@@ -14,7 +15,15 @@ function Layout() {
       <Navbar />
       <main className="flex-1">
         <AnimatePresence mode="wait" initial={false}>
-          <Outlet key={location.pathname} />
+          <motion.div
+            key={location.pathname}
+            variants={pageVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+          >
+            <Outlet />
+          </motion.div>
         </AnimatePresence>
       </main>
       <Footer />

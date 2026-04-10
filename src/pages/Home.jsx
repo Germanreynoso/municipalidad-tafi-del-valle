@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, MapPin, Users, Mountain, Camera } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { fadeUp, stagger, slideLeft } from '../styles/motion.js';
 import PortalCard from '../components/PortalCard.jsx';
 import { noticias } from '../features/institucional/data/noticias.js';
 
@@ -102,35 +104,55 @@ export default function Home() {
 
       {/* Portal Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <div className="text-center mb-16">
+        <motion.div
+          className="text-center mb-16"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-80px' }}
+        >
           <p className="text-xs font-semibold tracking-widest uppercase mb-3 text-stone font-body">
             Accesos directos
           </p>
           <h2 className="text-4xl sm:text-5xl font-black text-stone-dark font-heading">
             ¿Qué necesitás?
           </h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        </motion.div>
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          variants={stagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-60px' }}
+        >
           {portals.map((portal) => (
-            <PortalCard key={portal.to} {...portal} />
+            <motion.div key={portal.to} variants={fadeUp}>
+              <PortalCard {...portal} />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </section>
 
       {/* Stats Bar */}
       <section className="bg-stone-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <motion.div
+            className="grid grid-cols-2 md:grid-cols-4 gap-8"
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             {stats.map((stat) => (
-              <div key={stat.label} className="flex flex-col items-center text-center gap-2">
+              <motion.div key={stat.label} variants={slideLeft} className="flex flex-col items-center text-center gap-2">
                 <div className="w-10 h-10 rounded-full flex items-center justify-center mb-2 bg-primary-light text-primary">
                   {stat.icono}
                 </div>
                 <p className="text-3xl font-black text-primary font-heading">{stat.valor}</p>
                 <p className="text-sm text-stone font-body">{stat.label}</p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -153,35 +175,40 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          variants={stagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-60px' }}
+        >
           {noticiasRecientes.map((noticia) => (
-            <article
-              key={noticia.id}
-              className="group overflow-hidden rounded-2xl border border-stone-light transition-all duration-300 hover:-translate-y-1 cursor-pointer bg-white"
-              style={{ boxShadow: 'var(--shadow-card)' }}
-            >
-              <div className="overflow-hidden h-48">
-                <img
-                  src={noticia.image}
-                  alt={noticia.titulo}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="p-6">
-                <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3 bg-primary-light text-primary font-body">
-                  {noticia.categoria}
-                </span>
-                <h3 className="font-bold text-base mb-2 line-clamp-2 leading-snug text-stone-dark font-heading">
-                  {noticia.titulo}
-                </h3>
-                <p className="text-sm mb-4 line-clamp-2 text-stone font-body">
-                  {noticia.extracto}
-                </p>
-                <p className="text-xs text-stone font-body">{formatFecha(noticia.fecha)}</p>
-              </div>
-            </article>
+            <motion.div key={noticia.id} variants={fadeUp}>
+              <article
+                className="group overflow-hidden rounded-2xl border border-stone-light transition-all duration-300 hover:-translate-y-1 cursor-pointer bg-white"
+                style={{ boxShadow: 'var(--shadow-card)' }}
+              >
+                <div className="overflow-hidden h-48">
+                  <img
+                    src={noticia.image}
+                    alt={noticia.titulo}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-6">
+                  <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3 bg-primary-light text-primary font-body">
+                    {noticia.categoria}
+                  </span>
+                  <h3 className="font-bold text-base mb-2 line-clamp-2 leading-snug text-stone-dark font-heading">
+                    {noticia.titulo}
+                  </h3>
+                  <p className="text-sm mb-4 line-clamp-2 text-stone font-body">{noticia.extracto}</p>
+                  <p className="text-xs text-stone font-body">{formatFecha(noticia.fecha)}</p>
+                </div>
+              </article>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         <div className="mt-8 text-center md:hidden">
           <Link
