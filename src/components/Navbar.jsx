@@ -9,6 +9,8 @@ const navLinks = [
     submenu: [
       { label: 'Autoridades', to: '#' },
       { label: 'Historia', to: '/historia' },
+      { label: 'Perfil del Valle', to: '/perfil-valle' },
+      { label: 'Fiestas y Tradiciones', to: '/tradiciones' },
       { label: 'Ordenanzas', to: '#' },
     ],
   },

@@ -5,6 +5,8 @@ import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 import Home from './pages/Home.jsx';
 import Historia from './pages/Historia.jsx';
+import PerfilValle from './pages/PerfilValle.jsx';
+import Tradiciones from './pages/Tradiciones.jsx';
 import CiudadanoPage from './features/ciudadano/CiudadanoPage.jsx';
 import TurismoPage from './features/turismo/TurismoPage.jsx';
 import InstitucionalPage from './features/institucional/InstitucionalPage.jsx';
@@ -38,6 +40,8 @@ const router = createBrowserRouter([
     children: [
       { path: '/',              element: <Home /> },
       { path: '/historia',      element: <Historia /> },
+      { path: '/perfil-valle',  element: <PerfilValle /> },
+      { path: '/tradiciones',   element: <Tradiciones /> },
       { path: '/ciudadano',     element: <CiudadanoPage /> },
       { path: '/turismo',       element: <TurismoPage /> },
       { path: '/institucional', element: <InstitucionalPage /> },
