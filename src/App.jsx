@@ -10,7 +10,7 @@ import InstitucionalPage from './features/institucional/InstitucionalPage.jsx';
 function Layout() {
   const location = useLocation();
   return (
-    <div className="min-h-screen flex flex-col" style={{ backgroundColor: 'var(--color-white-warm)' }}>
+    <div className="min-h-screen flex flex-col bg-white-warm">
       <Navbar />
       <main className="flex-1">
         <AnimatePresence mode="wait" initial={false}>
