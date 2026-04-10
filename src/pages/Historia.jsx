@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mountain, Users, Map, SunSnow } from 'lucide-react';
+import { Mountain, Users, Map, SunSnow, Landmark } from 'lucide-react';
 import historiaHero from '../assets/historia-hero.png';
 
 export default function Historia() {
@@ -64,6 +64,29 @@ export default function Historia() {
                 Se destacan los <strong>menhires</strong>, monolitos de piedra, obra de una antiquísima civilización 
                 y con significados aún no precisados.
               </p>
+            </section>
+
+            <section className="prose prose-lg max-w-none">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-amber-100 flex items-center justify-center text-amber-800">
+                  <Landmark size={28} />
+                </div>
+                <h2 className="text-3xl font-black text-stone-dark font-heading m-0">Arqueología</h2>
+              </div>
+              <div className="space-y-6">
+                <p className="text-lg text-stone font-body leading-relaxed">
+                  En todo el valle se conservan vestigios de la cultura que lo habitó, testigo de una rica herencia y del paso del tiempo de habitantes laboriosos y organizados, con una proyección de más de <strong>3000 años de antigüedad</strong>.
+                </p>
+                <div className="bg-stone-light/50 p-6 rounded-2xl border-l-4 border-amber-800">
+                  <p className="text-sm font-bold uppercase tracking-widest text-amber-800 mb-2">Yacimientos Principales</p>
+                  <p className="text-stone font-body">
+                    Carapunco, Las Bolsas, Las Carreras, Malvinas, La Costa y <strong>Casas Viejas</strong> (la leyenda lo señala como el primer asentamiento poblacional de la conquista en el norte del país).
+                  </p>
+                </div>
+                <p className="text-lg text-stone font-body leading-relaxed">
+                  En el <strong>Museo Jesuítico de La Banda</strong> se conserva una colección de gran valor: pucos, urnas funerarias, cántaros y utensilios que narran la vida cotidiana de siglos pasados.
+                </p>
+              </div>
             </section>
 
             <section className="prose prose-lg max-w-none">
