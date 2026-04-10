@@ -1,3 +1,197 @@
+import { Link } from 'react-router-dom';
+import { ArrowRight, MapPin, Users, Mountain, Camera } from 'lucide-react';
+import PortalCard from '../components/PortalCard.jsx';
+import { noticias } from '../features/institucional/data/noticias.js';
+
+const portals = [
+  {
+    title: 'Soy Residente',
+    subtitle: 'Portal Ciudadano',
+    description: 'Trámites, pagos de tasas, reclamos y servicios municipales para vecinos.',
+    image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80',
+    to: '/ciudadano',
+    accentColor: '--color-primary',
+  },
+  {
+    title: 'Soy Turista',
+    subtitle: 'Portal Turístico',
+    description: 'Descubrí los paisajes, la cultura y la gastronomía del Valle Sagrado de Tafí.',
+    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+    to: '/turismo',
+    accentColor: '--color-sky',
+  },
+  {
+    title: 'Transparencia',
+    subtitle: 'Portal Institucional',
+    description: 'Noticias de gestión, presupuesto, ordenanzas y gobierno abierto.',
+    image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&q=80',
+    to: '/institucional',
+    accentColor: '--color-earth',
+  },
+];
+
+const stats = [
+  { valor: '12.000', label: 'Habitantes', icono: <Users size={20} /> },
+  { valor: '2.000m', label: 'Altura sobre el mar', icono: <Mountain size={20} /> },
+  { valor: '6', label: 'Atracciones destacadas', icono: <Camera size={20} /> },
+  { valor: '150km', label: 'Desde Tucumán capital', icono: <MapPin size={20} /> },
+];
+
+function formatFecha(isoDate) {
+  return new Date(isoDate).toLocaleDateString('es-AR', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+
 export default function Home() {
-  return <div className="p-8 text-2xl font-heading">Home — en construcción</div>;
+  const noticiasRecientes = noticias.slice(0, 3);
+
+  return (
+    <div>
+      {/* Hero */}
+      <section
+        className="relative w-full overflow-hidden"
+        style={{ height: 'calc(100vh - 80px)', minHeight: '560px' }}
+      >
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url("https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=2000&q=80")',
+          }}
+        >
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(135deg, rgba(45,80,22,0.6) 0%, rgba(0,0,0,0.3) 100%)',
+            }}
+          />
+        </div>
+
+        <div className="relative h-full flex flex-col items-center justify-center text-center px-4">
+          <p className="text-xs font-semibold tracking-[0.3em] uppercase text-white/70 mb-4 font-body">
+            Provincia de Tucumán — Argentina
+          </p>
+          <h1
+            className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-6 leading-none font-heading"
+            style={{ textShadow: '0 2px 24px rgba(0,0,0,0.4)' }}
+          >
+            Tafí del Valle
+          </h1>
+          <p className="text-lg sm:text-xl text-white/85 mb-10 max-w-xl leading-relaxed font-body">
+            El valle sagrado de los Calchaquíes, a 2.000 metros sobre el mar.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link
+              to="/turismo"
+              className="px-8 py-4 rounded-xl font-bold text-white flex items-center gap-2 transition-all duration-200 hover:scale-105 hover:opacity-90 bg-primary font-body"
+            >
+              Guía Turística <ArrowRight size={18} />
+            </Link>
+            <Link
+              to="/ciudadano"
+              className="px-8 py-4 rounded-xl font-bold flex items-center gap-2 transition-all duration-200 hover:scale-105 text-white font-body"
+              style={{
+                backgroundColor: 'rgba(255,255,255,0.15)',
+                backdropFilter: 'blur(8px)',
+                border: '1px solid rgba(255,255,255,0.3)',
+              }}
+            >
+              Trámites Online <ArrowRight size={18} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Portal Grid */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="text-center mb-16">
+          <p className="text-xs font-semibold tracking-widest uppercase mb-3 text-stone font-body">
+            Accesos directos
+          </p>
+          <h2 className="text-4xl sm:text-5xl font-black text-stone-dark font-heading">
+            ¿Qué necesitás?
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {portals.map((portal) => (
+            <PortalCard key={portal.to} {...portal} />
+          ))}
+        </div>
+      </section>
+
+      {/* Stats Bar */}
+      <section className="bg-stone-light">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat) => (
+              <div key={stat.label} className="flex flex-col items-center text-center gap-2">
+                <div className="w-10 h-10 rounded-full flex items-center justify-center mb-2 bg-primary-light text-primary">
+                  {stat.icono}
+                </div>
+                <p className="text-3xl font-black text-primary font-heading">{stat.valor}</p>
+                <p className="text-sm text-stone font-body">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* News Preview */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="flex items-end justify-between mb-12">
+          <div>
+            <p className="text-xs font-semibold tracking-widest uppercase mb-2 text-stone font-body">
+              Últimas novedades
+            </p>
+            <h2 className="text-4xl font-black text-stone-dark font-heading">
+              Noticias del municipio
+            </h2>
+          </div>
+          <Link
+            to="/institucional"
+            className="hidden md:flex items-center gap-2 text-sm font-semibold text-primary font-body hover:underline"
+          >
+            Ver todas <ArrowRight size={16} />
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {noticiasRecientes.map((noticia) => (
+            <article
+              key={noticia.id}
+              className="group overflow-hidden rounded-2xl border border-stone-light transition-all duration-300 hover:-translate-y-1 cursor-pointer bg-white"
+              style={{ boxShadow: 'var(--shadow-card)' }}
+            >
+              <div className="overflow-hidden h-48">
+                <img
+                  src={noticia.image}
+                  alt={noticia.titulo}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-6">
+                <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3 bg-primary-light text-primary font-body">
+                  {noticia.categoria}
+                </span>
+                <h3 className="font-bold text-base mb-2 line-clamp-2 leading-snug text-stone-dark font-heading">
+                  {noticia.titulo}
+                </h3>
+                <p className="text-sm mb-4 line-clamp-2 text-stone font-body">
+                  {noticia.extracto}
+                </p>
+                <p className="text-xs text-stone font-body">{formatFecha(noticia.fecha)}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className="mt-8 text-center md:hidden">
+          <Link
+            to="/institucional"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-primary font-body"
+          >
+            Ver todas las noticias <ArrowRight size={16} />
+          </Link>
+        </div>
+      </section>
+    </div>
+  );
 }
