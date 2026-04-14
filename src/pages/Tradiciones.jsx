@@ -98,20 +98,20 @@ export default function Tradiciones() {
             </div>
             <div className="md:w-1/2 grid grid-cols-2 gap-6">
               <div className="p-8 bg-white/5 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors">
-                <p className="text-2xl font-black font-heading text-primary">Cajas</p>
-                <p className="text-xs text-white/40 uppercase font-bold tracking-widest mt-1">Ritmo Ancestral</p>
+                <p className="text-2xl font-black font-heading text-primary-light">Cajas</p>
+                <p className="text-xs text-white/60 uppercase font-bold tracking-widest mt-1">Ritmo Ancestral</p>
               </div>
               <div className="p-8 bg-white/5 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors translate-y-8">
-                <p className="text-2xl font-black font-heading text-primary">Violín</p>
-                <p className="text-xs text-white/40 uppercase font-bold tracking-widest mt-1">Sentir Criollo</p>
+                <p className="text-2xl font-black font-heading text-primary-light">Violín</p>
+                <p className="text-xs text-white/60 uppercase font-bold tracking-widest mt-1">Sentir Criollo</p>
               </div>
               <div className="p-8 bg-white/5 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors">
-                <p className="text-2xl font-black font-heading text-primary">Bandoneón</p>
-                <p className="text-xs text-white/40 uppercase font-bold tracking-widest mt-1">Legado Social</p>
+                <p className="text-2xl font-black font-heading text-primary-light">Bandoneón</p>
+                <p className="text-xs text-white/60 uppercase font-bold tracking-widest mt-1">Legado Social</p>
               </div>
               <div className="p-8 bg-white/5 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors translate-y-8">
-                <p className="text-2xl font-black font-heading text-primary">Guitarra</p>
-                <p className="text-xs text-white/40 uppercase font-bold tracking-widest mt-1">Voz del Pueblo</p>
+                <p className="text-2xl font-black font-heading text-primary-light">Guitarra</p>
+                <p className="text-xs text-white/60 uppercase font-bold tracking-widest mt-1">Voz del Pueblo</p>
               </div>
             </div>
           </div>

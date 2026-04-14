@@ -28,9 +28,9 @@ export default function PerfilValle() {
             
             {/* Hidrografía */}
             <div className="bg-white p-8 rounded-3xl shadow-card border border-stone-light border-l-8 border-l-sky">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-sky/10 flex items-center justify-center text-sky">
-                  <Droplets size={24} />
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-sky/10 flex items-center justify-center text-sky">
+                  <Droplets size={28} />
                 </div>
                 <h3 className="text-2xl font-bold text-stone-dark font-heading">Hidrografía</h3>
               </div>
@@ -49,9 +49,11 @@ export default function PerfilValle() {
             {/* Flora y Fauna */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white p-6 rounded-3xl shadow-card border border-stone-light">
-                <div className="flex items-center gap-3 mb-4 text-primary">
-                  <Sprout size={20} />
-                  <h4 className="font-bold font-heading">Flora</h4>
+                <div className="flex items-center gap-3 mb-4 mt-1">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                    <Sprout size={20} />
+                  </div>
+                  <h4 className="font-bold font-heading text-primary">Flora</h4>
                 </div>
                 <p className="text-sm text-stone font-body mb-4">
                   Desde los valles hasta las altas cumbres (arriba de los 2.000m), la vegetación varía:
@@ -64,9 +66,11 @@ export default function PerfilValle() {
               </div>
 
               <div className="bg-white p-6 rounded-3xl shadow-card border border-stone-light">
-                <div className="flex items-center gap-3 mb-4 text-earth">
-                  <Footprints size={20} />
-                  <h4 className="font-bold font-heading">Fauna</h4>
+                <div className="flex items-center gap-3 mb-4 mt-1">
+                  <div className="w-10 h-10 rounded-xl bg-indigo/10 flex items-center justify-center text-indigo">
+                    <Footprints size={20} />
+                  </div>
+                  <h4 className="font-bold font-heading text-indigo">Fauna</h4>
                 </div>
                 <p className="text-sm text-stone font-body mb-4">
                   La fauna autóctona está fuertemente representada por los camélidos andinos:
@@ -91,7 +95,7 @@ export default function PerfilValle() {
               className="w-full h-full object-cover aspect-square md:aspect-auto"
             />
             <div className="absolute bottom-10 left-10 text-white">
-              <p className="text-4xl font-black font-heading leading-tight underline decoration-primary decoration-4">Suelo fértil,<br />espíritu vivo.</p>
+              <p className="text-4xl font-black font-heading leading-tight">Suelo fértil,<br />espíritu vivo.</p>
             </div>
           </div>
         </div>
@@ -142,11 +146,11 @@ export default function PerfilValle() {
             {/* Ganadería */}
             <div className="bg-stone-light/50 rounded-[2rem] p-10 border border-stone-light">
               <div className="flex items-center gap-4 mb-8">
-                <div className="w-14 h-14 rounded-2xl bg-stone-dark text-white flex items-center justify-center shadow-lg">
+                <div className="w-14 h-14 rounded-2xl bg-earth text-white flex items-center justify-center shadow-lg">
                   <Footprints size={30} />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-black text-stone-dark font-heading uppercase tracking-tight">Ganadería</h3>
+                  <h3 className="text-2xl font-black text-earth font-heading uppercase tracking-tight">Ganadería</h3>
                   <p className="text-xs font-bold text-stone mb-1 uppercase tracking-widest">Diversidad Pecuaria</p>
                 </div>
               </div>

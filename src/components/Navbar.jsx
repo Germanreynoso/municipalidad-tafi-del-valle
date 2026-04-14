@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Mountain, ChevronDown, X, Menu } from 'lucide-react';
+import { ChevronDown, X, Menu } from 'lucide-react';
+import institutionalLogo from '../assets/MUNICIPALIDAD INSTITUCIONAL COLOR.png';
 
 const navLinks = [
   { label: 'Inicio', to: '/' },
@@ -46,21 +47,15 @@ export default function Navbar() {
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-40">
 
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center transition-transform duration-200 group-hover:scale-105 bg-primary">
-                <Mountain className="text-white" size={22} />
-              </div>
-              <div>
-                <p className="text-[10px] font-semibold tracking-widest uppercase text-stone font-body">
-                  Municipalidad
-                </p>
-                <p className="text-sm font-black tracking-tight leading-none text-stone-dark font-heading">
-                  Tafí del Valle
-                </p>
-              </div>
+              <img 
+                src={institutionalLogo} 
+                alt="Municipalidad de Tafí del Valle" 
+                className="h-32 w-auto transition-transform duration-200 group-hover:scale-105"
+              />
             </Link>
 
             {/* Desktop Menu */}

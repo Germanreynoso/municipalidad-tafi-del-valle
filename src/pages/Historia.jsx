@@ -68,7 +68,7 @@ export default function Historia() {
 
             <section className="prose prose-lg max-w-none">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-2xl bg-amber-100 flex items-center justify-center text-amber-800">
+                <div className="w-12 h-12 rounded-2xl bg-stone-light flex items-center justify-center text-stone-dark">
                   <Landmark size={28} />
                 </div>
                 <h2 className="text-3xl font-black text-stone-dark font-heading m-0">Arqueología</h2>
@@ -77,8 +77,8 @@ export default function Historia() {
                 <p className="text-lg text-stone font-body leading-relaxed">
                   En todo el valle se conservan vestigios de la cultura que lo habitó, testigo de una rica herencia y del paso del tiempo de habitantes laboriosos y organizados, con una proyección de más de <strong>3000 años de antigüedad</strong>.
                 </p>
-                <div className="bg-stone-light/50 p-6 rounded-2xl border-l-4 border-amber-800">
-                  <p className="text-sm font-bold uppercase tracking-widest text-amber-800 mb-2">Yacimientos Principales</p>
+                <div className="bg-stone-light/50 p-6 rounded-2xl border-l-4 border-stone">
+                  <p className="text-sm font-bold uppercase tracking-widest text-stone-dark mb-2">Yacimientos Principales</p>
                   <p className="text-stone font-body">
                     Carapunco, Las Bolsas, Las Carreras, Malvinas, La Costa y <strong>Casas Viejas</strong> (la leyenda lo señala como el primer asentamiento poblacional de la conquista en el norte del país).
                   </p>

@@ -4,13 +4,18 @@ import { motion as Motion } from 'framer-motion';
 import { fadeUp, stagger, slideLeft } from '../styles/motion.js';
 import PortalCard from '../components/PortalCard.jsx';
 import { noticias } from '../features/institucional/data/noticias.js';
+import somosTodosLogo from '../assets/SOMOS TODOS COLOR.png';
+import heroTafi from '../assets/hero-tafi.jpg';
+import residentesImg from '../assets/residentes.jpg';
+import turistaImg from '../assets/turista.jpg';
+import transparenciaImg from '../assets/transparencia.jpg';
 
 const portals = [
   {
     title: 'Soy Residente',
     subtitle: 'Portal Ciudadano',
     description: 'Trámites, pagos de tasas, reclamos y servicios municipales para vecinos.',
-    image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80',
+    image: residentesImg,
     to: '/ciudadano',
     accentColor: '--color-primary',
   },
@@ -18,7 +23,7 @@ const portals = [
     title: 'Soy Turista',
     subtitle: 'Portal Turístico',
     description: 'Descubrí los paisajes, la cultura y la gastronomía del Valle Sagrado de Tafí.',
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+    image: turistaImg,
     to: '/turismo',
     accentColor: '--color-sky',
   },
@@ -26,7 +31,7 @@ const portals = [
     title: 'Transparencia',
     subtitle: 'Portal Institucional',
     description: 'Noticias de gestión, presupuesto, ordenanzas y gobierno abierto.',
-    image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&q=80',
+    image: transparenciaImg,
     to: '/institucional',
     accentColor: '--color-earth',
   },
@@ -56,7 +61,7 @@ export default function Home() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=2000&q=80")',
+            backgroundImage: `url(${heroTafi})`,
           }}
         >
           <div
@@ -152,6 +157,28 @@ export default function Home() {
                 <p className="text-sm text-stone font-body">{stat.label}</p>
               </Motion.div>
             ))}
+          </Motion.div>
+        </div>
+      </section>
+
+      {/* Slogan Section */}
+      <section className="py-24 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+          <Motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <img 
+              src={somosTodosLogo} 
+              alt="Somos Todos" 
+              className="h-32 md:h-48 h-auto object-contain transition-transform duration-500 hover:scale-110"
+            />
+            <p className="mt-8 text-xl font-body italic text-stone max-w-2xl mx-auto">
+              "Una gestión comprometida con el bienestar de cada familia tafinista, 
+              trabajando juntos por el presente y el futuro de nuestro valle."
+            </p>
           </Motion.div>
         </div>
       </section>

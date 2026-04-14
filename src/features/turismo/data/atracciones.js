@@ -25,7 +25,7 @@ export const atracciones = [
   },
   {
     id: 4,
-    nombre: 'Sendero del Cerro Muñano',
+    nombre: 'Sendero ',
     categoria: 'aventura',
     distancia: '3 km del centro',
     descripcion: 'Trekking de nivel moderado con vistas panorámicas al valle y la represa.',
