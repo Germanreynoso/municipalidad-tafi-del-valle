@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { pageVariants } from './styles/motion.js';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
+import ChatBotWidget from './components/chatbot/ChatBotWidget.jsx';
 import Home from './pages/Home.jsx';
 import Historia from './pages/Historia.jsx';
 import PerfilValle from './pages/PerfilValle.jsx';
@@ -30,6 +31,7 @@ function Layout() {
         </AnimatePresence>
       </main>
       <Footer />
+      <ChatBotWidget />
     </div>
   );
 }
