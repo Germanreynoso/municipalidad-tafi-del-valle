@@ -3,11 +3,14 @@ import { Link } from 'react-router-dom';
 import { atracciones, eventoDestacado } from './data/atracciones.js';
 import AtraccionCard from './components/AtraccionCard.jsx';
 import EventosBanner from './components/EventosBanner.jsx';
+import AtraccionModal from './components/AtraccionModal.jsx';
 
 const categorias = ['todos', 'naturaleza', 'cultura', 'aventura', 'gastronomía'];
 
 export default function TurismoPage() {
   const [filtro, setFiltro] = useState('todos');
+  const [selectedAttr, setSelectedAttr] = useState(null);
+  
   const filtradas = filtro === 'todos' ? atracciones : atracciones.filter((a) => a.categoria === filtro);
 
   return (
@@ -57,9 +60,22 @@ export default function TurismoPage() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filtradas.map((a) => <AtraccionCard key={a.id} {...a} />)}
+          {filtradas.map((a) => (
+            <AtraccionCard 
+              key={a.id} 
+              {...a} 
+              onClick={() => setSelectedAttr(a)}
+            />
+          ))}
         </div>
       </div>
+
+      {/* Modal */}
+      <AtraccionModal 
+        isOpen={!!selectedAttr} 
+        onClose={() => setSelectedAttr(null)} 
+        attraccion={selectedAttr} 
+      />
 
       {/* CTA */}
       <div className="py-16 px-4 text-center" style={{ backgroundColor: '#E8EEF7' }}>
