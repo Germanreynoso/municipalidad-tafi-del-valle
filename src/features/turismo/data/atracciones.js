@@ -1,11 +1,16 @@
+import elMollarImg from '../../../assets/el-mollar.jpg';
+import quesosTafiImg from '../../../assets/quesos-tafi.jpg';
+import diqueAngosturaImg from '../../../assets/dique-angostura.jpg';
+import feriaArtesanalImg from '../../../assets/feria-artesanal.jpg';
+
 export const atracciones = [
   {
     id: 1,
-    nombre: 'Laguna del Indio',
+    nombre: 'Dique la Angostura',
     categoria: 'naturaleza',
     distancia: '12 km del centro',
     descripcion: 'Laguna de altura rodeada de cardones y paisaje andino único.',
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+    image: diqueAngosturaImg,
   },
   {
     id: 2,
@@ -21,7 +26,7 @@ export const atracciones = [
     categoria: 'naturaleza',
     distancia: '8 km del centro',
     descripcion: 'Pueblo tranquilo a orillas de la represa La Angostura con gastronomía regional.',
-    image: 'https://images.unsplash.com/photo-1542332213-9b5a5a3fab35?w=800&q=80',
+    image: elMollarImg,
   },
   {
     id: 4,
@@ -37,7 +42,7 @@ export const atracciones = [
     categoria: 'cultura',
     distancia: 'Centro de Tafí',
     descripcion: 'Artesanías en lana, cuero y cerámica de productores locales todos los fines de semana.',
-    image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80',
+    image: feriaArtesanalImg,
   },
   {
     id: 6,
@@ -45,7 +50,7 @@ export const atracciones = [
     categoria: 'gastronomía',
     distancia: 'Rutas cercanas',
     descripcion: 'Visitas guiadas a tambos y degustación del famoso queso de Tafí con denominación de origen.',
-    image: 'https://images.unsplash.com/photo-1452195100486-9cc805987862?w=800&q=80',
+    image: quesosTafiImg,
   },
 ];
 

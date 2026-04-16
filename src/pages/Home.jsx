@@ -92,17 +92,6 @@ export default function Home() {
             >
               Guía Turística <ArrowRight size={18} />
             </Link>
-            <Link
-              to="/ciudadano"
-              className="px-8 py-4 rounded-xl font-bold flex items-center gap-2 transition-all duration-200 hover:scale-105 text-white font-body"
-              style={{
-                backgroundColor: 'rgba(255,255,255,0.15)',
-                backdropFilter: 'blur(8px)',
-                border: '1px solid rgba(255,255,255,0.3)',
-              }}
-            >
-              Trámites Online <ArrowRight size={18} />
-            </Link>
           </div>
         </div>
       </section>

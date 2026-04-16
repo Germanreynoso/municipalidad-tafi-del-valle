@@ -16,7 +16,6 @@ const navLinks = [
     ],
   },
   { label: 'Turismo', to: '/turismo' },
-  { label: 'Trámites', to: '/ciudadano' },
   { label: 'Transparencia', to: '/institucional' },
 ];
 
@@ -94,13 +93,6 @@ export default function Navbar() {
                   </Link>
                 )
               )}
-
-              <Link
-                to="/ciudadano"
-                className="ml-4 px-5 py-2 rounded-lg text-sm font-bold text-white bg-primary transition-all duration-200 hover:opacity-90 hover:scale-105 font-body"
-              >
-                Trámites Online
-              </Link>
             </div>
 
             {/* Mobile hamburger */}
@@ -160,12 +152,6 @@ export default function Navbar() {
                 )
               )}
             </nav>
-            <Link
-              to="/ciudadano"
-              className="mt-auto px-5 py-3 rounded-lg text-sm font-bold text-white text-center bg-primary font-body"
-            >
-              Trámites Online
-            </Link>
           </div>
         </div>
       )}

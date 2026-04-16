@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Droplets, Sprout, Footprints, Tractor, ChevronRight } from 'lucide-react';
+import campoTafiImg from '../assets/campo-tafi.jpg';
 
 export default function PerfilValle() {
   return (
@@ -90,7 +91,7 @@ export default function PerfilValle() {
           <div className="relative group overflow-hidden rounded-[2.5rem] shadow-hover border-8 border-white">
             <div className="absolute inset-0 bg-stone-dark/20 group-hover:bg-transparent transition-colors duration-500"></div>
             <img 
-              src="https://images.unsplash.com/photo-1542601906990-b4d3fb773b09?q=80&w=1000&auto=format&fit=crop" 
+              src={campoTafiImg} 
               alt="Campo Tafí" 
               className="w-full h-full object-cover aspect-square md:aspect-auto"
             />

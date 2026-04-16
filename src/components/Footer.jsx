@@ -16,7 +16,6 @@ const footerLinks = [
   {
     titulo: 'Servicios',
     links: [
-      { label: 'Trámites Online', to: '/ciudadano' },
       { label: 'Portal Turístico', to: '/turismo' },
       { label: 'Transparencia', to: '/institucional' },
       { label: 'Contacto', to: '#' },
