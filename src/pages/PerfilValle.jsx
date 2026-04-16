@@ -1,21 +1,33 @@
 import { Link } from 'react-router-dom';
 import { Droplets, Sprout, Footprints, Tractor, ChevronRight } from 'lucide-react';
 import campoTafiImg from '../assets/campo-tafi.jpg';
+import perfilHeroImg from '../assets/perfil-hero.jpeg';
 
 export default function PerfilValle() {
   return (
     <div className="bg-white-warm min-h-screen">
-      {/* Hero Section */}
-      <div className="relative py-24 px-4 overflow-hidden" style={{ background: 'linear-gradient(135deg, var(--color-earth) 0%, #5d4328 100%)' }}>
-        <div className="max-w-7xl mx-auto">
-          <p className="text-xs font-semibold tracking-widest uppercase mb-3 text-white/70 font-body">
+      {/* Hero Section con Imagen de Fondo */}
+      <div className="relative h-[60vh] min-h-[400px] flex items-center overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center transition-transform duration-1000"
+          style={{ 
+            backgroundImage: `url(${perfilHeroImg})`,
+          }}
+        >
+          {/* Overlay gradiente para legibilidad */}
+          <div className="absolute inset-0 bg-gradient-to-r from-stone-900/80 via-stone-900/40 to-transparent" />
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+          <p className="text-xs font-semibold tracking-widest uppercase mb-4 text-primary-light font-body">
             <Link to="/" className="hover:text-white transition-colors">Inicio</Link>
             {' / '} Municipio
           </p>
-          <h1 className="text-5xl sm:text-6xl font-black text-white mb-4 leading-tight font-heading">
+          <h1 className="text-5xl sm:text-7xl font-black text-white mb-6 leading-tight font-heading max-w-2xl">
             Perfil del Valle
           </h1>
-          <p className="text-lg text-white/80 max-w-xl font-body">
+          <p className="text-xl text-white/90 max-w-xl font-body leading-relaxed">
             Naturaleza, hidrografía y el motor productivo que da vida a nuestra región.
           </p>
         </div>
@@ -87,7 +99,7 @@ export default function PerfilValle() {
             </div>
           </div>
 
-          {/* Image Placeholder/Visual */}
+          {/* Imagen de Contrapunto */}
           <div className="relative group overflow-hidden rounded-[2.5rem] shadow-hover border-8 border-white">
             <div className="absolute inset-0 bg-stone-dark/20 group-hover:bg-transparent transition-colors duration-500"></div>
             <img 
