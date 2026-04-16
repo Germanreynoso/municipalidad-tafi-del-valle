@@ -185,14 +185,18 @@ const ChatBotWidget = () => {
 
       {/* Toggle Button */}
       <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-primary text-white p-4 rounded-full shadow-2xl flex items-center justify-center relative group"
+        className={`w-16 h-16 rounded-full shadow-2xl flex items-center justify-center relative group overflow-hidden ${isOpen ? 'bg-primary text-white' : 'bg-white'}`}
       >
         <div className="absolute inset-0 bg-primary-mid rounded-full animate-ping opacity-20 group-hover:opacity-40" />
         {isOpen ? <X size={28} /> : 
-          <img src="/assets/chatbot/tafinito.png" alt="Chat" className="w-10 h-10 object-contain brightness-0 invert" />
+          <img 
+            src="/assets/chatbot/tafinito.png" 
+            alt="Chat" 
+            className="w-full h-full object-cover scale-150 transform transition-transform" 
+          />
         }
       </motion.button>
     </div>
