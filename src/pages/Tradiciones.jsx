@@ -3,6 +3,7 @@ import fiestaImg from '../assets/fiesta-tradicion.png';
 import quesoImg from '../assets/queso-tradicion.png';
 import GastronomyCarousel from '../components/GastronomyCarousel';
 import EventsCarousel from '../components/EventsCarousel';
+import CraftsCarousel from '../components/CraftsCarousel';
 
 export default function Tradiciones() {
   const fiestas = [
@@ -74,6 +75,35 @@ export default function Tradiciones() {
             <p className="text-sm text-stone font-body italic">
               "El gusto muy particular se debe a las bondades únicas de las pasturas de nuestra zona."
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Artesanías Section */}
+      <section className="py-24 px-4 bg-stone-50 overflow-hidden border-y border-stone-200">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-16 items-center">
+            <div className="lg:w-1/3">
+              <div className="inline-block px-4 py-1 rounded-full bg-stone-200 text-stone-600 text-[10px] font-black uppercase tracking-[0.2em] mb-6">
+                Legado Cultural
+              </div>
+              <h2 className="text-4xl sm:text-6xl font-black text-stone-dark font-heading leading-[0.9] mb-8">
+                Manos <br />
+                <span className="text-earth italic">Vallistas</span>
+              </h2>
+              <div className="space-y-6">
+                <p className="text-lg text-stone font-body leading-relaxed">
+                  El arte de Tafí nace de la tierra misma. Nuestros artesanos transforman la lana, el cuero, la piedra y la arcilla en piezas únicas que respiran la historia del valle.
+                </p>
+                <div className="h-0.5 w-20 bg-earth/20"></div>
+                <p className="text-sm text-stone/60 font-body uppercase tracking-widest font-bold">
+                  Tejidos • Cerámica • Piedra • Cuero
+                </p>
+              </div>
+            </div>
+            <div className="lg:w-2/3 w-full">
+              <CraftsCarousel />
+            </div>
           </div>
         </div>
       </section>
