@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, X, Send, Bot, User, Loader2 } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
 
 const GROQ_API_KEY = import.meta.env.VITE_GROQ_API_KEY;
 const API_URL = "https://api.groq.com/openai/v1/chat/completions";
@@ -98,8 +99,8 @@ const ChatBotWidget = () => {
             {/* Header */}
             <div className="bg-primary p-4 flex justify-between items-center text-white shadow-lg">
               <div className="flex items-center gap-3">
-                <div className="bg-white/20 p-2 rounded-full">
-                  <Bot size={20} />
+                <div className="bg-white/20 p-1 rounded-full overflow-hidden w-10 h-10 flex items-center justify-center">
+                  <img src="/assets/chatbot/tafinito.png" alt="Tafinito" className="w-full h-full object-cover" />
                 </div>
                 <div>
                   <h3 className="font-bold text-sm">Tafinito</h3>
@@ -125,12 +126,21 @@ const ChatBotWidget = () => {
                     <div className={`mt-1 p-1 rounded-full h-fit ${m.role === 'assistant' ? 'bg-primary-light text-primary' : 'bg-primary text-white'}`}>
                       {m.role === 'assistant' ? <Bot size={14} /> : <User size={14} />}
                     </div>
-                    <div className={`p-3 rounded-2xl text-sm shadow-sm ${
+                    <div className={`p-3 rounded-2xl text-sm shadow-sm max-w-none ${
                       m.role === 'assistant' 
                         ? 'bg-white text-gray-800 rounded-tl-none border border-primary-light' 
-                        : 'bg-primary text-white rounded-tr-none'
+                        : 'bg-primary text-white rounded-tr-none prose-invert'
                     }`}>
-                      {m.content}
+                      <ReactMarkdown
+                        components={{
+                          strong: ({node, ...props}) => <span className="font-bold text-inherit" {...props} />,
+                          ul: ({node, ...props}) => <ul className="list-disc ml-4 mt-2 space-y-1" {...props} />,
+                          li: ({node, ...props}) => <li className="text-sm" {...props} />,
+                          p: ({node, ...props}) => <p className="mb-2 last:mb-0" {...props} />,
+                        }}
+                      >
+                        {m.content}
+                      </ReactMarkdown>
                     </div>
                   </div>
                 </div>
@@ -181,7 +191,9 @@ const ChatBotWidget = () => {
         className="bg-primary text-white p-4 rounded-full shadow-2xl flex items-center justify-center relative group"
       >
         <div className="absolute inset-0 bg-primary-mid rounded-full animate-ping opacity-20 group-hover:opacity-40" />
-        {isOpen ? <X size={28} /> : <MessageCircle size={28} />}
+        {isOpen ? <X size={28} /> : 
+          <img src="/assets/chatbot/tafinito.png" alt="Chat" className="w-10 h-10 object-contain brightness-0 invert" />
+        }
       </motion.button>
     </div>
   );
