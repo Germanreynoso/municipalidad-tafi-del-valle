@@ -1,7 +1,8 @@
-import { Link } from 'react-router-dom';
-import { Music, Calendar, Star, Utensils, Heart } from 'lucide-react';
+import { Music, Calendar, Star, Utensils, Info } from 'lucide-react';
 import fiestaImg from '../assets/fiesta-tradicion.png';
 import quesoImg from '../assets/queso-tradicion.png';
+import GastronomyCarousel from '../components/GastronomyCarousel';
+import EventsCarousel from '../components/EventsCarousel';
 
 export default function Tradiciones() {
   const fiestas = [
@@ -12,7 +13,7 @@ export default function Tradiciones() {
 
   return (
     <div className="bg-white-warm min-h-screen">
-      {/* Hero Section */}
+      
       <div className="relative py-24 px-4 overflow-hidden bg-earth">
         <div className="absolute inset-0 z-0">
           <img 
@@ -34,7 +35,6 @@ export default function Tradiciones() {
         </div>
       </div>
 
-      {/* Fiesta del Queso - Feature Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative group">
@@ -78,7 +78,6 @@ export default function Tradiciones() {
         </div>
       </section>
 
-      {/* Música y Coplas */}
       <section className="bg-stone-dark py-24 text-white overflow-hidden relative">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/20 blur-[120px] rounded-full translate-x-1/2"></div>
         <div className="max-w-7xl mx-auto px-4 relative z-10">
@@ -118,8 +117,24 @@ export default function Tradiciones() {
         </div>
       </section>
 
-      {/* Calendario de Fiestas */}
+      {/* Galería de Festividades */}
       <section className="py-24 px-4 bg-white-warm">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl sm:text-6xl font-black font-heading text-stone-dark mb-6 tracking-tight">
+              Viví Nuestras Fiestas
+            </h2>
+            <p className="text-stone font-body max-w-2xl mx-auto text-lg">
+              Un recorrido visual por las celebraciones que marcan el ritmo del valle. Tradición, color y fe en cada encuentro.
+            </p>
+          </div>
+          
+          <EventsCarousel />
+        </div>
+      </section>
+
+      {/* Calendario de Fiestas */}
+      <section className="py-24 px-4 bg-stone-100 rounded-[3rem] mx-4 sm:mx-8 shadow-inner shadow-black/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-black font-heading text-stone-dark mb-4 tracking-tighter uppercase">Calendario de Fiestas</h2>
@@ -140,20 +155,27 @@ export default function Tradiciones() {
       </section>
 
       {/* Gastronomía */}
-      <section className="py-24 px-4 bg-primary text-white text-center rounded-[3rem] mx-4 sm:mx-8 mb-20">
-        <div className="max-w-4xl mx-auto">
-          <Utensils className="mx-auto mb-8 text-white/50" size={48} />
-          <h2 className="text-4xl sm:text-5xl font-black font-heading mb-8">Sabores del Valle</h2>
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+      <section className="py-24 px-4 bg-white-warm text-center mb-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-16">
+            <Utensils className="mx-auto mb-6 text-earth/40" size={48} />
+            <h2 className="text-4xl sm:text-6xl font-black font-heading text-stone-dark mb-6 tracking-tight italic">
+              Sabores del Valle
+            </h2>
+            <p className="text-xl text-stone font-body max-w-2xl mx-auto leading-relaxed">
+              Una cocina que fusiona ingredientes locales con técnicas ancestrales para crear platos que alimentan el alma.
+            </p>
+          </div>
+
+          <GastronomyCarousel />
+
+          <div className="flex flex-wrap justify-center gap-3 mt-16 max-w-3xl mx-auto">
             {["Locro", "Humita", "Empanada", "Chanfaina", "Asado de cordero", "Tamal", "Dulces varios"].map(comida => (
-              <span key={comida} className="px-6 py-2 bg-white/10 rounded-full text-sm font-bold border border-white/20">
+              <span key={comida} className="px-6 py-2 bg-white rounded-full text-sm font-bold border border-stone-light text-stone-dark shadow-sm hover:border-earth/40 transition-colors">
                 {comida}
               </span>
             ))}
           </div>
-          <p className="text-lg text-white/80 font-body leading-relaxed">
-            Una cocina que fusiona ingredientes locales con técnicas ancestrales para crear platos que alimentan el alma.
-          </p>
         </div>
       </section>
     </div>
