@@ -12,6 +12,7 @@ import CiudadanoPage from './features/ciudadano/CiudadanoPage.jsx';
 import TurismoPage from './features/turismo/TurismoPage.jsx';
 import AlojamientoPage from './features/turismo/AlojamientoPage.jsx';
 import CosasHacerPage from './features/turismo/CosasHacerPage.jsx';
+import GastronomiaPage from './features/turismo/GastronomiaPage.jsx';
 import InstitucionalPage from './features/institucional/InstitucionalPage.jsx';
 
 function Layout() {
@@ -50,6 +51,7 @@ const router = createBrowserRouter([
       { path: '/turismo',       element: <TurismoPage /> },
       { path: '/turismo/alojamiento', element: <AlojamientoPage /> },
       { path: '/turismo/que-hacer',   element: <CosasHacerPage /> },
+      { path: '/turismo/gastronomia', element: <GastronomiaPage /> },
       { path: '/institucional', element: <InstitucionalPage /> },
     ],
   },

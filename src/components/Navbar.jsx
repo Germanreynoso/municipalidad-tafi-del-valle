@@ -20,7 +20,8 @@ const navLinks = [
     submenu: [
       { label: 'Portal Principal', to: '/turismo' },
       { label: 'Alojamiento', to: '/turismo/alojamiento' },
-      { label: 'Cosas para hacer', to: '/turismo/que-hacer' },
+      { label: 'Gastronomía', to: '/turismo/gastronomia' },
+      { label: 'Qué hacer', to: '/turismo/que-hacer' },
     ]
   },
   { label: 'Transparencia', to: '/institucional' },

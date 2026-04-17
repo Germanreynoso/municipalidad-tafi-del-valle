@@ -19,6 +19,14 @@ const eventImages = [
   '/assets/eventos/evento-14.jpeg',
   '/assets/eventos/evento-15.jpeg',
   '/assets/eventos/evento-16.jpeg',
+  '/assets/eventos/evento-17.jpeg',
+  '/assets/eventos/evento-18.jpeg',
+  '/assets/eventos/evento-19.jpeg',
+  '/assets/eventos/evento-20.jpeg',
+  '/assets/eventos/evento-21.jpeg',
+  '/assets/eventos/evento-22.jpeg',
+  '/assets/eventos/evento-23.jpeg',
+  '/assets/eventos/evento-24.jpeg',
 ];
 
 export default function EventsCarousel() {

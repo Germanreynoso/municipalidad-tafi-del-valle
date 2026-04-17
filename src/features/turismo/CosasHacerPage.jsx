@@ -1,115 +1,197 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { actividades, categoriasActividades } from './data/cosasHacer.js';
-import { Compass, Clock, Activity, ArrowRight } from 'lucide-react';
+import { Search, Clock, Activity, ArrowRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+// Custom Instagram Icon to avoid library version issues
+const InstagramIcon = ({ size = 20 }) => (
+  <svg 
+    width={size} 
+    height={size} 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round"
+  >
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+  </svg>
+);
 
 export default function CosasHacerPage() {
   const [filtro, setFiltro] = useState('todos');
+  const [search, setSearch] = useState('');
 
-  const filtradas = filtro === 'todos' 
-    ? actividades 
-    : actividades.filter(a => a.categoria === filtro);
+  const filtradas = useMemo(() => {
+    return actividades.filter(a => {
+      const matchFiltro = filtro === 'todos' || a.categoria === filtro;
+      const matchSearch = a.nombre.toLowerCase().includes(search.toLowerCase()) || 
+                          a.descripcion.toLowerCase().includes(search.toLowerCase());
+      return matchFiltro && matchSearch;
+    });
+  }, [filtro, search]);
 
   return (
-    <div className="bg-white min-h-screen">
-      {/* Hero */}
+    <div className="bg-[#F8F9FA] min-h-screen">
+      {/* Header / Hero */}
       <div 
-        className="relative py-24 px-4 overflow-hidden"
-        style={{ background: 'linear-gradient(135deg, #10b981 0%, #047857 100%)' }}
+        className="relative pt-32 pb-20 px-4 text-center"
+        style={{ background: 'linear-gradient(rgba(16, 185, 129, 0.05), rgba(16, 185, 129, 0))' }}
       >
-        <div className="max-w-7xl mx-auto relative z-10">
-          <p className="text-xs font-semibold tracking-widest uppercase mb-3 text-white/70 font-body">
-            <Link to="/turismo" className="hover:text-white transition-colors">Turismo</Link>
-            {' / '}Qué hacer en el valle
-          </p>
-          <h1 className="text-5xl sm:text-7xl font-black text-white mb-6 font-heading">
-            Cosas <br />
-            <span className="text-white/60">para hacer</span>
-          </h1>
-          <p className="text-lg text-white/80 max-w-2xl font-body">
-            Aventura, cultura y sabores únicos. Descubrí las mejores experiencias para 
-            vivir Tafí del Valle al máximo.
-          </p>
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            <p className="text-emerald-600 font-bold uppercase tracking-[0.2em] text-[10px] mb-4 font-body">
+              Experiencias — Qué hacer en Tafí
+            </p>
+            <h1 className="text-4xl md:text-6xl font-black text-stone-900 mb-6 font-heading leading-tight">
+              Aventura y <br />
+              <span className="text-emerald-500">Naturaleza</span>
+            </h1>
+            <p className="text-stone-500 max-w-xl mx-auto mb-12 font-body">
+              Descubrí las mejores actividades al aire libre guiadas por especialistas. 
+              Viví el valle desde una perspectiva única.
+            </p>
+          </motion.div>
+
+          {/* Search Bar Container */}
+          <div className="relative max-w-2xl mx-auto">
+            <div className="absolute inset-y-0 left-5 flex items-center pointer-events-none text-stone-400">
+              <Search size={20} />
+            </div>
+            <input 
+              type="text" 
+              placeholder="Buscar actividad o tipo de aventura..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="w-full pl-14 pr-6 py-5 rounded-2xl bg-white border-none shadow-xl shadow-emerald-900/5 focus:ring-2 focus:ring-emerald-500 transition-all font-body text-stone-dark"
+            />
+          </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32">
         {/* Filters */}
-        <div className="flex items-center gap-4 mb-16 border-b border-stone-100 pb-6">
-          <span className="text-xs font-black uppercase tracking-widest text-stone-400 mr-4 font-body">Filtrar por:</span>
-          <div className="flex items-center gap-2 overflow-x-auto no-scrollbar">
-            {categoriasActividades.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setFiltro(cat)}
-                className="px-6 py-2 rounded-xl text-xs font-bold capitalize transition-all duration-200 whitespace-nowrap font-body"
-                style={{
-                  backgroundColor: filtro === cat ? '#10b981' : 'transparent',
-                  color: filtro === cat ? 'white' : '#64748b',
-                }}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Activities Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {filtradas.map((act) => (
-            <div 
-              key={act.id} 
-              className="group cursor-pointer"
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-16">
+          {categoriasActividades.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setFiltro(cat)}
+              className="px-5 py-2.5 rounded-xl text-xs font-bold capitalize transition-all duration-200 border border-stone-200 font-body"
+              style={{
+                backgroundColor: filtro === cat ? 'var(--color-stone-dark)' : 'white',
+                color: filtro === cat ? 'white' : 'var(--color-stone-dark)',
+                borderColor: filtro === cat ? 'var(--color-stone-dark)' : 'transparent',
+                boxShadow: filtro === cat ? '0 10px 15px -5px rgba(0,0,0,0.1)' : 'none'
+              }}
             >
-              <div className="relative h-80 rounded-3xl overflow-hidden mb-6 shadow-lg shadow-stone-200">
-                <div className="absolute inset-0 bg-stone-200 flex items-center justify-center opacity-30">
-                  <Compass size={64} className="group-hover:rotate-45 transition-transform duration-500" />
-                </div>
-                <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
-                  <span className="inline-block px-3 py-1 bg-emerald-500 text-white text-[10px] font-bold uppercase tracking-wider rounded-lg mb-2">
-                    {act.categoria}
-                  </span>
-                  <h3 className="text-2xl font-bold text-white font-heading">{act.nombre}</h3>
-                </div>
-              </div>
-              
-              <div className="px-2">
-                <div className="flex items-center gap-6 mb-4 text-xs font-bold text-stone-400 font-body uppercase tracking-widest">
-                  <div className="flex items-center gap-2">
-                    <Clock size={14} className="text-emerald-500" />
-                    {act.duracion}
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Activity size={14} className="text-emerald-500" />
-                    Dificultad: {act.dificultad}
-                  </div>
-                </div>
-                <p className="text-stone-600 font-body leading-relaxed mb-6 line-clamp-2">
-                  {act.descripcion}
-                </p>
-                <div className="flex items-center gap-2 text-emerald-600 font-black text-sm uppercase tracking-wider group-hover:gap-4 transition-all duration-300">
-                  Ver detalles <ArrowRight size={18} />
-                </div>
-              </div>
-            </div>
+              {cat}
+            </button>
           ))}
         </div>
 
-        {/* Special Activity CTA */}
-        <div className="mt-32 relative rounded-3xl overflow-hidden bg-stone-900 py-16 px-8 md:px-16 text-center">
-          <div className="max-w-2xl mx-auto">
-            <h3 className="text-3xl md:text-4xl font-black text-white mb-6 font-heading">¿Querés una experiencia personalizada?</h3>
-            <p className="text-white/60 mb-10 font-body">
-              Contamos con guías registrados y especialistas en turismo activo para diseñar tu itinerario a medida.
-            </p>
-            <Link 
-              to="/contacto"
-              className="inline-block px-12 py-4 bg-emerald-500 text-white font-black rounded-2xl hover:bg-emerald-400 transition-colors shadow-xl shadow-emerald-900/40 font-body"
-            >
-              Contactar con un Guía
-            </Link>
+        {/* Activities Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <AnimatePresence mode="popLayout">
+            {filtradas.map((act) => (
+              <motion.div
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                key={act.id}
+                className="bg-white rounded-3xl overflow-hidden border border-stone-100 hover:border-emerald-200 hover:shadow-2xl hover:shadow-emerald-900/5 transition-all duration-300 group flex flex-col h-full"
+              >
+                {/* Image Section */}
+                <div className="relative h-64 bg-stone-100 overflow-hidden">
+                  <img 
+                    src={act.image} 
+                    alt={act.nombre}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-300" />
+                  <div className="absolute top-4 right-4 focus-within:z-10">
+                     <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-stone-800 text-[10px] font-black uppercase tracking-wider rounded-lg shadow-sm border border-stone-100">
+                      {act.categoria}
+                    </span>
+                  </div>
+                </div>
+                
+                <div className="p-8 flex flex-col flex-grow">
+                  <div className="flex items-center gap-4 mb-4 text-[10px] font-bold text-stone-400 font-body uppercase tracking-[0.15em]">
+                    <div className="flex items-center gap-1.5">
+                      <Clock size={12} className="text-emerald-500" />
+                      {act.duracion}
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <Activity size={12} className="text-emerald-500" />
+                      {act.dificultad}
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-stone-800 font-heading mb-3 group-hover:text-emerald-600 transition-colors leading-tight">
+                    {act.nombre}
+                  </h3>
+                  
+                  <p className="text-stone-500 font-body leading-relaxed mb-8 flex-grow">
+                    {act.descripcion}
+                  </p>
+
+                  <div className="mt-auto">
+                    {act.instagram ? (
+                      <a 
+                        href={act.instagram}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="w-full py-4 flex items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 text-white hover:opacity-90 transition-all duration-300 shadow-lg shadow-pink-500/20 font-bold text-sm"
+                      >
+                        <InstagramIcon size={18} />
+                        Explorar en Instagram
+                      </a>
+                    ) : (
+                      <button className="w-full py-4 flex items-center justify-center gap-3 rounded-2xl bg-stone-900 text-white hover:bg-stone-800 transition-all duration-300 font-bold text-sm">
+                        Ver información <ArrowRight size={18} />
+                      </button>
+                    )}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </div>
+
+        {/* Empty State */}
+        {filtradas.length === 0 && (
+          <div className="py-24 text-center">
+            <div className="w-20 h-20 bg-stone-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Search size={32} className="text-stone-300" />
+            </div>
+            <h4 className="text-xl font-bold text-stone-800 mb-2 font-heading">Sin resultados</h4>
+            <p className="text-stone-500 font-body">No encontramos actividades que coincidan con tu búsqueda.</p>
           </div>
+        )}
+      </div>
+
+      {/* Advice CTA */}
+      <div className="bg-stone-900 py-24 px-4 text-center">
+        <div className="max-w-xl mx-auto">
+          <h3 className="text-4xl font-black text-white mb-6 font-heading leading-tight">¿Buscás algo más específico?</h3>
+          <p className="text-white/50 font-body leading-relaxed mb-10">
+            Contamos con guías expertos para trekking, mountain bike y cabalgatas personalizadas. 
+            ¡Animación y seguridad garantizada!
+          </p>
+          <Link 
+            to="/contacto"
+            className="inline-flex items-center gap-3 px-10 py-4 bg-emerald-500 text-white font-black rounded-2xl hover:bg-emerald-400 transition-all duration-300 shadow-xl shadow-emerald-500/20 uppercase tracking-widest text-xs"
+          >
+            Contactar Guía <ArrowRight size={18} />
+          </Link>
         </div>
       </div>
     </div>
