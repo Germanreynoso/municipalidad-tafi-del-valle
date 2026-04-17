@@ -24,7 +24,6 @@ const navLinks = [
       { label: 'Qué hacer', to: '/turismo/que-hacer' },
     ]
   },
-  { label: 'Transparencia', to: '/institucional' },
 ];
 
 export default function Navbar() {
@@ -66,12 +65,12 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-10">
               {navLinks.map((item) =>
                 item.submenu ? (
                   <div key={item.label} className="relative group">
                     <button
-                      className="flex items-center gap-1 text-sm font-semibold pb-1 border-b-2 border-transparent transition-all duration-200 hover:border-stone-dark text-stone-dark font-body"
+                      className="flex items-center gap-1 text-base font-semibold pb-1 border-b-2 border-transparent transition-all duration-200 hover:border-stone-dark text-stone-dark font-body"
                     >
                       {item.label}
                       <ChevronDown size={14} className="opacity-60" />
@@ -92,7 +91,7 @@ export default function Navbar() {
                   <Link
                     key={item.label}
                     to={item.to}
-                    className="text-sm font-semibold pb-1 border-b-2 transition-all duration-200 text-stone-dark font-body"
+                    className="text-base font-semibold pb-1 border-b-2 transition-all duration-200 text-stone-dark font-body"
                     style={{
                       borderColor: location.pathname === item.to ? 'var(--color-primary)' : 'transparent',
                     }}
@@ -140,7 +139,7 @@ export default function Navbar() {
                       <Link
                         key={sub.label}
                         to={sub.to}
-                        className="block px-6 py-2 text-sm text-stone-dark font-body rounded-lg hover:bg-primary-light transition-colors"
+                        className="block px-6 py-2.5 text-base text-stone-dark font-body rounded-lg hover:bg-primary-light transition-colors"
                       >
                         {sub.label}
                       </Link>
@@ -150,7 +149,7 @@ export default function Navbar() {
                   <Link
                     key={item.label}
                     to={item.to}
-                    className="px-3 py-3 rounded-lg text-sm font-semibold text-stone-dark font-body transition-colors duration-150"
+                    className="px-4 py-4 rounded-lg text-base font-semibold text-stone-dark font-body transition-colors duration-150"
                     style={{
                       backgroundColor: location.pathname === item.to ? 'var(--color-primary-light)' : 'transparent',
                     }}
