@@ -15,11 +15,17 @@ import CosasHacerPage from './features/turismo/CosasHacerPage.jsx';
 import GastronomiaPage from './features/turismo/GastronomiaPage.jsx';
 import InstitucionalPage from './features/institucional/InstitucionalPage.jsx';
 
+import { useState } from 'react';
+import GlobalSearch from './components/common/GlobalSearch.jsx';
+
 function Layout() {
   const location = useLocation();
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
   return (
     <div className="min-h-screen flex flex-col bg-white-warm">
-      <Navbar />
+      <Navbar onSearchOpen={() => setIsSearchOpen(true)} />
+      <GlobalSearch isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
       <main className="flex-1">
         <AnimatePresence mode="wait" initial={false}>
           <motion.div

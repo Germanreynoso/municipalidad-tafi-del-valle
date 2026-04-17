@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Hotel, Compass, Utensils } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { atracciones, eventoDestacado } from './data/atracciones.js';
@@ -14,7 +14,19 @@ const categorias = ['todos', 'naturaleza', 'cultura', 'aventura', 'gastronomía'
 export default function TurismoPage() {
   const [filtro, setFiltro] = useState('todos');
   const [selectedAttr, setSelectedAttr] = useState(null);
-  
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.openAttrId) {
+      const attr = atracciones.find(a => a.id === location.state.openAttrId);
+      if (attr) {
+        setSelectedAttr(attr);
+        // Clear state to prevent reopening on refresh
+        window.history.replaceState({}, document.title);
+      }
+    }
+  }, [location]);
+
   const filtradas = filtro === 'todos' ? atracciones : atracciones.filter((a) => a.categoria === filtro);
 
   return (

@@ -1,6 +1,6 @@
 const emergencias = [
-  { id: 1, nombre: 'Hospital del Valle', telefono: '(0867) 421-000', icono: '🏥', area: 'Salud' },
-  { id: 2, nombre: 'Comisaría Tafí del Valle', telefono: '(0867) 421-111', icono: '🚔', area: 'Seguridad' },
+  { id: 1, nombre: 'Hospital del Valle', telefono: '(03867) 421031 / 427034', icono: '🏥', area: 'Salud' },
+  { id: 2, nombre: 'Comisaría Tafí del Valle', telefono: '03867 421322', icono: '🚔', area: 'Seguridad' },
   { id: 3, nombre: 'Bomberos Voluntarios', telefono: '100', icono: '🚒', area: 'Bomberos' },
 ];
 

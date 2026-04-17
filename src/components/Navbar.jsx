@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ChevronDown, X, Menu } from 'lucide-react';
+import { ChevronDown, X, Menu, Search } from 'lucide-react';
 import institutionalLogo from '../assets/MUNICIPALIDAD INSTITUCIONAL COLOR.png';
 
 const navLinks = [
@@ -26,10 +26,21 @@ const navLinks = [
   },
 ];
 
-export default function Navbar() {
+export default function Navbar({ onSearchOpen }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
+        e.preventDefault();
+        onSearchOpen();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [onSearchOpen]);
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 40);
@@ -100,16 +111,37 @@ export default function Navbar() {
                   </Link>
                 )
               )}
+
+              {/* Botón de Búsqueda */}
+              <button
+                onClick={onSearchOpen}
+                className="flex items-center gap-3 px-4 py-2 bg-stone-100 hover:bg-stone-200 text-stone-dark rounded-xl transition-all duration-200 border border-stone-200 group"
+              >
+                <Search size={18} className="text-primary" />
+                <span className="text-sm font-semibold opacity-60 group-hover:opacity-100">¿Qué buscas?</span>
+                <span className="hidden lg:flex items-center gap-1 px-1.5 py-0.5 rounded bg-white text-[9px] font-bold text-stone/60 border border-stone-200">
+                  <span className="text-[11px]">⌘</span>K
+                </span>
+              </button>
             </div>
 
-            {/* Mobile hamburger */}
-            <button
-              className="md:hidden p-2 rounded-lg text-stone-dark"
-              onClick={() => setMobileOpen(true)}
-              aria-label="Abrir menú"
-            >
-              <Menu size={24} />
-            </button>
+            {/* Mobile Actions */}
+            <div className="md:hidden flex items-center gap-4">
+              <button
+                className="p-2 rounded-lg text-stone-dark bg-stone-100"
+                onClick={onSearchOpen}
+                aria-label="Buscar"
+              >
+                <Search size={22} />
+              </button>
+              <button
+                className="p-2 rounded-lg text-stone-dark"
+                onClick={() => setMobileOpen(true)}
+                aria-label="Abrir menú"
+              >
+                <Menu size={24} />
+              </button>
+            </div>
           </div>
         </div>
       </nav>
