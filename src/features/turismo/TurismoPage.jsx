@@ -7,6 +7,7 @@ import AtraccionCard from './components/AtraccionCard.jsx';
 import EventosBanner from './components/EventosBanner.jsx';
 import AtraccionModal from './components/AtraccionModal.jsx';
 import CalendarioEventos from './components/CalendarioEventos.jsx';
+import WeatherWidget from '../../components/common/WeatherWidget.jsx';
 import turismoHeroImg from '../../assets/turismo-hero.jpeg';
 
 const categorias = ['todos', 'naturaleza', 'cultura', 'aventura', 'gastronomía'];
@@ -43,7 +44,10 @@ export default function TurismoPage() {
         {/* Overlay gradiente para legibilidad */}
         <div className="absolute inset-0 bg-gradient-to-r from-stone-900/80 via-stone-900/40 to-transparent z-[5]" />
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-20">
+          <div className="mb-10 inline-block">
+            <WeatherWidget />
+          </div>
           <p className="text-xs font-semibold tracking-widest uppercase mb-4 text-sky-400 font-body">
             <Link to="/" className="hover:text-white transition-colors">Inicio</Link>
             {' / '}Portal Turístico

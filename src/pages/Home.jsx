@@ -3,6 +3,7 @@ import { ArrowRight, MapPin, Users, Mountain, Camera } from 'lucide-react';
 import { motion as Motion } from 'framer-motion';
 import { fadeUp, stagger, slideLeft } from '../styles/motion.js';
 import PortalCard from '../components/PortalCard.jsx';
+import WeatherWidget from '../components/common/WeatherWidget.jsx';
 import { noticias } from '../features/institucional/data/noticias.js';
 import somosTodosLogo from '../assets/SOMOS TODOS COLOR.png';
 import heroTafi from '../assets/hero-tafi.jpg';
@@ -65,6 +66,9 @@ export default function Home() {
         </div>
 
         <div className="relative h-full flex flex-col items-center justify-center text-center px-4">
+          <div className="mb-8">
+            <WeatherWidget />
+          </div>
           <p className="text-xs font-semibold tracking-[0.3em] uppercase text-white/70 mb-4 font-body">
             Provincia de Tucumán — Argentina
           </p>
