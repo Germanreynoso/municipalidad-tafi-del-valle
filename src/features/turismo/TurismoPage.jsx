@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Hotel, Compass } from 'lucide-react';
 import { atracciones, eventoDestacado } from './data/atracciones.js';
 import AtraccionCard from './components/AtraccionCard.jsx';
 import EventosBanner from './components/EventosBanner.jsx';
@@ -45,8 +46,39 @@ export default function TurismoPage() {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         
+        {/* Quick Access Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
+          <Link 
+            to="/turismo/alojamiento"
+            className="group relative h-48 rounded-3xl overflow-hidden bg-sky-900 shadow-lg shadow-sky-900/20"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-sky-400/20 to-transparent z-10" />
+            <div className="absolute inset-0 flex flex-col justify-end p-8 z-20">
+              <h3 className="text-2xl font-black text-white font-heading group-hover:translate-x-2 transition-transform duration-300">Alojamiento</h3>
+              <p className="text-white/70 text-sm font-body">Hoteles, cabañas y más</p>
+            </div>
+            <div className="absolute top-6 right-8 text-white/20 group-hover:text-white/40 transition-colors">
+              <Hotel size={80} />
+            </div>
+          </Link>
+
+          <Link 
+            to="/turismo/que-hacer"
+            className="group relative h-48 rounded-3xl overflow-hidden bg-emerald-900 shadow-lg shadow-emerald-900/20"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/20 to-transparent z-10" />
+            <div className="absolute inset-0 flex flex-col justify-end p-8 z-20">
+              <h3 className="text-2xl font-black text-white font-heading group-hover:translate-x-2 transition-transform duration-300">Cosas para hacer</h3>
+              <p className="text-white/70 text-sm font-body">Experiencias y actividades</p>
+            </div>
+            <div className="absolute top-6 right-8 text-white/20 group-hover:text-white/40 transition-colors">
+              <Compass size={80} />
+            </div>
+          </Link>
+        </div>
+
         {/* Evento Destacado */}
         <div className="mb-24">
           <div className="flex items-center gap-2 mb-6">

@@ -8,14 +8,21 @@ const navLinks = [
   {
     label: 'Municipio',
     submenu: [
-      { label: 'Autoridades', to: '#' },
+      { label: 'Autoridades', to: '/autoridades' },
       { label: 'Historia', to: '/historia' },
       { label: 'Perfil del Valle', to: '/perfil-valle' },
       { label: 'Fiestas y Tradiciones', to: '/tradiciones' },
       { label: 'Ordenanzas', to: '#' },
     ],
   },
-  { label: 'Turismo', to: '/turismo' },
+  { 
+    label: 'Turismo', 
+    submenu: [
+      { label: 'Portal Principal', to: '/turismo' },
+      { label: 'Alojamiento', to: '/turismo/alojamiento' },
+      { label: 'Cosas para hacer', to: '/turismo/que-hacer' },
+    ]
+  },
   { label: 'Transparencia', to: '/institucional' },
 ];
 

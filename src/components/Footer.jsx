@@ -7,7 +7,7 @@ const footerLinks = [
   {
     titulo: 'Municipio',
     links: [
-      { label: 'Autoridades', to: '#' },
+      { label: 'Autoridades', to: '/autoridades' },
       { label: 'Historia de Tafí', to: '#' },
       { label: 'Ordenanzas', to: '#' },
       { label: 'Concejo Deliberante', to: '#' },

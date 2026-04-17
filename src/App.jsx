@@ -7,8 +7,11 @@ import Home from './pages/Home.jsx';
 import Historia from './pages/Historia.jsx';
 import PerfilValle from './pages/PerfilValle.jsx';
 import Tradiciones from './pages/Tradiciones.jsx';
+import Autoridades from './pages/Autoridades.jsx';
 import CiudadanoPage from './features/ciudadano/CiudadanoPage.jsx';
 import TurismoPage from './features/turismo/TurismoPage.jsx';
+import AlojamientoPage from './features/turismo/AlojamientoPage.jsx';
+import CosasHacerPage from './features/turismo/CosasHacerPage.jsx';
 import InstitucionalPage from './features/institucional/InstitucionalPage.jsx';
 
 function Layout() {
@@ -42,8 +45,11 @@ const router = createBrowserRouter([
       { path: '/historia',      element: <Historia /> },
       { path: '/perfil-valle',  element: <PerfilValle /> },
       { path: '/tradiciones',   element: <Tradiciones /> },
+      { path: '/autoridades',   element: <Autoridades /> },
       { path: '/ciudadano',     element: <CiudadanoPage /> },
       { path: '/turismo',       element: <TurismoPage /> },
+      { path: '/turismo/alojamiento', element: <AlojamientoPage /> },
+      { path: '/turismo/que-hacer',   element: <CosasHacerPage /> },
       { path: '/institucional', element: <InstitucionalPage /> },
     ],
   },
