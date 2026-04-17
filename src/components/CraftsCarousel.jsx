@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import OptimizedImage from './common/OptimizedImage';
 
 const craftImages = [
+// ...
   '/assets/artesanias/artesania-1.jpeg',
   '/assets/artesanias/artesania-2.jpeg',
   '/assets/artesanias/artesania-3.jpeg',
@@ -84,7 +86,7 @@ export default function CraftsCarousel() {
             exit="exit"
             className="absolute inset-0"
           >
-            <img
+            <OptimizedImage
               src={craftImages[currentIndex]}
               className="w-full h-full object-cover"
               alt={`Artesanía ${currentIndex + 1}`}

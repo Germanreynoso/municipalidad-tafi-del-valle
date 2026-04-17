@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Utensils } from 'lucide-react';
+import OptimizedImage from './common/OptimizedImage';
 
 const images = [
+// ... (images array remains the same)
   { url: '/assets/gastronomia/comida-1.jpeg', title: '', desc: '' },
   { url: '/assets/gastronomia/comida-2.jpeg', title: '', desc: '' },
   { url: '/assets/gastronomia/comida-3.jpeg', title: '', desc: '' },
@@ -79,7 +81,7 @@ export default function GastronomyCarousel() {
             className="absolute inset-0"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
-            <img
+            <OptimizedImage
               src={images[currentIndex].url}
               alt={images[currentIndex].title}
               className="w-full h-full object-cover"
