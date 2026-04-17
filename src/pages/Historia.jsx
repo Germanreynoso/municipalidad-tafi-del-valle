@@ -148,17 +148,6 @@ export default function Historia() {
               </div>
             </div>
 
-            {/* CTA or Extra Card */}
-            <div className="mt-8 bg-earth rounded-3xl p-8 text-white relative overflow-hidden group">
-              <div className="absolute -right-4 -bottom-4 opacity-20 group-hover:scale-110 transition-transform duration-500">
-                <Mountain size={120} />
-              </div>
-              <h4 className="text-lg font-black font-heading mb-2 relative z-10">¡Visítanos!</h4>
-              <p className="text-sm text-white/80 font-body mb-6 relative z-10">Tafí del Valle te espera con sus paisajes y cultura única.</p>
-              <Link to="/turismo" className="inline-block px-6 py-3 rounded-xl bg-white text-earth font-bold text-sm hover:bg-stone-light transition-colors relative z-10">
-                Guía de Turismo
-              </Link>
-            </div>
           </div>
         </div>
       </div>
