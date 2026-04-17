@@ -27,14 +27,6 @@ const portals = [
     to: '/turismo',
     accentColor: '--color-sky',
   },
-  {
-    title: 'Transparencia',
-    subtitle: 'Portal Institucional',
-    description: 'Noticias de gestión, presupuesto, ordenanzas y gobierno abierto.',
-    image: transparenciaImg,
-    to: '/institucional',
-    accentColor: '--color-earth',
-  },
 ];
 
 const stats = [
@@ -113,7 +105,7 @@ export default function Home() {
           </h2>
         </Motion.div>
         <Motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto"
           variants={stagger}
           initial="hidden"
           whileInView="visible"
@@ -172,69 +164,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* News Preview */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <div className="flex items-end justify-between mb-12">
-          <div>
-            <p className="text-xs font-semibold tracking-widest uppercase mb-2 text-stone font-body">
-              Últimas novedades
-            </p>
-            <h2 className="text-4xl font-black text-stone-dark font-heading">
-              Noticias del municipio
-            </h2>
-          </div>
-          <Link
-            to="/institucional"
-            className="hidden md:flex items-center gap-2 text-sm font-semibold text-primary font-body hover:underline"
-          >
-            Ver todas <ArrowRight size={16} />
-          </Link>
-        </div>
-
-        <Motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
-          variants={stagger}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-60px' }}
-        >
-          {noticiasRecientes.map((noticia) => (
-            <Motion.div key={noticia.id} variants={fadeUp}>
-              <article
-                className="group overflow-hidden rounded-2xl border border-stone-light transition-all duration-300 hover:-translate-y-1 cursor-pointer bg-white"
-                style={{ boxShadow: 'var(--shadow-card)' }}
-              >
-                <div className="overflow-hidden h-48">
-                  <img
-                    src={noticia.image}
-                    alt={noticia.titulo}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-6">
-                  <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3 bg-primary-light text-primary font-body">
-                    {noticia.categoria}
-                  </span>
-                  <h3 className="font-bold text-base mb-2 line-clamp-2 leading-snug text-stone-dark font-heading">
-                    {noticia.titulo}
-                  </h3>
-                  <p className="text-sm mb-4 line-clamp-2 text-stone font-body">{noticia.extracto}</p>
-                  <p className="text-xs text-stone font-body">{formatFecha(noticia.fecha)}</p>
-                </div>
-              </article>
-            </Motion.div>
-          ))}
-        </Motion.div>
-
-        <div className="mt-8 text-center md:hidden">
-          <Link
-            to="/institucional"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-primary font-body"
-          >
-            Ver todas las noticias <ArrowRight size={16} />
-          </Link>
-        </div>
-      </section>
     </div>
   );
 }
