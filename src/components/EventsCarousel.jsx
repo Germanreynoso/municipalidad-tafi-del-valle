@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Camera } from 'lucide-react';
+import OptimizedImage from './common/OptimizedImage';
 
 const eventImages = [
   '/assets/eventos/evento-1.jpeg',
@@ -88,10 +89,12 @@ export default function EventsCarousel() {
             exit="exit"
             className="absolute inset-0"
           >
-            <img
+            <OptimizedImage
               src={eventImages[currentIndex]}
               className="w-full h-full object-cover"
               alt={`Evento cultural ${currentIndex + 1}`}
+              containerClassName="w-full h-full"
+              priority={true}
             />
           </motion.div>
         </AnimatePresence>

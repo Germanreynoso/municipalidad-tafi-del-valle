@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Hotel, Compass, Utensils } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { atracciones, eventoDestacado } from './data/atracciones.js';
 import AtraccionCard from './components/AtraccionCard.jsx';
 import EventosBanner from './components/EventosBanner.jsx';
@@ -26,10 +27,9 @@ export default function TurismoPage() {
           style={{ 
             backgroundImage: `url(${turismoHeroImg})`,
           }}
-        >
-          {/* Overlay gradiente para legibilidad */}
-          <div className="absolute inset-0 bg-gradient-to-r from-stone-900/80 via-stone-900/40 to-transparent" />
-        </div>
+        />
+        {/* Overlay gradiente para legibilidad */}
+        <div className="absolute inset-0 bg-gradient-to-r from-stone-900/80 via-stone-900/40 to-transparent z-[5]" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <p className="text-xs font-semibold tracking-widest uppercase mb-4 text-sky-400 font-body">

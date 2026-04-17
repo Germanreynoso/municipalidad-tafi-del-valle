@@ -7,7 +7,8 @@ const categoriaColors = {
   gastronomía:  { bg: '#FEF3E2', text: '#C47B20' },
 };
 
-export default function AtraccionCard({ nombre, categoria, distancia, descripcion, image, onClick }) {
+export default function AtraccionCard({ atraccion, onClick }) {
+  const { nombre, categoria, distancia, descripcion, image } = atraccion;
   const colors = categoriaColors[categoria] || categoriaColors.naturaleza;
   return (
     <div

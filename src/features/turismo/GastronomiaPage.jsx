@@ -22,14 +22,13 @@ export default function GastronomiaPage() {
       <div className="relative h-[60vh] min-h-[400px] flex items-center overflow-hidden">
         {/* Background Image */}
         <div 
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 scale-105"
           style={{ 
-            backgroundImage: "url('/assets/gastronomia/comida-12.jpeg')",
+            backgroundImage: `url('/assets/gastronomia/comida-12.jpeg')`,
           }}
-        >
-          {/* Overlay gradiente para legibilidad */}
-          <div className="absolute inset-0 bg-gradient-to-r from-stone-900/90 via-stone-900/50 to-transparent" />
-        </div>
+        />
+        {/* Overlay gradiente para legibilidad */}
+        <div className="absolute inset-0 bg-gradient-to-r from-stone-900/90 via-stone-900/40 to-transparent z-[5]" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <motion.div

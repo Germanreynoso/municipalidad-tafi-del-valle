@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { actividades, categoriasActividades } from './data/cosasHacer.js';
 import { Search, Clock, Activity, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import OptimizedImage from '../../components/common/OptimizedImage';
 
 // Custom Instagram Icon to avoid library version issues
 const InstagramIcon = ({ size = 20 }) => (
@@ -109,15 +110,17 @@ export default function CosasHacerPage() {
                 className="bg-white rounded-3xl overflow-hidden border border-stone-100 hover:border-emerald-200 hover:shadow-2xl hover:shadow-emerald-900/5 transition-all duration-300 group flex flex-col h-full"
               >
                 {/* Image Section */}
-                <div className="relative h-64 bg-stone-100 overflow-hidden">
-                  <img 
+                <div className="relative h-64 overflow-hidden">
+                  <OptimizedImage 
                     src={act.image} 
                     alt={act.nombre}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    width={400}
+                    height={256}
                   />
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-300" />
-                  <div className="absolute top-4 right-4 focus-within:z-10">
-                     <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-stone-800 text-[10px] font-black uppercase tracking-wider rounded-lg shadow-sm border border-stone-100">
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-300 pointer-events-none" />
+                  <div className="absolute top-4 right-4 z-10">
+                    <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-stone-800 text-[10px] font-black uppercase tracking-wider rounded-lg shadow-sm border border-stone-100">
                       {act.categoria}
                     </span>
                   </div>
@@ -176,23 +179,6 @@ export default function CosasHacerPage() {
             <p className="text-stone-500 font-body">No encontramos actividades que coincidan con tu búsqueda.</p>
           </div>
         )}
-      </div>
-
-      {/* Advice CTA */}
-      <div className="bg-stone-900 py-24 px-4 text-center">
-        <div className="max-w-xl mx-auto">
-          <h3 className="text-4xl font-black text-white mb-6 font-heading leading-tight">¿Buscás algo más específico?</h3>
-          <p className="text-white/50 font-body leading-relaxed mb-10">
-            Contamos con guías expertos para trekking, mountain bike y cabalgatas personalizadas. 
-            ¡Animación y seguridad garantizada!
-          </p>
-          <Link 
-            to="/contacto"
-            className="inline-flex items-center gap-3 px-10 py-4 bg-emerald-500 text-white font-black rounded-2xl hover:bg-emerald-400 transition-all duration-300 shadow-xl shadow-emerald-500/20 uppercase tracking-widest text-xs"
-          >
-            Contactar Guía <ArrowRight size={18} />
-          </Link>
-        </div>
       </div>
     </div>
   );
