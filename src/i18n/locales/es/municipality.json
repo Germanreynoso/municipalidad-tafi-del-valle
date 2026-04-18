@@ -1,0 +1,243 @@
+{
+  "history": {
+    "title": "Historia",
+    "subtitle": "Descubre los orígenes, las culturas y la evolución del corazón de los valles calchaquíes.",
+    "breadcrumb": "Municipio",
+    "nameOrigin": {
+      "title": "Origen del Nombre",
+      "content": "El nombre **Tafí** deriva del vocablo diaguita **TAKTILLAKTA**, que quiere decir <span class=\"text-primary font-semibold\">\"pueblo de entrada espléndida\"</span>. Esta villa está enclavada entre las montañas, en la región central del oeste de Tucumán y es una combinación perfecta de montañas y ríos que la convierten en uno de los destinos más elegidos por el turismo nacional e internacional."
+    },
+    "cultures": {
+      "title": "Culturas Originarias",
+      "content": "Todo el Valle de Tafí fue sede de importantes culturas originarias, lo prueban los numerosos testimonios hallados. Se destacan los **menhires**, monolitos de piedra, obra de una antiquísima civilización y con significados aún no precisados."
+    },
+    "archaeology": {
+      "title": "Arqueología",
+      "content": "En todo el valle se conservan vestigios de la cultura que lo habitó, testigo de una rica herencia y del paso del tiempo de habitantes laboriosos y organizados, con una proyección de más de **3000 años de antigüedad**.",
+      "yacimientosTitle": "Yacimientos Principales",
+      "yacimientosContent": "Carapunco, Las Bolsas, Las Carreras, Malvinas, La Costa y **Casas Viejas** (la leyenda lo señala como el primer asentamiento poblacional de la conquista en el norte del país).",
+      "museum": "En el **Museo Jesuítico de La Banda** se conserva una colección de gran valor: pucos, urnas funerarias, cántaros y utensilios que narran la vida cotidiana de siglos pasados."
+    },
+    "colonial": {
+      "title": "Periodo Colonial y Modernidad",
+      "p1": "Después de la llegada de los españoles, las tierras donde está asentada la villa pertenecieron a la **Compañía de Jesús**, desde 1718 hasta su expulsión, ordenada por la corona española en 1767.",
+      "p2": "A mediados del siglo pasado, en el año 1943, con motivo de la apertura de la **Ruta Provincial 307**, comenzó a poblarse con casas de veraneo y se consolidó como la principal villa veraniega de la provincia."
+    },
+    "sidebar": {
+      "title": "Información General",
+      "surface": "Superficie",
+      "climate": "Clima",
+      "climateDesc": "Semiárido templado a frío con nevadas invernales.",
+      "temps": "Temperaturas Máximas",
+      "summer": "Verano",
+      "winter": "Invierno"
+    }
+  },
+  "profile": {
+    "title": "Perfil del Valle",
+    "subtitle": "Naturaleza, hidrografía y el motor productivo que da vida a nuestra región.",
+    "breadcrumb": "Municipio",
+    "nature": {
+      "title": "Entorno Natural",
+      "hydrography": {
+        "title": "Hidrografía",
+        "content": "El corazón hídrico de la región es el **Río Tafí**, que recorre el valle nutriendo sus tierras. Sus principales afluentes son:",
+        "rivers": ["El Mollar", "La Ovejería", "El Blanquito"]
+      },
+      "flora": {
+        "title": "Flora",
+        "content": "Desde los valles hasta las altas cumbres, la vegetación varía:",
+        "items": [
+          "Algarrobo blanco, churqui, tusca",
+          "Alisos y queñua (en altura)",
+          "Sauces y frutales variados"
+        ]
+      },
+      "fauna": {
+        "title": "Fauna",
+        "content": "La fauna autóctona está fuertemente representada por los camélidos andinos:",
+        "items": ["Vicuñas", "Guanacos", "Llamas"]
+      },
+      "quote": "Suelo fértil,\nespíritu vivo."
+    },
+    "productive": {
+      "title": "Motor Productivo",
+      "subtitle": "La economía vallista se sustenta en la nobleza de su suelo y el trabajo de su gente en la agricultura y la ganadería.",
+      "agriculture": {
+        "title": "Agricultura",
+        "badge": "Base Exportadora",
+        "starProduct": {
+          "label": "Producto Estrella",
+          "name": "Papa Semilla",
+          "desc": "Principal producción para exportación de la región."
+        },
+        "others": {
+          "label": "Otras Producciones:",
+          "horticulture": {
+            "title": "Hortalizas",
+            "items": "Lechuga, arveja, poroto, maíz, ajo."
+          },
+          "fruit": {
+            "title": "Frutales",
+            "items": "Manzana, durazno, nueces, peras, ciruelas."
+          }
+        }
+      },
+      "livestock": {
+        "title": "Ganadería",
+        "badge": "Diversidad Pecuaria",
+        "traditional": {
+          "title": "Tradicional",
+          "items": ["Vacunos", "Bovinos", "Porcinos", "Caprinos", "Avícolas"]
+        },
+        "indigenous": {
+          "title": "Autóctona y Menor",
+          "items": ["Guanacos", "Llamas", "Liebres", "Chinchillas"]
+        },
+        "fact": {
+          "label": "Dato Valor:",
+          "content": "\"La convivencia entre la ganadería tradicional y la autóctona (camélidos) es una de las señas de identidad del valle.\""
+        }
+      }
+    }
+  },
+  "traditions": {
+    "title": "El Alma del Valle",
+    "subtitle": "Música, fiestas populares y el sabor inigualable de nuestra tierra.",
+    "breadcrumb": "Cultura y Tradiciones",
+    "cheeseFestival": {
+      "title": "Fiesta Nacional del Queso",
+      "badge": "Febrero",
+      "star": {
+        "label": "Declarada en 1987",
+        "value": "Fiesta Nacional"
+      },
+      "description": "Es el principal festival del valle y su convocatoria es masiva. En ella se vuelcan todas las expresiones populares de Tafí: desde las artesanías y la música hasta los bailes criollos.",
+      "skills": {
+        "title": "Destrezas del Corral",
+        "desc": "Enlazadores, pialadores y avezados domadores."
+      },
+      "sabor": {
+        "title": "Sabor de Antigüedad",
+        "desc": "Quesos fabricados con un proceso artesanal jesuita."
+      }
+    },
+    "crafts": {
+      "badge": "Legado Cultural",
+      "title": "Manos",
+      "subtitle": "Vallistas",
+      "description": "El arte de Tafí nace de la tierra misma. Nuestros artesanos transforman la lana, el cuero, la piedra y la arcilla en piezas únicas que respiran la historia del valle.",
+      "footer": "Tejidos • Cerámica • Piedra • Cuero"
+    },
+    "music": {
+      "title": "El Espíritu Vallisto:",
+      "subtitle": "El \"Joi-Joi\"",
+      "description": "Coplas acompañadas por cajas que retumban en las soledades del valle, hablando del sentir profundo de nuestra gente. No faltan nunca el violín, el bandoneón y la guitarra para completar la banda sonora de Tafí.",
+      "instruments": {
+        "cajas": {
+          "title": "Cajas",
+          "subtitle": "Ritmo Ancestral"
+        },
+        "violin": {
+          "title": "Violín",
+          "subtitle": "Sentir Criollo"
+        }
+      }
+    },
+    "festivities": {
+      "title": "Viví Nuestras Fiestas"
+    },
+    "gastronomy": {
+      "title": "Sabores del Valle",
+      "description": "Una cocina que fusiona ingredientes locales con técnicas ancestrales para crear platos que alimentan el alma."
+    }
+  },
+  "institutional": {
+    "title": "Transparencia",
+    "subtitle": "Noticias de gestión, documentos oficiales y gobierno abierto.",
+    "breadcrumb": "Portal Institucional",
+    "newsTitle": "Últimas noticias",
+    "documentsTitle": "Documentos",
+    "openGov": {
+      "title": "Gobierno Abierto",
+      "subtitle": "Toda la información de gestión está disponible para los ciudadanos.",
+      "cta": "Ver informe de gestión"
+    },
+    "news": {
+      "1": {
+        "title": "Pavimentación de calles en el sector norte del municipio",
+        "category": "Obras Públicas",
+        "excerpt": "La municipalidad avanza con el plan de pavimentación de 6 cuadras en el sector norte, beneficiando a más de 200 familias."
+      },
+      "2": {
+        "title": "Nueva plaza pública inaugurada en El Mollar",
+        "category": "Infraestructura",
+        "excerpt": "Se inauguró el nuevo espacio verde con juegos infantiles, luminaria LED y bancos de madera local."
+      },
+      "3": {
+        "title": "Programa de becas para estudiantes universitarios 2026",
+        "category": "Educación",
+        "excerpt": "El municipio abre el período de inscripción para las 30 becas universitarias anuales destinadas a jóvenes del valle."
+      },
+      "4": {
+        "title": "Balance de gestión: primer trimestre 2026",
+        "category": "Transparencia",
+        "excerpt": "El intendente presentó el informe de ejecución presupuestaria y obras completadas en el primer trimestre del año."
+      }
+    },
+    "docs": {
+      "1": "Presupuesto Municipal 2026",
+      "2": "Ordenanzas Vigentes",
+      "3": "Declaración Jurada de Bienes — Intendente",
+      "4": "Contrataciones y Licitaciones Q1 2026"
+    }
+  },
+  "authorities": {
+    "title": "Autoridades",
+    "subtitle": "Municipales",
+    "description": "Conozca a los responsables de las distintas áreas de la gestión municipal, trabajando por el bienestar de Tafí del Valle.",
+    "intendente": {
+      "role": "Intendente Municipal",
+      "description": "Responsable de la conducción política y administrativa del municipio, liderando proyectos estratégicos para el desarrollo de nuestra comunidad."
+    },
+    "cabinet": "Gabinete Municipal",
+    "areas": "Direcciones y Áreas",
+    "footer": {
+      "title": "¿Necesita contactarse con alguna área?",
+      "description": "Estamos a su disposición para resolver cualquier duda o consulta sobre los servicios municipales.",
+      "cta": "Ir a Contacto"
+    },
+    "roles": {
+      "intendente": "Intendente",
+      "gobierno": "Secretario de Gobierno",
+      "hacienda": "Secretario de Hacienda",
+      "obrasValle": "Secretaria de Obras y Servicios Públicos",
+      "desarrollo": "Secretario de Desarrollo y Bienestar Social",
+      "contador": "Contador General",
+      "finanzas": "Director de Finanzas",
+      "turismo": "Director de Turismo",
+      "cultura": "Director de Cultura",
+      "rentas": "Director de Rentas Municipal",
+      "empleo": "Director de Empleo y Educación",
+      "prensaRadio": "Directora de FM Municipal Radio Calchaquí",
+      "camping": "Director de Camping Los Sauzales",
+      "deportes": "Director de Deportes",
+      "comercio": "Director de Comercio",
+      "prensaDifusion": "Directora de Prensa y Difusión",
+      "produccion": "Director de Producción Agrícola Ganadera",
+      "automotor": "Director de Automotor",
+      "taller": "Director de Taller",
+      "compras": "Director de Compras",
+      "transito": "Director de Tránsito",
+      "personal": "Directora de Personal",
+      "discapacidad": "Directora de Discapacidad",
+      "defensaCivil": "Directora de Defensa Civil",
+      "medioAmbiente": "Director de Medio Ambiente",
+      "obrasPublicas": "Director de Obras Públicas",
+      "catastro": "Director de Catastro y Edificación Privada",
+      "protocolo": "Directora de Protocolo y Ceremonial",
+      "despacho": "Directora de Despacho",
+      "juridico": "Directora de Asuntos Jurídicos"
+    }
+  }
+}

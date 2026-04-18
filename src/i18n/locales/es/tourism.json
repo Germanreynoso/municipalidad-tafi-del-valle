@@ -1,0 +1,289 @@
+{
+  "hero": {
+    "title": "Soy Turista",
+    "subtitle": "Descubrí los paisajes, la cultura y la gastronomía del Valle Sagrado de Tafí."
+  },
+  "links": {
+    "accommodation": {
+      "title": "Alojamiento",
+      "description": "Hoteles, cabañas y más"
+    },
+    "gastronomy": {
+      "title": "Gastronomía",
+      "description": "Sabores regionales y parrillas"
+    },
+    "activities": {
+      "title": "Qué hacer",
+      "description": "Aventura y excursiones"
+    }
+  },
+  "sections": {
+    "highlights": "Imperdibles de Tafí",
+    "events": "Eventos"
+  },
+  "categories": {
+    "all": "todos",
+    "naturaleza": "naturaleza",
+    "cultura": "cultura",
+    "aventura": "aventura",
+    "gastronomía": "gastronomía"
+  },
+  "labels": {
+    "distance": "Distancia",
+    "location": "Ubicación",
+    "back": "Inicio",
+    "portal": "Portal Turístico",
+    "moreInfo": "Más información",
+    "featuredEvent": "Evento Destacado"
+  },
+  "calendar": {
+    "subtitle": "Temporadas y Festejos",
+    "title": "Calendario de Nuestras Fiestas",
+    "description": "Tafí del Valle celebra su identidad durante todo el año. Agendá los eventos más importantes de nuestra cultura y tradición.",
+    "featuredLabel": "Evento Máximo",
+    "missIt": "No te lo podés perder",
+    "festivities": {
+      "encuentroDanza": {
+        "nombre": "Encuentro de Danzas del Ballet Raíz Calchaquí",
+        "descripcion": "Esta academia celebra sus aniversarios con un evento que convoca a agrupaciones de danzas folclóricas argentinas de distintos puntos del país."
+      },
+      "fiestaChuscha": {
+        "nombre": "Fiesta de La Chuscha",
+        "descripcion": "Festival en homenaje a la chuscha. Incluye jineteada nocturna y la actuación de artistas locales y nacionales."
+      },
+      "fiestaYerbiao": {
+        "nombre": "Fiesta del Yerbiao",
+        "descripcion": "El festival de mayor altura en La Ciénaga. Degustación de la infusión tradicional acompañada de tareas de corral."
+      },
+      "fiestaQuesito": {
+        "nombre": "Fiesta del Quesito",
+        "descripcion": "Evento infanto-juvenil de Folclore organizado por el Ballet Parroquial."
+      },
+      "fiestaNacionalQueso": {
+        "nombre": "Fiesta Nacional del Queso",
+        "descripcion": "El evento más importante del Valle. Incluye actividades en corral de piedra, desfiles gauchos y carrozas alegóricas."
+      },
+      "fiestaArtesano": {
+        "nombre": "Fiesta del Artesano",
+        "descripcion": "Homenaje a los artesanos locales con almuerzos comunitarios y talleres abiertos al público."
+      },
+      "vidaPasion": {
+        "nombre": "Vida y Pasión de Dios Hombre",
+        "descripcion": "Mega obra de teatro con más de 200 actores. Escenifica el nacimiento, pasión, muerte y resurrección de Jesucristo."
+      },
+      "fiestaLazo": {
+        "nombre": "Fiesta del Lazo",
+        "descripcion": "Revalorización del trabajo del hombre de campo con jineteadas y pialadas al pie del cerro."
+      },
+      "fiestaPatronal": {
+        "nombre": "Fiestas Patronales de Nuestra Señora del Carmen",
+        "descripcion": "Multitudinario misachico el 16 de julio por las calles del pueblo y espectáculos artísticos."
+      },
+      "inauguracionTemporada": {
+        "nombre": "Inauguración de Temporada y Fiesta del Gaucho",
+        "descripcion": "Desfile de más de 800 gauchos que inician oficialmente la temporada de verano en el valle."
+      }
+    }
+  },
+  "accommodation": {
+    "title": "Alojamientos",
+    "subtitle": "Habilitados",
+    "description": "Garantizá tu seguridad y confort eligiendo prestadores registrados y supervisados por la Municipalidad.",
+    "searchPlaceholder": "Buscar por nombre o zona...",
+    "results": "{{count}} resultados encontrados",
+    "officialRegistry": "Registro Municipal Oficial",
+    "contactWhatsapp": "Contactar por WhatsApp",
+    "contactInstagram": "Contactar por Instagram",
+    "noResults": {
+      "title": "No encontramos resultados",
+      "description": "Probá ajustando los filtros o el término de búsqueda."
+    },
+    "responsibleTourism": {
+      "title": "Turismo Responsable",
+      "description": "Al elegir alojamientos habilitados, no solo aseguras tu tranquilidad, sino que también apoyas el crecimiento legal y ordenado de nuestra ciudad. Todos los establecimientos en esta lista cumplen con las normativas de seguridad e higiene vigentes."
+    },
+    "categories": {
+      "todos": "todos",
+      "hotel": "hoteles",
+      "hostería": "hosterías",
+      "cabañas": "cabañas",
+      "hospedaje": "hospedajes",
+      "hostal": "hostales",
+      "apart": "aparts",
+      "departamento": "departamentos",
+      "posada": "posadas",
+      "camping": "campings",
+      "otros": "otros"
+    }
+  },
+  "gastronomy": {
+    "title": "Donde",
+    "subtitle": "Comer",
+    "description": "Desde las clásicas empanadas tucumanas hasta cocina gourmet de montaña. Descubrí la riqueza culinaria de Tafí del Valle.",
+    "searchPlaceholder": "Buscar restaurante...",
+    "results": "{{count}} establecimientos",
+    "officialGuide": "Guía Gastronómica Oficial",
+    "viewOnMaps": "Ver en Google Maps",
+    "noResults": {
+      "title": "Sin resultados",
+      "description": "No encontramos lugares que coincidan con tu búsqueda."
+    },
+    "footer": {
+      "title": "Sabores que Enamoran",
+      "description": "La gastronomía tucumana es Patrimonio Cultural del Valle. No te vayas sin probar nuestras empanadas, el locro y los quesos artesanales.",
+      "tag1": "Empanadas al Horno de Barro",
+      "tag2": "Vinos de Altura"
+    },
+    "categories": {
+      "todos": "todos",
+      "restaurante": "restaurantes",
+      "parrilla": "parrillas",
+      "regional": "regional",
+      "empanadas": "empanaderías",
+      "bar": "bares",
+      "casa de té": "casas de té",
+      "internacional": "internacional",
+      "bodegón": "bodegones",
+      "minutas": "minutas"
+    },
+    "places": {
+      "muppa": "Sabores locales y ambiente acogedor en el corazón del valle.",
+      "tuichy": "Comidas típicas regionales con el sello auténtico tafiisto.",
+      "felix": "Especialistas en carnes asadas y platos tradicionales.",
+      "museo": "Gastronomía de alto nivel en un entorno histórico.",
+      "arismendi": "Exclusiva cocina de montaña con vistas panorámicas.",
+      "rueda": "Platos variados y excelente atención para toda la familia.",
+      "donPerez": "Tradición en parrilla y cortes seleccionados.",
+      "morenos": "Comidas caseras y ambiente tradicional.",
+      "santiagueños": "El sabor del norte en un ambiente de estancia.",
+      "bodegon": "Platos abundantes y clásicos en un ambiente familiar.",
+      "simoqueño": "Auténticas empanadas y locro del norte argentino.",
+      "terraza": "Tragos y platos ligeros con la mejor vista nocturna.",
+      "buenSabor": "Rapidez y calidad en el centro de Tafí.",
+      "quebradita": "Parrilla y platos regionales al paso.",
+      "altoAhi": "Sandwiches y comidas rápidas de excelente calidad.",
+      "patioEmpanada": "Variedad de empanadas tucumanas hechas al horno de barro.",
+      "donJose": "Las clásicas empanadas de Tafí del Valle.",
+      "cris": "Repostería artesanal y el mejor té del valle.",
+      "querencia": "Comidas caseras con atención personalizada."
+    }
+  },
+  "activities": {
+    "title": "Aventura y",
+    "subtitle": "Naturaleza",
+    "description": "Descubrí las mejores actividades al aire libre guiadas por especialistas. Viví el valle desde una perspectiva única.",
+    "searchPlaceholder": "Buscar actividad o tipo de aventura...",
+    "exploreInstagram": "Explorar en Instagram",
+    "viewInfo": "Ver información",
+    "noResults": {
+      "title": "Sin resultados",
+      "description": "No encontramos actividades que coincidan con tu búsqueda."
+    },
+    "labels": {
+      "duration": "Duración",
+      "difficulty": "Dificultad",
+      "guide": "Qué hacer en Tafí"
+    },
+    "categories": {
+      "todos": "todos",
+      "naturaleza": "naturaleza",
+      "aventura": "aventura",
+      "deportes": "deportes"
+    },
+    "places": {
+      "elpuesto": {
+        "nombre": "El Puesto Actividades Outdoor",
+        "descripcion": "Turismo aventura, cabalgatas y experiencias premium en el valle.",
+        "duracion": "A convenir",
+        "dificultad": "Media"
+      },
+      "cerrosycoplas": {
+        "nombre": "Cerros y Coplas",
+        "descripcion": "Excursiones guiadas, trekking y vivencias culturales en la montaña.",
+        "duracion": "3 a 6 horas",
+        "dificultad": "Media"
+      },
+      "pinosport": {
+        "nombre": "Aventura Pinosport",
+        "descripcion": "Alquiler de bicicletas, mountain bike guiado y turismo aventura deportivo.",
+        "duracion": "A convenir",
+        "dificultad": "Media"
+      }
+    }
+  },
+  "atracciones": {
+    "1": {
+      "nombre": "Museo Jesuítico La Banda",
+      "distancia": "6 km del centro",
+      "descripcion": "Una experiencia inmersiva en una estancia del siglo XIX con capilla, sacristía y fábrica de quesos.",
+      "descripcionLarga": "En 1716 los jesuitas concretaron una importante compra de tierras en el valle de Tafí, Organizaron una estancia y construyeron casas y capilla. La expulsión de la orden en 1767 provocó la división de las tierras. En la actualidad, el espacio ofrece una experiencia totalmente inmersiva que agudiza los sentidos."
+    },
+    "2": {
+      "nombre": "Mirador del Cristo de la Quebradita",
+      "distancia": "2400 msnm",
+      "descripcion": "Una de las mejores panorámicas del valle coronada por el Cristo Bendiciente de 3.5 metros.",
+      "descripcionLarga": "A 2400 msnm una imagen del Cristo Bendiciente vigila nuestro valle. Ubicada en un lugar privilegiado, ofrece una de las mejores panorámicas para apreciar nuestro paraíso. El Cristo fue emplazado en La Quebradita en 1962."
+    },
+    "3": {
+      "nombre": "Dique La Angostura",
+      "distancia": "8 km del centro",
+      "descripcion": "El lago navegable de mayor altura en el país, ideal para deportes náuticos y pesca.",
+      "descripcionLarga": "Es el primer punto panorámico que ofrece el Valle de Tafí al ingresar. Ofrece una vista privilegiada al Dique La Angostura y a los cerros que conforman nuestro valle. Es el lago navegable de mayor altura en el país."
+    },
+    "4": {
+      "nombre": "Estancia Las Carreras",
+      "distancia": "15 km del centro",
+      "descripcion": "Casco histórico de 1779 donde se fabrica el Queso \"M\" con receta jesuítica ancestral.",
+      "descripcionLarga": "Es una Estancia Jesuítica construida en 1779. Es uno de los cascos de estancia más antiguos del valle. Aquí se fabrica el Queso “M” usando la misma receta manchega traída por los Jesuitas hace 300 años."
+    },
+    "5": {
+      "nombre": "Tambo La Sofía",
+      "distancia": "5 km del centro",
+      "descripcion": "El tambo robotizado más alto del mundo, especializado en quesos, mozzarella y dulce de leche.",
+      "descripcionLarga": "Es el tambo robotizado mas alto del mundo. La fábrica y el tambo se instalaron en Las Bolsas en 2017. Comenzaron produciendo Queso Mozzarella y luego sumaron otros productos lácteos."
+    },
+    "6": {
+      "nombre": "Ruta del Artesano",
+      "distancia": "Recorrido valle",
+      "descripcion": "Circuito autoguiado por talleres de cerámica, tejidos, cuero y tallado en piedra.",
+      "descripcionLarga": "Es un recorrido autoguiado donde podrás visitar los distintos talleres de artesanías tinerfeñas. La artesanía vallista está compuesta por cerámica, tejidos, tallado en piedra, cuero y madera."
+    },
+    "7": {
+      "nombre": "Centro y Casco Histórico",
+      "distancia": "Centro de Tafí",
+      "descripcion": "Arquitectura colonial, la Plaza Miguel Esteves y la histórica Parroquia de 1895.",
+      "descripcionLarga": "Nuestro casco histórico combina la arquitectura colonial con la cultura diaguita-jesuita. Se destaca la Parroquia Nuestra Señora del Carmen (1895) y la Villa tradicional."
+    },
+    "8": {
+      "nombre": "La Ciénaga",
+      "distancia": "2.700 msnm",
+      "descripcion": "Paraje de montaña ideal para el trekking y sede de la tradicional Fiesta del Yerbiao.",
+      "descripcionLarga": "Es un paraje de montaña ubicado a más de 2.700 metros sobre el nivel del mar y es un destino ideal para el trekking y el turismo rural. Sede de la Fiesta del Yerbiao."
+    },
+    "9": {
+      "nombre": "Cerro La Cruz",
+      "distancia": "45 min trekking",
+      "descripcion": "Vista panorámica de 360° del valle en un sendero legendario de dificultad moderada.",
+      "descripcionLarga": "Es un sendero obligado para el que visita Tafí. Este mirador ofrece una vista panorámica de 360° de la majestuosidad del Valle."
+    },
+    "10": {
+      "nombre": "Cascada de Los Alisos",
+      "distancia": "20 km del centro",
+      "descripcion": "Impactante salto de agua de 60 metros accesible desde El Remate.",
+      "descripcionLarga": "Es la cascada mas conocida y la de menor dificultad para acceder. Tiene 60 metros de altura que invita a contemplar y fotografiar."
+    },
+    "11": {
+      "nombre": "Museo Los Menhires",
+      "distancia": "El Mollar",
+      "descripcion": "Reserva arqueológica con 50 piedras de más de 2000 años frente a la plaza de El Mollar.",
+      "descripcionLarga": "Es el principal centro arqueológico de nuestro Valle. Es una reserva con piedras de hasta tres metros de alto y más de 2000 años de antigüedad."
+    }
+  },
+  "eventos": {
+    "1": {
+      "nombre": "Fiesta Nacional del Queso",
+      "fecha": "Febrero 2027",
+      "descripcion": "La celebración más importante del Valle con música, gastronomía y artesanías."
+    }
+  }
+}

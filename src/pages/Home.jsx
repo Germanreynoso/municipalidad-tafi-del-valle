@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { ArrowRight, MapPin, Users, Mountain, Camera } from 'lucide-react';
 import { motion as Motion } from 'framer-motion';
 import { fadeUp, stagger, slideLeft } from '../styles/motion.js';
@@ -9,40 +10,44 @@ import somosTodosLogo from '../assets/SOMOS TODOS COLOR.png';
 import heroTafi from '../assets/hero-tafi.jpg';
 import residentesImg from '../assets/residentes.jpg';
 import turistaImg from '../assets/turista.jpg';
-import transparenciaImg from '../assets/transparencia.jpg';
-
-const portals = [
-  {
-    title: 'Soy Residente',
-    subtitle: 'Portal Ciudadano',
-    description: 'Trámites, pagos de tasas, reclamos y servicios municipales para vecinos.',
-    image: residentesImg,
-    to: '/ciudadano',
-    accentColor: '--color-primary',
-  },
-  {
-    title: 'Soy Turista',
-    subtitle: 'Portal Turístico',
-    description: 'Descubrí los paisajes, la cultura y la gastronomía del Valle Sagrado de Tafí.',
-    image: turistaImg,
-    to: '/turismo',
-    accentColor: '--color-sky',
-  },
-];
-
-const stats = [
-  { valor: '12.000', label: 'Habitantes', icono: <Users size={20} /> },
-  { valor: '2.000m', label: 'Altura sobre el mar', icono: <Mountain size={20} /> },
-  { valor: '6', label: 'Atracciones destacadas', icono: <Camera size={20} /> },
-  { valor: '150km', label: 'Desde Tucumán capital', icono: <MapPin size={20} /> },
-];
-
-function formatFecha(isoDate) {
-  return new Date(isoDate).toLocaleDateString('es-AR', { day: 'numeric', month: 'long', year: 'numeric' });
-}
 
 export default function Home() {
+  const { t, i18n } = useTranslation(['home', 'common']);
   const noticiasRecientes = noticias.slice(0, 3);
+
+  const portals = [
+    {
+      title: t('home:portals.resident.title'),
+      subtitle: t('home:portals.resident.subtitle'),
+      description: t('home:portals.resident.description'),
+      image: residentesImg,
+      to: '/ciudadano',
+      accentColor: '--color-primary',
+    },
+    {
+      title: t('home:portals.tourist.title'),
+      subtitle: t('home:portals.tourist.subtitle'),
+      description: t('home:portals.tourist.description'),
+      image: turistaImg,
+      to: '/turismo',
+      accentColor: '--color-sky',
+    },
+  ];
+
+  const stats = [
+    { valor: '12.000', label: t('home:stats.inhabitants'), icono: <Users size={20} /> },
+    { valor: '2.000m', label: t('home:stats.altitude'), icono: <Mountain size={20} /> },
+    { valor: '6', label: t('home:stats.attractions'), icono: <Camera size={20} /> },
+    { valor: '150km', label: t('home:stats.distance'), icono: <MapPin size={20} /> },
+  ];
+
+  const formatFecha = (isoDate) => {
+    return new Date(isoDate).toLocaleDateString(i18n.language === 'es' ? 'es-AR' : 'en-US', { 
+      day: 'numeric', 
+      month: 'long', 
+      year: 'numeric' 
+    });
+  };
 
   return (
     <div>
@@ -70,23 +75,23 @@ export default function Home() {
             <WeatherWidget />
           </div>
           <p className="text-xs font-semibold tracking-[0.3em] uppercase text-white/70 mb-4 font-body">
-            Provincia de Tucumán — Argentina
+            {t('home:hero.province')}
           </p>
           <h1
             className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-6 leading-none font-heading"
             style={{ textShadow: '0 2px 24px rgba(0,0,0,0.4)' }}
           >
-            Tafí del Valle
+            {t('home:hero.title')}
           </h1>
           <p className="text-lg sm:text-xl text-white/85 mb-10 max-w-xl leading-relaxed font-body">
-            El valle sagrado de los Calchaquíes, a 2.000 metros sobre el mar.
+            {t('home:hero.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               to="/turismo"
               className="px-8 py-4 rounded-xl font-bold text-white flex items-center gap-2 transition-all duration-200 hover:scale-105 hover:opacity-90 bg-primary font-body"
             >
-              Guía Turística <ArrowRight size={18} />
+              {t('common:buttons.guide')} <ArrowRight size={18} />
             </Link>
           </div>
         </div>
@@ -102,10 +107,10 @@ export default function Home() {
           viewport={{ once: true, margin: '-80px' }}
         >
           <p className="text-xs font-semibold tracking-widest uppercase mb-3 text-stone font-body">
-            Accesos directos
+            {t('home:portals.shortcuts')}
           </p>
           <h2 className="text-4xl sm:text-5xl font-black text-stone-dark font-heading">
-            ¿Qué necesitás?
+            {t('home:portals.title')}
           </h2>
         </Motion.div>
         <Motion.div
@@ -161,8 +166,7 @@ export default function Home() {
               className="h-32 md:h-48 h-auto object-contain transition-transform duration-500 hover:scale-110"
             />
             <p className="mt-8 text-xl font-body italic text-stone max-w-2xl mx-auto">
-              "Una gestión comprometida con el bienestar de cada familia tafinista, 
-              trabajando juntos por el presente y el futuro de nuestro valle."
+              {t('home:slogan.text')}
             </p>
           </Motion.div>
         </div>

@@ -1,87 +1,77 @@
 export const eventosCalendario = [
   {
-    mes: 'Enero',
+    mesId: 'january',
     eventos: [
       {
-        nombre: 'Encuentro de Danzas del Ballet Raíz Calchaquí',
-        descripcion: 'Esta academia celebra sus aniversarios con un evento que convoca a agrupaciones de danzas folclóricas argentinas de distintos puntos del país. Una jornada llena de argentinidad expresada en danza y espectáculos musicales.',
-        tipo: 'Danza',
+        id: 'encuentroDanza',
+        tipoId: 'dance',
       },
       {
-        nombre: 'Fiesta de La Chuscha',
-        descripcion: 'Festival en homenaje a la chuscha (crines de bovinos y equinos). Incluye jineteada nocturna y la actuación de artistas locales y nacionales en el Complejo Democracia.',
-        tipo: 'Festival',
+        id: 'fiestaChuscha',
+        tipoId: 'festival',
       },
       {
-        nombre: 'Fiesta del Yerbiao',
-        descripcion: 'El festival de mayor altura en La Ciénaga. Degustación de la infusión tradicional acompañada de tareas de corral y almuerzo criollo.',
-        tipo: 'Tradición',
+        id: 'fiestaYerbiao',
+        tipoId: 'tradition',
       },
       {
-        nombre: 'Fiesta del Quesito',
-        descripcion: 'Evento infanto-juvenil de Folclore organizado por el Ballet Parroquial. Es la antesala de nuestra Fiesta Nacional de Queso.',
-        tipo: 'Folclore',
+        id: 'fiestaQuesito',
+        tipoId: 'folclore',
       }
     ]
   },
   {
-    mes: 'Febrero',
+    mesId: 'february',
     eventos: [
       {
-        nombre: 'Fiesta Nacional del Queso',
-        descripcion: 'El evento más importante del Valle. Incluye actividades en corral de piedra, desfiles gauchos, carrozas alegóricas y la elección del Mejor Productor Quesero.',
-        tipo: 'Evento Nacional',
+        id: 'fiestaNacionalQueso',
+        tipoId: 'nationalEvent',
         destacado: true,
       }
     ]
   },
   {
-    mes: 'Marzo',
+    mesId: 'march',
     eventos: [
       {
-        nombre: 'Fiesta del Artesano',
-        descripcion: 'Homenaje a los artesanos locales con almuerzos comunitarios, talleres abiertos al público y un desfile de prendas tejidas a mano.',
-        tipo: 'Cultura',
+        id: 'fiestaArtesano',
+        tipoId: 'culture',
       }
     ]
   },
   {
-    mes: 'Semana Santa',
+    mesId: 'holyWeek',
     eventos: [
       {
-        nombre: 'Vida y Pasión de Dios Hombre',
-        descripcion: 'Mega obra de teatro con más de 200 actores en el escenario natural de Ojo de Agua. Escenifica el nacimiento, pasión, muerte y resurrección de Jesucristo.',
-        tipo: 'Religiosidad',
+        id: 'vidaPasion',
+        tipoId: 'religiosity',
       }
     ]
   },
   {
-    mes: 'Abril',
+    mesId: 'april',
     eventos: [
       {
-        nombre: 'Fiesta del Lazo',
-        descripcion: 'Revalorización del trabajo del hombre de campo con jineteadas, enlazadas y pialadas al pie del cerro.',
-        tipo: 'Tradición',
+        id: 'fiestaLazo',
+        tipoId: 'tradition',
       }
     ]
   },
   {
-    mes: 'Julio',
+    mesId: 'july',
     eventos: [
       {
-        nombre: 'Fiestas Patronales de Nuestra Señora del Carmen',
-        descripcion: 'Multitudinario misachico el 16 de julio por las calles del pueblo, seguido de un almuerzo comunitario y espectáculos artísticos.',
-        tipo: 'Religiosidad',
+        id: 'fiestaPatronal',
+        tipoId: 'religiosity',
       }
     ]
   },
   {
-    mes: 'Diciembre',
+    mesId: 'december',
     eventos: [
       {
-        nombre: 'Inauguración de Temporada y Fiesta del Gaucho',
-        descripcion: 'Desfile de más de 800 gauchos que celebran su día nacional e inician oficialmente la temporada de verano en el valle.',
-        tipo: 'Tradición',
+        id: 'inauguracionTemporada',
+        tipoId: 'tradition',
       }
     ]
   }

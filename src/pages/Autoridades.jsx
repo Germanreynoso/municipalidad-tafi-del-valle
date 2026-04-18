@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { autoridades } from '../features/institucional/data/autoridades.js';
-import { ShieldCheck, Briefcase, User } from 'lucide-react';
+import { ShieldCheck, Briefcase } from 'lucide-react';
 import intendentePhoto from '../assets/intendente.jpeg';
 
 export default function Autoridades() {
+  const { t } = useTranslation(['municipality', 'common']);
+
   return (
     <div className="bg-white-warm min-h-screen">
       {/* Header Section */}
@@ -13,16 +16,15 @@ export default function Autoridades() {
       >
         <div className="max-w-7xl mx-auto relative z-10">
           <p className="text-xs font-semibold tracking-widest uppercase mb-3 text-white/70 font-body">
-            <Link to="/" className="hover:text-white transition-colors">Inicio</Link>
-            {' / '}Municipio
+            <Link to="/" className="hover:text-white transition-colors">{t('common:nav.home')}</Link>
+            {' / '}{t('municipality:history.breadcrumb')}
           </p>
           <h1 className="text-5xl sm:text-7xl font-black text-white mb-6 leading-tight font-heading">
-            Autoridades <br />
-            <span className="text-white/60">Municipales</span>
+            {t('municipality:authorities.title')} <br />
+            <span className="text-white/60">{t('municipality:authorities.subtitle')}</span>
           </h1>
           <p className="text-lg text-white/80 max-w-2xl font-body">
-            Conozca a los responsables de las distintas áreas de la gestión municipal, 
-            trabajando por el bienestar de Tafí del Valle.
+            {t('municipality:authorities.description')}
           </p>
         </div>
         
@@ -46,11 +48,12 @@ export default function Autoridades() {
                 />
               </div>
               <div className="p-8 md:p-12 md:w-3/5 flex flex-col justify-center">
-                <p className="text-earth font-bold uppercase tracking-widest text-sm mb-2 font-body">Intendente Municipal</p>
+                <p className="text-earth font-bold uppercase tracking-widest text-sm mb-2 font-body">
+                  {t('municipality:authorities.intendente.role')}
+                </p>
                 <h2 className="text-3xl md:text-4xl font-black text-stone-dark mb-4 font-heading">{autoridades.intendente.nombre}</h2>
                 <p className="text-stone leading-relaxed font-body">
-                  Responsable de la conducción política y administrativa del municipio, 
-                  liderando proyectos estratégicos para el desarrollo de nuestra comunidad.
+                  {t('municipality:authorities.intendente.description')}
                 </p>
               </div>
             </div>
@@ -61,7 +64,9 @@ export default function Autoridades() {
         <div className="mb-24">
           <div className="flex items-center gap-4 mb-12">
             <div className="h-[2px] w-12 bg-earth opacity-30"></div>
-            <h3 className="text-3xl font-black text-stone-dark font-heading">Gabinete Municipal</h3>
+            <h3 className="text-3xl font-black text-stone-dark font-heading">
+              {t('municipality:authorities.cabinet')}
+            </h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {autoridades.secretarias.map((sec, idx) => (
@@ -75,7 +80,9 @@ export default function Autoridades() {
                   </div>
                   <div>
                     <h4 className="text-xl font-bold text-stone-dark mb-1 font-heading">{sec.nombre}</h4>
-                    <p className="text-earth font-semibold text-sm uppercase tracking-wide font-body">{sec.cargo}</p>
+                    <p className="text-earth font-semibold text-sm uppercase tracking-wide font-body">
+                      {t(`municipality:authorities.roles.${sec.roleId}`)}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -87,7 +94,9 @@ export default function Autoridades() {
         <div>
           <div className="flex items-center gap-4 mb-12">
             <div className="h-[2px] w-12 bg-earth opacity-30"></div>
-            <h3 className="text-3xl font-black text-stone-dark font-heading">Direcciones y Áreas</h3>
+            <h3 className="text-3xl font-black text-stone-dark font-heading">
+              {t('municipality:authorities.areas')}
+            </h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {autoridades.direcciones.map((dir, idx) => (
@@ -100,8 +109,12 @@ export default function Autoridades() {
                     <Briefcase size={18} />
                   </div>
                   <div>
-                    <h5 className="text-base font-bold text-stone-dark leading-tight font-heading group-hover:text-earth transition-colors">{dir.nombre}</h5>
-                    <p className="text-stone text-xs font-medium uppercase tracking-wider mt-1 font-body">{dir.cargo}</p>
+                    <h5 className="text-base font-bold text-stone-dark leading-tight font-heading group-hover:text-earth transition-colors">
+                      {dir.nombre}
+                    </h5>
+                    <p className="text-stone text-xs font-medium uppercase tracking-wider mt-1 font-body">
+                      {t(`municipality:authorities.roles.${dir.roleId}`)}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -113,15 +126,17 @@ export default function Autoridades() {
 
       {/* Footer CTA */}
       <div className="py-20 bg-stone-dark text-white text-center px-4">
-        <h3 className="text-3xl font-black mb-6 font-heading">¿Necesita contactarse con alguna área?</h3>
+        <h3 className="text-3xl font-black mb-6 font-heading">
+          {t('municipality:authorities.footer.title')}
+        </h3>
         <p className="text-white/60 mb-8 max-w-xl mx-auto font-body">
-          Estamos a su disposición para resolver cualquier duda o consulta sobre los servicios municipales.
+          {t('municipality:authorities.footer.description')}
         </p>
         <Link 
           to="/contacto"
           className="inline-block px-10 py-4 bg-white text-stone-dark font-black rounded-xl hover:scale-105 transition-transform duration-200 font-body"
         >
-          Ir a Contacto
+          {t('municipality:authorities.footer.cta')}
         </Link>
       </div>
     </div>

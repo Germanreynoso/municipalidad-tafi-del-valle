@@ -1,28 +1,31 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Mail, Share2, Globe } from 'lucide-react';
 import EmergencyGrid from './EmergencyGrid.jsx';
 import institutionalLogo from '../assets/MUNICIPALIDAD INSTITUCIONAL COLOR.png';
 
-const footerLinks = [
-  {
-    titulo: 'Municipio',
-    links: [
-      { label: 'Autoridades', to: '/autoridades' },
-      { label: 'Historia de Tafí', to: '#' },
-      { label: 'Ordenanzas', to: '#' },
-      { label: 'Concejo Deliberante', to: '#' },
-    ],
-  },
-  {
-    titulo: 'Servicios',
-    links: [
-      { label: 'Portal Turístico', to: '/turismo' },
-      { label: 'Contacto', to: '#' },
-    ],
-  },
-];
-
 export default function Footer() {
+  const { t } = useTranslation('common');
+
+  const footerLinks = [
+    {
+      titulo: t('footer.municipality'),
+      links: [
+        { label: t('nav.authorities'), to: '/autoridades' },
+        { label: t('nav.history'), to: '#' },
+        { label: t('nav.ordinances'), to: '#' },
+        { label: 'Concejo Deliberante', to: '#' },
+      ],
+    },
+    {
+      titulo: t('footer.services'),
+      links: [
+        { label: t('nav.tourism'), to: '/turismo' },
+        { label: 'Contacto', to: '#' },
+      ],
+    },
+  ];
+
   return (
     <footer>
       <EmergencyGrid />
@@ -41,7 +44,7 @@ export default function Footer() {
                 />
               </div>
               <p className="text-sm leading-relaxed mb-6 font-body" style={{ color: 'rgba(255,255,255,0.5)' }}>
-                Comprometidos con el desarrollo sustentable y la calidad de vida de los habitantes del Valle Sagrado.
+                {t('footer.mission')}
               </p>
               <div className="flex gap-3">
                 {[
@@ -120,7 +123,7 @@ export default function Footer() {
         <div className="border-t py-6" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <p className="text-xs text-center font-body" style={{ color: 'rgba(255,255,255,0.3)' }}>
-              © 2026 Municipalidad de Tafí del Valle — Provincia de Tucumán, Argentina
+              {t('footer.copyright')}
             </p>
           </div>
         </div>

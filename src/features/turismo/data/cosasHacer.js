@@ -1,32 +1,20 @@
 export const actividades = [
   {
-    id: 1,
-    nombre: 'El Puesto Actividades Outdoor',
+    id: 'elpuesto',
     categoria: 'aventura',
-    duracion: 'A convenir',
-    descripcion: 'Turismo aventura, cabalgatas y experiencias premium en el valle.',
     image: '/assets/turismo/actividades/elpuesto.jpg',
-    dificultad: 'Media',
     instagram: 'https://www.instagram.com/elpuestoactividadesoutdoor?igsh=MTNrY2dqbjh1ZzZ2Zw==',
   },
   {
-    id: 2,
-    nombre: 'Cerros y Coplas',
+    id: 'cerrosycoplas',
     categoria: 'naturaleza',
-    duracion: '3 a 6 horas',
-    descripcion: 'Excursiones guiadas, trekking y vivencias culturales en la montaña.',
     image: '/assets/turismo/actividades/cerrosycoplas.jpg',
-    dificultad: 'Media',
     instagram: 'https://www.instagram.com/cerrosycoplas_?igsh=dnJhY3NsZmR6anJy',
   },
   {
-    id: 3,
-    nombre: 'Aventura Pinosport',
+    id: 'pinosport',
     categoria: 'deportes',
-    duracion: 'A convenir',
-    descripcion: 'Alquiler de bicicletas, mountain bike guiado y turismo aventura deportivo.',
     image: '/assets/turismo/actividades/pinosport.jpg',
-    dificultad: 'Media',
     instagram: 'https://www.instagram.com/aventura_pinosport?igsh=MW5la3ZtMWV6NzZ3MA==',
   }
 ];

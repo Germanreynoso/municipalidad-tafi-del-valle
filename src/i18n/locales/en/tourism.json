@@ -1,0 +1,289 @@
+{
+  "hero": {
+    "title": "I'm a Tourist",
+    "subtitle": "Discover the landscapes, culture, and gastronomy of the Sacred Valley of Tafí."
+  },
+  "links": {
+    "accommodation": {
+      "title": "Accommodation",
+      "description": "Hotels, cabins, and more"
+    },
+    "gastronomy": {
+      "title": "Gastronomy",
+      "description": "Regional flavors and grills"
+    },
+    "activities": {
+      "title": "Things to do",
+      "description": "Adventure and excursions"
+    }
+  },
+  "sections": {
+    "highlights": "Tafí's Highlights",
+    "events": "Events"
+  },
+  "categories": {
+    "all": "all",
+    "naturaleza": "nature",
+    "cultura": "culture",
+    "aventura": "adventure",
+    "gastronomía": "gastronomy"
+  },
+  "labels": {
+    "distance": "Distance",
+    "location": "Location",
+    "back": "Home",
+    "portal": "Tourism Portal",
+    "moreInfo": "More info",
+    "featuredEvent": "Featured Event"
+  },
+  "calendar": {
+    "subtitle": "Seasons and Festivities",
+    "title": "Festival Calendar",
+    "description": "Tafí del Valle celebrates its identity all year round. Schedule the most important events of our culture and tradition.",
+    "featuredLabel": "Maximum Event",
+    "missIt": "Don't miss it",
+    "festivities": {
+      "encuentroDanza": {
+        "nombre": "Raíz Calchaquí Ballet Dance Encounter",
+        "descripcion": "This academy celebrates its anniversaries with an event that brings together folk dance groups from different parts of the country."
+      },
+      "fiestaChuscha": {
+        "nombre": "La Chuscha Festival",
+        "descripcion": "Festival in honor of the chuscha (horsehair). Includes night rodeo and performances by local and national artists."
+      },
+      "fiestaYerbiao": {
+        "nombre": "Yerbiao Festival",
+        "descripcion": "The highest altitude festival in La Ciénaga. Tasting of the traditional infusion accompanied by farm tasks."
+      },
+      "fiestaQuesito": {
+        "nombre": "Little Cheese Festival",
+        "descripcion": "Youth folklore event organized by the Parochial Ballet."
+      },
+      "fiestaNacionalQueso": {
+        "nombre": "National Cheese Festival",
+        "descripcion": "The most important event in the Valley. Includes stone corral activities, gaucho parades, and allegorical floats."
+      },
+      "fiestaArtesano": {
+        "nombre": "Artisan Festival",
+        "descripcion": "Tribute to local artisans with community lunches and open workshops."
+      },
+      "vidaPasion": {
+        "nombre": "Life and Passion of God Man",
+        "descripcion": "Mega theater play with over 200 actors. Depicts the birth, passion, death, and resurrection of Jesus Christ."
+      },
+      "fiestaLazo": {
+        "nombre": "Lasso Festival",
+        "descripcion": "Revaluation of the field man's work with rodeos and lassoing at the foot of the hill."
+      },
+      "fiestaPatronal": {
+        "nombre": "Our Lady of Carmen Patronal Festivals",
+        "descripcion": "Massive misachico on July 16 through the town streets and artistic shows."
+      },
+      "inauguracionTemporada": {
+        "nombre": "Season Opening and Gaucho Festival",
+        "descripcion": "Parade of over 800 gauchos who officially start the summer season in the valley."
+      }
+    }
+  },
+  "accommodation": {
+    "title": "Accommodation",
+    "subtitle": "Certified",
+    "description": "Ensure your safety and comfort by choosing providers registered and supervised by the Municipality.",
+    "searchPlaceholder": "Search by name or area...",
+    "results": "{{count}} results found",
+    "officialRegistry": "Official Municipal Registry",
+    "contactWhatsapp": "Contact via WhatsApp",
+    "contactInstagram": "Contact via Instagram",
+    "noResults": {
+      "title": "No results found",
+      "description": "Try adjusting filters or the search term."
+    },
+    "responsibleTourism": {
+      "title": "Responsible Tourism",
+      "description": "By choosing certified accommodation, you not only ensure your peace of mind, but also support the legal and orderly growth of our city. All establishments on this list comply with current safety and hygiene regulations."
+    },
+    "categories": {
+      "todos": "all",
+      "hotel": "hotels",
+      "hostería": "inns",
+      "cabañas": "cabins",
+      "hospedaje": "lodgings",
+      "hostal": "hostels",
+      "apart": "aparts",
+      "departamento": "apartments",
+      "posada": "posadas",
+      "camping": "campings",
+      "otros": "others"
+    }
+  },
+  "gastronomy": {
+    "title": "Where to",
+    "subtitle": "Eat",
+    "description": "From classic Tucuman empanadas to gourmet mountain cuisine. Discover the culinary richness of Tafí del Valle.",
+    "searchPlaceholder": "Search restaurant...",
+    "results": "{{count}} establishments",
+    "officialGuide": "Official Gastronomic Guide",
+    "viewOnMaps": "View on Google Maps",
+    "noResults": {
+      "title": "No results",
+      "description": "We couldn't find places that match your search."
+    },
+    "footer": {
+      "title": "Flavors That Inspire",
+      "description": "Tucuman gastronomy is Cultural Heritage of the Valley. Don't leave without trying our empanadas, locro, and handmade cheeses.",
+      "tag1": "Clay Oven Empanadas",
+      "tag2": "High Altitude Wines"
+    },
+    "categories": {
+      "todos": "all",
+      "restaurante": "restaurants",
+      "parrilla": "grill",
+      "regional": "regional",
+      "empanadas": "empanada shops",
+      "bar": "bars",
+      "casa de té": "tea houses",
+      "internacional": "international",
+      "bodegón": "classic tavern",
+      "minutas": "quick bites"
+    },
+    "places": {
+      "muppa": "Local flavors and cozy atmosphere in the heart of the valley.",
+      "tuichy": "Typical regional meals with the authentic Tafi identity.",
+      "felix": "Specialists in grilled meats and traditional dishes.",
+      "museo": "High-level gastronomy in a historic setting.",
+      "arismendi": "Exclusive mountain cuisine with panoramic views.",
+      "rueda": "Varied dishes and excellent service for the whole family.",
+      "donPerez": "Tradition in grill and selected cuts.",
+      "morenos": "Homemade meals and traditional atmosphere.",
+      "santiagueños": "The northern flavor in a ranch-style environment.",
+      "bodegon": "Abundant and classic dishes in a family atmosphere.",
+      "simoqueño": "Authentic empanadas and locro from the Argentine North.",
+      "terraza": "Drinks and light snacks with the best night view.",
+      "buenSabor": "Speed and quality in the center of Tafí.",
+      "quebradita": "Grill and regional dishes on the go.",
+      "altoAhi": "Sandwiches and fast food of excellent quality.",
+      "patioEmpanada": "Variety of Tucuman empanadas made in a clay oven.",
+      "donJose": "The classic empanadas of Tafí del Valle.",
+      "cris": "Handmade pastry and the best tea in the valley.",
+      "querencia": "Homemade meals with personalized attention."
+    }
+  },
+  "activities": {
+    "title": "Adventure and",
+    "subtitle": "Nature",
+    "description": "Discover the best outdoor activities guided by specialists. Experience the valley from a unique perspective.",
+    "searchPlaceholder": "Search activity or adventure type...",
+    "exploreInstagram": "Explore on Instagram",
+    "viewInfo": "View Information",
+    "noResults": {
+      "title": "No results",
+      "description": "We couldn't find activities that match your search."
+    },
+    "labels": {
+      "duration": "Duration",
+      "difficulty": "Difficulty",
+      "guide": "What to do in Tafí"
+    },
+    "categories": {
+      "todos": "all",
+      "naturaleza": "nature",
+      "aventura": "adventure",
+      "deportes": "sports"
+    },
+    "places": {
+      "elpuesto": {
+        "nombre": "El Puesto Outdoor Activities",
+        "descripcion": "Adventure tourism, horseback riding, and premium experiences in the valley.",
+        "duracion": "To be arranged",
+        "dificultad": "Medium"
+      },
+      "cerrosycoplas": {
+        "nombre": "Cerros y Coplas",
+        "descripcion": "Guided excursions, trekking, and cultural experiences in the mountains.",
+        "duracion": "3 to 6 hours",
+        "dificultad": "Medium"
+      },
+      "pinosport": {
+        "nombre": "Pinosport Adventure",
+        "descripcion": "Bicycle rental, guided mountain biking, and adventure sports tourism.",
+        "duracion": "To be arranged",
+        "dificultad": "Medium"
+      }
+    }
+  },
+  "atracciones": {
+    "1": {
+      "nombre": "La Banda Jesuit Museum",
+      "distancia": "6 km from center",
+      "descripcion": "An immersive experience in a 19th-century estate with a chapel, sacristy, and cheese factory.",
+      "descripcionLarga": "In 1716, the Jesuits completed a major land purchase in the Tafí Valley. Today, the space offers a fully immersive experience that sharpens the senses."
+    },
+    "2": {
+      "nombre": "Christ of La Quebradita Viewpoint",
+      "distancia": "2400 masl",
+      "descripcion": "One of the best panoramic views of the valley crowned by the 3.5-meter Blessing Christ.",
+      "descripcionLarga": "At 2400 meters above sea level, an image of the Blessing Christ watches over our valley. Located in a privileged spot, it offers one of the best panoramas."
+    },
+    "3": {
+      "nombre": "La Angostura Dam",
+      "distancia": "8 km from center",
+      "descripcion": "The highest navigable lake in the country, ideal for water sports and fishing.",
+      "descripcionLarga": "It is the first panoramic point that the Tafí Valley offers upon entering. It offers a privileged view of the La Angostura Dam and the mountains."
+    },
+    "4": {
+      "nombre": "Las Carreras Estate",
+      "distancia": "15 km from center",
+      "descripcion": "Historic 1779 manor house where \"M\" Cheese is made with an ancient Jesuit recipe.",
+      "descripcionLarga": "A Jesuit estate built in 1779. It is one of the oldest estate houses in the valley. Here, \"M\" Cheese is produced using the same recipe brought by the Jesuits 300 years ago."
+    },
+    "5": {
+      "nombre": "La Sofía Dairy Farm",
+      "distancia": "5 km from center",
+      "descripcion": "The world's highest robotic dairy farm, specialized in cheeses, mozzarella, and dulce de leche.",
+      "descripcionLarga": "The world's highest robotic dairy farm. All processes can be seen in guided tours, from milking to observing how milk is transformed into artisanal products."
+    },
+    "6": {
+      "nombre": "Artisan Route",
+      "distancia": "Valley tour",
+      "descripcion": "Self-guided circuit through ceramics, weaving, leather, and stone carving workshops.",
+      "descripcionLarga": "A self-guided tour through Tafí del Valle and El Mollar where you can visit various artisanal workshops and experience the warmth of our people."
+    },
+    "7": {
+      "nombre": "Center and Historic District",
+      "distancia": "Tafí Center",
+      "descripcion": "Colonial architecture, Miguel Esteves Square, and the historic 1895 Parish.",
+      "descripcionLarga": "Our historic and central district combines colonial architecture with Diaguita-Jesuit culture. Key highlights include the Our Lady of Carmen Parish (1895)."
+    },
+    "8": {
+      "nombre": "La Ciénaga",
+      "distancia": "2,700 masl",
+      "descripcion": "Mountain spot ideal for trekking and host of the traditional Yerbiao Festival.",
+      "descripcionLarga": "A mountain spot located at over 2,700 meters above sea level. It is an ideal destination for trekking and rural and archaeological tourism."
+    },
+    "9": {
+      "nombre": "La Cruz Hill",
+      "distancia": "45 min trekking",
+      "descripcion": "360° panoramic view of the valley on a legendary trail of moderate difficulty.",
+      "descripcionLarga": "A must-do trail for those visiting Tafí. This viewpoint offers a 360° panoramic view that allows you to appreciate the majesty of the Valley."
+    },
+    "10": {
+      "nombre": "Los Alisos Waterfall",
+      "distancia": "20 km from center",
+      "descripcion": "Impressive 60-meter waterfall accessible from El Remate.",
+      "descripcionLarga": "The Los Alisos waterfall is the most well-known and least difficult to access. It stands 60 meters high, perfect for contemplating and photography."
+    },
+    "11": {
+      "nombre": "Los Menhires Museum",
+      "distancia": "El Mollar",
+      "descripcion": "Archaeological reserve with 50 stones over 2000 years old in front of El Mollar square.",
+      "descripcionLarga": "The main archaeological center of our Tafí Valley. A reserve with stones up to three meters high and over 2000 years old."
+    }
+  },
+  "eventos": {
+    "1": {
+      "nombre": "National Cheese Festival",
+      "fecha": "February 2027",
+      "descripcion": "The most important celebration in the Valley with music, gastronomy, and crafts."
+    }
+  }
+}

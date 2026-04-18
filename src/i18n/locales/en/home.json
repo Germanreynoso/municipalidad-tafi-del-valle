@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "province": "Tucumán Province — Argentina",
+    "title": "Tafi del Valle",
+    "subtitle": "The sacred valley of the Calchaquíes, at 2,000 meters above sea level."
+  },
+  "portals": {
+    "shortcuts": "Shortcuts",
+    "title": "What do you need?",
+    "resident": {
+      "title": "I'm a Resident",
+      "subtitle": "Citizen Portal",
+      "description": "Procedures, fee payments, claims, and municipal services for neighbors."
+    },
+    "tourist": {
+      "title": "I'm a Tourist",
+      "subtitle": "Tourism Portal",
+      "description": "Discover the landscapes, culture, and gastronomy of the Sacred Valley of Tafí."
+    }
+  },
+  "stats": {
+    "inhabitants": "Inhabitants",
+    "altitude": "Height above sea level",
+    "attractions": "Featured attractions",
+    "distance": "From Tucumán capital"
+  },
+  "slogan": {
+    "text": "\"A management committed to the well-being of every Tafí family, working together for the present and future of our valley.\""
+  },
+  "weather": {
+    "wind": "Wind",
+    "status": "Passable",
+    "route": "Route 307"
+  }
+}

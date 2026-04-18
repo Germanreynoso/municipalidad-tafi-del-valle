@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Sun, Cloud, CloudRain, CloudLightning, Wind, Thermometer, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function WeatherWidget() {
+  const { t } = useTranslation('home');
   const [weather, setWeather] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -65,15 +67,15 @@ export default function WeatherWidget() {
             <Wind size={14} className="text-sky-300" />
             <span className="text-xs font-bold uppercase tracking-wider">{weather?.wind_speed_10m} km/h</span>
           </div>
-          <span className="text-[9px] text-white/40 font-bold uppercase mt-0.5">Viento</span>
+          <span className="text-[9px] text-white/40 font-bold uppercase mt-0.5">{t('weather.wind')}</span>
         </div>
 
         <div className="flex flex-col">
           <div className="flex items-center gap-1.5 text-white/80">
             <MapPin size={14} className="text-emerald-400" />
-            <span className="text-xs font-bold uppercase tracking-wider">Transitable</span>
+            <span className="text-xs font-bold uppercase tracking-wider">{t('weather.status')}</span>
           </div>
-          <span className="text-[9px] text-white/40 font-bold uppercase mt-0.5">Ruta 307</span>
+          <span className="text-[9px] text-white/40 font-bold uppercase mt-0.5">{t('weather.route')}</span>
         </div>
       </div>
     </motion.div>

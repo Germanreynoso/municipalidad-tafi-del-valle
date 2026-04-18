@@ -1,7 +1,11 @@
 import { FileText, Download } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { formatFecha } from '../../../utils/formatFecha.js';
 
-export default function DocumentoItem({ nombre, tipo, fecha, url }) {
+export default function DocumentoItem({ id, tipo, fecha, url }) {
+  const { t } = useTranslation('municipality');
+  const nombre = t(`institutional.docs.${id}`);
+
   return (
     <a
       href={url}

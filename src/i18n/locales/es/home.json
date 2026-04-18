@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "province": "Provincia de Tucumán — Argentina",
+    "title": "Tafí del Valle",
+    "subtitle": "El valle sagrado de los Calchaquíes, a 2.000 metros sobre el mar."
+  },
+  "portals": {
+    "shortcuts": "Accesos directos",
+    "title": "¿Qué necesitás?",
+    "resident": {
+      "title": "Soy Residente",
+      "subtitle": "Portal Ciudadano",
+      "description": "Trámites, pagos de tasas, reclamos y servicios municipales para vecinos."
+    },
+    "tourist": {
+      "title": "Soy Turista",
+      "subtitle": "Portal Turístico",
+      "description": "Descubrí los paisajes, la cultura y la gastronomía del Valle Sagrado de Tafí."
+    }
+  },
+  "stats": {
+    "inhabitants": "Habitantes",
+    "altitude": "Altura sobre el mar",
+    "attractions": "Atracciones destacadas",
+    "distance": "Desde Tucumán capital"
+  },
+  "slogan": {
+    "text": "\"Una gestión comprometida con el bienestar de cada familia tafinista, trabajando juntos por el presente y el futuro de nuestro valle.\""
+  },
+  "weather": {
+    "wind": "Viento",
+    "status": "Transitable",
+    "route": "Ruta 307"
+  }
+}

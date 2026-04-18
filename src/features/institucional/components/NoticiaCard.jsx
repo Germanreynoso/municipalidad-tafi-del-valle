@@ -1,7 +1,14 @@
 import { ArrowRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { formatFecha } from '../../../utils/formatFecha.js';
 
-export default function NoticiaCard({ titulo, fecha, categoria, extracto, image }) {
+export default function NoticiaCard({ id, fecha, image }) {
+  const { t } = useTranslation('municipality');
+  
+  const titulo = t(`institutional.news.${id}.title`);
+  const categoria = t(`institutional.news.${id}.category`);
+  const extracto = t(`institutional.news.${id}.excerpt`);
+
   return (
     <article
       className="group overflow-hidden rounded-2xl border border-stone-light bg-white transition-all duration-300 hover:-translate-y-1 cursor-pointer"
@@ -30,7 +37,7 @@ export default function NoticiaCard({ titulo, fecha, categoria, extracto, image 
           className="flex items-center gap-1 text-sm font-semibold font-body transition-colors duration-200"
           style={{ color: 'var(--color-earth)' }}
         >
-          Leer más <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-1" />
+          {t('common:buttons.readMore', { defaultValue: 'Leer más' })} <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-1" />
         </div>
       </div>
     </article>

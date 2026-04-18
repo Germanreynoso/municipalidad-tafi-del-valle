@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { MapPin } from 'lucide-react';
 
 const categoriaColors = {
@@ -8,7 +9,8 @@ const categoriaColors = {
 };
 
 export default function AtraccionCard({ atraccion, onClick }) {
-  const { nombre, categoria, distancia, descripcion, image } = atraccion;
+  const { t } = useTranslation('tourism');
+  const { id, categoria, image } = atraccion;
   const colors = categoriaColors[categoria] || categoriaColors.naturaleza;
   return (
     <div
@@ -19,7 +21,7 @@ export default function AtraccionCard({ atraccion, onClick }) {
       <div className="overflow-hidden h-52">
         <img
           src={image}
-          alt={nombre}
+          alt={t(`atracciones.${id}.nombre`)}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
       </div>
@@ -29,16 +31,16 @@ export default function AtraccionCard({ atraccion, onClick }) {
             className="px-2 py-1 rounded-full text-xs font-semibold capitalize font-body"
             style={{ backgroundColor: colors.bg, color: colors.text }}
           >
-            {categoria}
+            {t(`categories.${categoria}`)}
           </span>
           <span className="flex items-center gap-1 text-xs text-stone font-body">
-            <MapPin size={12} /> {distancia}
+            <MapPin size={12} /> {t(`atracciones.${id}.distancia`)}
           </span>
         </div>
-        <h3 className="font-bold text-base mb-2 text-stone-dark font-heading">{nombre}</h3>
-        <p className="text-sm line-clamp-2 text-stone font-body">{descripcion}</p>
+        <h3 className="font-bold text-base mb-2 text-stone-dark font-heading">{t(`atracciones.${id}.nombre`)}</h3>
+        <p className="text-sm line-clamp-2 text-stone font-body">{t(`atracciones.${id}.descripcion`)}</p>
         <div className="mt-4 text-xs font-bold text-sky-600 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-          Saber más +
+          {t('labels.moreInfo')} +
         </div>
       </div>
     </div>

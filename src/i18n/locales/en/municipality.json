@@ -1,0 +1,243 @@
+{
+  "history": {
+    "title": "History",
+    "subtitle": "Discover the origins, cultures, and evolution of the heart of the Calchaquí Valleys.",
+    "breadcrumb": "Municipality",
+    "nameOrigin": {
+      "title": "Origin of the Name",
+      "content": "The name **Tafí** derives from the Diaguita word **TAKTILLAKTA**, which means <span class=\"text-primary font-semibold\">\"town of splendid entrance\"</span>. This village is nestled between mountains in the central-western region of Tucumán and is a perfect combination of mountains and rivers that make it one of the most chosen destinations for national and international tourism."
+    },
+    "cultures": {
+      "title": "Original Cultures",
+      "content": "The entire Tafí Valley was home to important original cultures, as evidenced by the numerous testimonies found. Notable are the **menhirs**, stone monoliths created by an ancient civilization with meanings yet to be specified."
+    },
+    "archaeology": {
+      "title": "Archaeology",
+      "content": "Throughout the valley, remains of the culture that inhabited it are preserved, witnessing a rich heritage and the passage of time of industrious and organized inhabitants, with a history of more than **3000 years**.",
+      "yacimientosTitle": "Main Archaeological Sites",
+      "yacimientosContent": "Carapunco, Las Bolsas, Las Carreras, Malvinas, La Costa, and **Casas Viejas** (legend points to it as the first settlement of the conquest in northern Argentina).",
+      "museum": "In the **La Banda Jesuit Museum**, a valuable collection is preserved: bowls, funerary urns, pitchers, and utensils that narrate the daily life of past centuries."
+    },
+    "colonial": {
+      "title": "Colonial Period and Modernity",
+      "p1": "After the arrival of the Spaniards, the lands where the village is located belonged to the **Society of Jesus** (Jesuits) from 1718 until their expulsion, ordered by the Spanish crown in 1767.",
+      "p2": "In the mid-20th century, in 1943, following the opening of **Provincial Route 307**, it began to be populated with summer houses and consolidated as the main summer village of the province."
+    },
+    "sidebar": {
+      "title": "General Information",
+      "surface": "Surface",
+      "climate": "Climate",
+      "climateDesc": "Semi-arid temperate to cold with winter snowfalls.",
+      "temps": "Max Temperatures",
+      "summer": "Summer",
+      "winter": "Winter"
+    }
+  },
+  "profile": {
+    "title": "Valley Profile",
+    "subtitle": "Nature, hydrography, and the productive engine that gives life to our region.",
+    "breadcrumb": "Municipality",
+    "nature": {
+      "title": "Natural Environment",
+      "hydrography": {
+        "title": "Hydrography",
+        "content": "The water heart of the region is the **Tafí River**, which flows through the valley nourishing its lands. Its main tributaries are:",
+        "rivers": ["El Mollar", "La Ovejería", "El Blanquito"]
+      },
+      "flora": {
+        "title": "Flora",
+        "content": "From the valleys to the high peaks, the vegetation varies:",
+        "items": [
+          "White Carob, Churqui, Tusca",
+          "Alders and Queñua (at height)",
+          "Willows and varied fruit trees"
+        ]
+      },
+      "fauna": {
+        "title": "Fauna",
+        "content": "The native fauna is strongly represented by Andean camelids:",
+        "items": ["Vicuñas", "Guanacos", "Llamas"]
+      },
+      "quote": "Fertile soil,\nliving spirit."
+    },
+    "productive": {
+      "title": "Productive Engine",
+      "subtitle": "The valley's economy is based on the nobility of its soil and the work of its people in agriculture and livestock.",
+      "agriculture": {
+        "title": "Agriculture",
+        "badge": "Export Base",
+        "starProduct": {
+          "label": "Star Product",
+          "name": "Seed Potato",
+          "desc": "Main export production of the region."
+        },
+        "others": {
+          "label": "Other Productions:",
+          "horticulture": {
+            "title": "Vegetables",
+            "items": "Lettuce, pea, bean, corn, garlic."
+          },
+          "fruit": {
+            "title": "Fruit trees",
+            "items": "Apple, peach, nuts, pears, plums."
+          }
+        }
+      },
+      "livestock": {
+        "title": "Livestock",
+        "badge": "Livestock Diversity",
+        "traditional": {
+          "title": "Traditional",
+          "items": ["Cattle", "Beef", "Swine", "Goats", "Poultry"]
+        },
+        "indigenous": {
+          "title": "Indigenous and Minor",
+          "items": ["Guanacos", "Llamas", "Hares", "Chinchillas"]
+        },
+        "fact": {
+          "label": "Value Fact:",
+          "content": "\"The coexistence between traditional livestock and native camelids is one of the identity signs of the valley.\""
+        }
+      }
+    }
+  },
+  "traditions": {
+    "title": "The Soul of the Valley",
+    "subtitle": "Music, popular festivals, and the incomparable flavor of our land.",
+    "breadcrumb": "Culture and Traditions",
+    "cheeseFestival": {
+      "title": "National Cheese Festival",
+      "badge": "February",
+      "star": {
+        "label": "Declared in 1987",
+        "value": "National Festival"
+      },
+      "description": "It is the main festival of the valley and its attendance is massive. In it, all the popular expressions of Tafí are reflected: from crafts and music to Creole dances.",
+      "skills": {
+        "title": "Corral Skills",
+        "desc": "Lassoers, 'pialadores', and experienced tamers."
+      },
+      "sabor": {
+        "title": "Taste of Antiquity",
+        "desc": "Cheeses manufactured with a Jesuit artisanal process."
+      }
+    },
+    "crafts": {
+      "badge": "Cultural Legacy",
+      "title": "Valley",
+      "subtitle": "Hands",
+      "description": "The art of Tafí is born from the land itself. Our artisans transform wool, leather, stone, and clay into unique pieces that breathe the history of the valley.",
+      "footer": "Weaving • Ceramics • Stone • Leather"
+    },
+    "music": {
+      "title": "The Valley Spirit:",
+      "subtitle": "The \"Joi-Joi\"",
+      "description": "Coplas accompanied by 'cajas' (drums) that echo in the solitudes of the valley, speaking of the deep feelings of our people. The violin, bandoneon, and guitar are never missing to complete the soundtrack of Tafí.",
+      "instruments": {
+        "cajas": {
+          "title": "Cajas",
+          "subtitle": "Ancestral Rhythm"
+        },
+        "violin": {
+          "title": "Violin",
+          "subtitle": "Creole Feeling"
+        }
+      }
+    },
+    "festivities": {
+      "title": "Experience Our Festivals"
+    },
+    "gastronomy": {
+      "title": "Flavors of the Valley",
+      "description": "A cuisine that merges local ingredients with ancestral techniques to create dishes that feed the soul."
+    }
+  },
+  "institutional": {
+    "title": "Transparency",
+    "subtitle": "Management news, official documents, and open government.",
+    "breadcrumb": "Institutional Portal",
+    "newsTitle": "Latest News",
+    "documentsTitle": "Documents",
+    "openGov": {
+      "title": "Open Government",
+      "subtitle": "All management information is available to citizens.",
+      "cta": "View Management Report"
+    },
+    "news": {
+      "1": {
+        "title": "Street paving in the northern sector of the municipality",
+        "category": "Public Works",
+        "excerpt": "The municipality advances with the paving plan for 6 blocks in the northern sector, benefiting more than 200 families."
+      },
+      "2": {
+        "title": "New public square inaugurated in El Mollar",
+        "category": "Infrastructure",
+        "excerpt": "The new green space was inaugurated with children's games, LED lighting, and local wooden benches."
+      },
+      "3": {
+        "title": "Scholarship program for university students 2026",
+        "category": "Education",
+        "excerpt": "The municipality opens the enrollment period for the 30 annual university scholarships for young people from the valley."
+      },
+      "4": {
+        "title": "Management balance: first quarter 2026",
+        "category": "Transparency",
+        "excerpt": "The mayor presented the budget execution report and completed works for the first quarter of the year."
+      }
+    },
+    "docs": {
+      "1": "Municipal Budget 2026",
+      "2": "Current Ordinances",
+      "3": "Sworn Statement of Assets — Mayor",
+      "4": "Procurement and Tenders Q1 2026"
+    }
+  },
+  "authorities": {
+    "title": "Authorities",
+    "subtitle": "Municipal",
+    "description": "Meet those responsible for the different areas of municipal management, working for the well-being of Tafí del Valle.",
+    "intendente": {
+      "role": "Mayor",
+      "description": "Responsible for the political and administrative leadership of the municipality, directing strategic projects for the development of our community."
+    },
+    "cabinet": "Municipal Cabinet",
+    "areas": "Departments and Areas",
+    "footer": {
+      "title": "Need to contact a specific area?",
+      "description": "We are at your disposal to resolve any doubts or queries regarding municipal services.",
+      "cta": "Go to Contact"
+    },
+    "roles": {
+      "intendente": "Mayor",
+      "gobierno": "Secretary of Government",
+      "hacienda": "Secretary of Treasury",
+      "obrasValle": "Secretary of Public Works and Services",
+      "desarrollo": "Secretary of Development and Social Well-being",
+      "contador": "General Accountant",
+      "finanzas": "Finance Director",
+      "turismo": "Director of Tourism",
+      "cultura": "Director of Culture",
+      "rentas": "Municipal Revenue Director",
+      "empleo": "Director of Employment and Education",
+      "prensaRadio": "Director of Municipal FM Radio Calchaquí",
+      "camping": "Director of Los Sauzales Camping",
+      "deportes": "Director of Sports",
+      "comercio": "Director of Commerce",
+      "prensaDifusion": "Director of Press and Media",
+      "produccion": "Director of Agricultural and Livestock Production",
+      "automotor": "Director of Motor Vehicles",
+      "taller": "Director of Maintenance Workshop",
+      "compras": "Purchasing Director",
+      "transito": "Traffic Director",
+      "personal": "Personnel Director",
+      "discapacidad": "Director of Disability Services",
+      "defensaCivil": "Civil Defense Director",
+      "medioAmbiente": "Director of Environment",
+      "obrasPublicas": "Public Works Director",
+      "catastro": "Director of Cadastre and Private Construction",
+      "protocolo": "Director of Protocol and Ceremonial",
+      "despacho": "Office Management Director",
+      "juridico": "Legal Affairs Director"
+    }
+  }
+}

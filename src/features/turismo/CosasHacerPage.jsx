@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { actividades, categoriasActividades } from './data/cosasHacer.js';
 import { Search, Clock, Activity, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -24,17 +24,20 @@ const InstagramIcon = ({ size = 20 }) => (
 );
 
 export default function CosasHacerPage() {
+  const { t } = useTranslation('tourism');
   const [filtro, setFiltro] = useState('todos');
   const [search, setSearch] = useState('');
 
   const filtradas = useMemo(() => {
     return actividades.filter(a => {
       const matchFiltro = filtro === 'todos' || a.categoria === filtro;
-      const matchSearch = a.nombre.toLowerCase().includes(search.toLowerCase()) || 
-                          a.descripcion.toLowerCase().includes(search.toLowerCase());
+      const translatedName = t(`activities.places.${a.id}.nombre`, { defaultValue: '' });
+      const translatedDesc = t(`activities.places.${a.id}.descripcion`, { defaultValue: '' });
+      const matchSearch = translatedName.toLowerCase().includes(search.toLowerCase()) || 
+                          translatedDesc.toLowerCase().includes(search.toLowerCase());
       return matchFiltro && matchSearch;
     });
-  }, [filtro, search]);
+  }, [filtro, search, t]);
 
   return (
     <div className="bg-[#F8F9FA] min-h-screen">
@@ -49,15 +52,14 @@ export default function CosasHacerPage() {
             animate={{ opacity: 1, y: 0 }}
           >
             <p className="text-emerald-600 font-bold uppercase tracking-[0.2em] text-[10px] mb-4 font-body">
-              Experiencias — Qué hacer en Tafí
+              {t('activities.labels.guide')}
             </p>
             <h1 className="text-4xl md:text-6xl font-black text-stone-900 mb-6 font-heading leading-tight">
-              Aventura y <br />
-              <span className="text-emerald-500">Naturaleza</span>
+              {t('activities.title')} <br />
+              <span className="text-emerald-500">{t('activities.subtitle')}</span>
             </h1>
             <p className="text-stone-500 max-w-xl mx-auto mb-12 font-body">
-              Descubrí las mejores actividades al aire libre guiadas por especialistas. 
-              Viví el valle desde una perspectiva única.
+              {t('activities.description')}
             </p>
           </motion.div>
 
@@ -68,7 +70,7 @@ export default function CosasHacerPage() {
             </div>
             <input 
               type="text" 
-              placeholder="Buscar actividad o tipo de aventura..."
+              placeholder={t('activities.searchPlaceholder')}
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="w-full pl-14 pr-6 py-5 rounded-2xl bg-white border-none shadow-xl shadow-emerald-900/5 focus:ring-2 focus:ring-emerald-500 transition-all font-body text-stone-dark"
@@ -92,7 +94,7 @@ export default function CosasHacerPage() {
                 boxShadow: filtro === cat ? '0 10px 15px -5px rgba(0,0,0,0.1)' : 'none'
               }}
             >
-              {cat}
+              {t(`activities.categories.${cat}`)}
             </button>
           ))}
         </div>
@@ -113,7 +115,7 @@ export default function CosasHacerPage() {
                 <div className="relative h-64 overflow-hidden">
                   <OptimizedImage 
                     src={act.image} 
-                    alt={act.nombre}
+                    alt={t(`activities.places.${act.id}.nombre`)}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     width={400}
                     height={256}
@@ -121,29 +123,29 @@ export default function CosasHacerPage() {
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-300 pointer-events-none" />
                   <div className="absolute top-4 right-4 z-10">
                     <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-stone-800 text-[10px] font-black uppercase tracking-wider rounded-lg shadow-sm border border-stone-100">
-                      {act.categoria}
+                      {t(`activities.categories.${act.categoria}`)}
                     </span>
                   </div>
                 </div>
                 
                 <div className="p-8 flex flex-col flex-grow">
                   <div className="flex items-center gap-4 mb-4 text-[10px] font-bold text-stone-400 font-body uppercase tracking-[0.15em]">
-                    <div className="flex items-center gap-1.5">
+                    <div className="flex items-center gap-1.5 text-stone-500">
                       <Clock size={12} className="text-emerald-500" />
-                      {act.duracion}
+                      {t(`activities.places.${act.id}.duracion`)}
                     </div>
-                    <div className="flex items-center gap-1.5">
+                    <div className="flex items-center gap-1.5 text-stone-500">
                       <Activity size={12} className="text-emerald-500" />
-                      {act.dificultad}
+                      {t(`activities.places.${act.id}.dificultad`)}
                     </div>
                   </div>
                   
                   <h3 className="text-2xl font-bold text-stone-800 font-heading mb-3 group-hover:text-emerald-600 transition-colors leading-tight">
-                    {act.nombre}
+                    {t(`activities.places.${act.id}.nombre`)}
                   </h3>
                   
                   <p className="text-stone-500 font-body leading-relaxed mb-8 flex-grow">
-                    {act.descripcion}
+                    {t(`activities.places.${act.id}.descripcion`)}
                   </p>
 
                   <div className="mt-auto">
@@ -155,11 +157,11 @@ export default function CosasHacerPage() {
                         className="w-full py-4 flex items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 text-white hover:opacity-90 transition-all duration-300 shadow-lg shadow-pink-500/20 font-bold text-sm"
                       >
                         <InstagramIcon size={18} />
-                        Explorar en Instagram
+                        {t('activities.exploreInstagram')}
                       </a>
                     ) : (
                       <button className="w-full py-4 flex items-center justify-center gap-3 rounded-2xl bg-stone-900 text-white hover:bg-stone-800 transition-all duration-300 font-bold text-sm">
-                        Ver información <ArrowRight size={18} />
+                        {t('activities.viewInfo')} <ArrowRight size={18} />
                       </button>
                     )}
                   </div>
@@ -175,8 +177,8 @@ export default function CosasHacerPage() {
             <div className="w-20 h-20 bg-stone-100 rounded-full flex items-center justify-center mx-auto mb-6">
               <Search size={32} className="text-stone-300" />
             </div>
-            <h4 className="text-xl font-bold text-stone-800 mb-2 font-heading">Sin resultados</h4>
-            <p className="text-stone-500 font-body">No encontramos actividades que coincidan con tu búsqueda.</p>
+            <h4 className="text-xl font-bold text-stone-800 mb-2 font-heading">{t('activities.noResults.title')}</h4>
+            <p className="text-stone-500 font-body">{t('activities.noResults.description')}</p>
           </div>
         )}
       </div>

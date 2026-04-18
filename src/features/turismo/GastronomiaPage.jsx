@@ -1,20 +1,23 @@
 import { useState, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { gastronomia, categoriasGastronomia } from './data/gastronomia.js';
 import { Search, MapPin, Utensils, Star, ArrowRight, ExternalLink } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function GastronomiaPage() {
+  const { t } = useTranslation('tourism');
   const [filtro, setFiltro] = useState('todos');
   const [search, setSearch] = useState('');
 
   const filtrados = useMemo(() => {
     return gastronomia.filter(g => {
       const matchFiltro = filtro === 'todos' || g.categoria === filtro;
+      const translatedDesc = t(`gastronomy.places.${g.descripcionId}`, { defaultValue: '' });
       const matchSearch = g.nombre.toLowerCase().includes(search.toLowerCase()) || 
-                          g.descripcion.toLowerCase().includes(search.toLowerCase());
+                          translatedDesc.toLowerCase().includes(search.toLowerCase());
       return matchFiltro && matchSearch;
     });
-  }, [filtro, search]);
+  }, [filtro, search, t]);
 
   return (
     <div className="bg-[#FAF9F6] min-h-screen">
@@ -37,15 +40,14 @@ export default function GastronomiaPage() {
             className="max-w-2xl"
           >
             <p className="text-orange-400 font-bold uppercase tracking-[0.2em] text-[10px] mb-4 font-body">
-              Sabores del Valle — Gastronomía
+              {t('gastronomy.officialGuide')}
             </p>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-heading leading-tight">
-              Donde <br />
-              <span className="text-orange-500">Comer</span>
+              {t('gastronomy.title')} <br />
+              <span className="text-orange-500">{t('gastronomy.subtitle')}</span>
             </h1>
             <p className="text-white/80 text-lg mb-8 font-body max-w-lg">
-              Desde las clásicas empanadas tucumanas hasta cocina gourmet de montaña. 
-              Descubrí la riqueza culinaria de Tafí del Valle.
+              {t('gastronomy.description')}
             </p>
             
             {/* Search Bar inside Hero for more impact */}
@@ -55,7 +57,7 @@ export default function GastronomiaPage() {
               </div>
               <input 
                 type="text" 
-                placeholder="Buscar restaurante..."
+                placeholder={t('gastronomy.searchPlaceholder')}
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 className="w-full pl-14 pr-6 py-4 rounded-xl bg-white/95 backdrop-blur-sm border-none shadow-2xl focus:ring-2 focus:ring-orange-500 transition-all font-body text-stone-dark"
@@ -80,17 +82,17 @@ export default function GastronomiaPage() {
                 boxShadow: filtro === cat ? '0 10px 15px -5px rgba(0,0,0,0.1)' : 'none'
               }}
             >
-              {cat}
+              {t(`gastronomy.categories.${cat}`)}
             </button>
           ))}
         </div>
 
         {/* Results Info */}
         <div className="flex items-center justify-between mb-8 px-2 font-body text-xs text-stone-400 font-bold uppercase tracking-widest">
-          <span>{filtrados.length} establecimientos</span>
+          <span>{t('gastronomy.results', { count: filtrados.length })}</span>
           <div className="flex items-center gap-2">
             <Utensils size={14} className="text-orange-500" />
-            <span className="text-orange-600">Guía Gastronómica Oficial</span>
+            <span className="text-orange-600">{t('gastronomy.officialGuide')}</span>
           </div>
         </div>
 
@@ -109,7 +111,7 @@ export default function GastronomiaPage() {
                 <div className="mb-4">
                   <div className="flex items-center justify-between mb-2">
                     <span className="px-2 py-0.5 rounded-md bg-orange-50 text-orange-600 text-[9px] font-black uppercase tracking-wider">
-                      {item.categoria}
+                      {t(`gastronomy.categories.${item.categoria}`)}
                     </span>
                     <Star size={14} className="text-orange-300" />
                   </div>
@@ -117,7 +119,7 @@ export default function GastronomiaPage() {
                     {item.nombre}
                   </h3>
                   <p className="text-stone-500 text-sm font-body leading-relaxed">
-                    {item.descripcion}
+                    {t(`gastronomy.places.${item.descripcionId}`)}
                   </p>
                 </div>
 
@@ -129,7 +131,7 @@ export default function GastronomiaPage() {
                     className="w-full py-3.5 flex items-center justify-center gap-3 rounded-xl bg-stone-900 text-white hover:bg-orange-600 transition-all duration-300 font-bold text-sm shadow-lg shadow-stone-900/10"
                   >
                     <MapPin size={18} />
-                    Ver en Google Maps
+                    {t('gastronomy.viewOnMaps')}
                     <ExternalLink size={14} className="opacity-50" />
                   </a>
                 </div>
@@ -144,8 +146,8 @@ export default function GastronomiaPage() {
             <div className="w-20 h-20 bg-stone-100 rounded-full flex items-center justify-center mx-auto mb-6">
               <Search size={32} className="text-stone-300" />
             </div>
-            <h4 className="text-xl font-bold text-stone-800 mb-2 font-heading">Sin resultados</h4>
-            <p className="text-stone-500 font-body">No encontramos lugares que coincidan con tu búsqueda.</p>
+            <h4 className="text-xl font-bold text-stone-800 mb-2 font-heading">{t('gastronomy.noResults.title')}</h4>
+            <p className="text-stone-500 font-body">{t('gastronomy.noResults.description')}</p>
           </div>
         )}
       </div>
@@ -153,17 +155,16 @@ export default function GastronomiaPage() {
       {/* Footer CTA */}
       <div className="bg-stone-900 py-24 px-4 text-center">
         <div className="max-w-xl mx-auto">
-          <h3 className="text-4xl font-black text-white mb-6 font-heading">Sabores que Enamoran</h3>
+          <h3 className="text-4xl font-black text-white mb-6 font-heading">{t('gastronomy.footer.title')}</h3>
           <p className="text-white/50 font-body leading-relaxed mb-10">
-            La gastronomía tucumana es Patrimonio Cultural del Valle. No te vayas sin probar 
-            nuestras empanadas, el locro y los quesos artesanales.
+            {t('gastronomy.footer.description')}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10 text-white/70 text-xs font-bold uppercase tracking-widest font-body">
-              Empanadas al Horno de Barro
+              {t('gastronomy.footer.tag1')}
             </div>
             <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10 text-white/70 text-xs font-bold uppercase tracking-widest font-body">
-              Vinos de Altura
+              {t('gastronomy.footer.tag2')}
             </div>
           </div>
         </div>

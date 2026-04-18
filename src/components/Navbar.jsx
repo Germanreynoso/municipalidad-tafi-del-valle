@@ -1,35 +1,38 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronDown, X, Menu, Search } from 'lucide-react';
 import institutionalLogo from '../assets/MUNICIPALIDAD INSTITUCIONAL COLOR.png';
-
-const navLinks = [
-  { label: 'Inicio', to: '/' },
-  {
-    label: 'Municipio',
-    submenu: [
-      { label: 'Autoridades', to: '/autoridades' },
-      { label: 'Historia', to: '/historia' },
-      { label: 'Perfil del Valle', to: '/perfil-valle' },
-      { label: 'Fiestas y Tradiciones', to: '/tradiciones' },
-      { label: 'Ordenanzas', to: '#' },
-    ],
-  },
-  { 
-    label: 'Turismo', 
-    submenu: [
-      { label: 'Portal Principal', to: '/turismo' },
-      { label: 'Alojamiento', to: '/turismo/alojamiento' },
-      { label: 'Gastronomía', to: '/turismo/gastronomia' },
-      { label: 'Qué hacer', to: '/turismo/que-hacer' },
-    ]
-  },
-];
+import LanguageSwitcher from './common/LanguageSwitcher';
 
 export default function Navbar({ onSearchOpen }) {
+  const { t } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
+
+  const navLinks = [
+    { label: t('nav.home'), to: '/' },
+    {
+      label: t('nav.municipality'),
+      submenu: [
+        { label: t('nav.authorities'), to: '/autoridades' },
+        { label: t('nav.history'), to: '/historia' },
+        { label: t('nav.valleyProfile'), to: '/perfil-valle' },
+        { label: t('nav.traditions'), to: '/tradiciones' },
+        { label: t('nav.ordinances'), to: '#' },
+      ],
+    },
+    { 
+      label: t('nav.tourism'), 
+      submenu: [
+        { label: t('nav.mainPortal'), to: '/turismo' },
+        { label: t('nav.accommodation'), to: '/turismo/alojamiento' },
+        { label: t('nav.gastronomy'), to: '/turismo/gastronomia' },
+        { label: t('nav.whatToDo'), to: '/turismo/que-hacer' },
+      ]
+    },
+  ];
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -118,15 +121,17 @@ export default function Navbar({ onSearchOpen }) {
                 className="flex items-center gap-3 px-4 py-2 bg-stone-100 hover:bg-stone-200 text-stone-dark rounded-xl transition-all duration-200 border border-stone-200 group"
               >
                 <Search size={18} className="text-primary" />
-                <span className="text-sm font-semibold opacity-60 group-hover:opacity-100">¿Qué buscas?</span>
+                <span className="text-sm font-semibold opacity-60 group-hover:opacity-100">{t('search.placeholder')}</span>
                 <span className="hidden lg:flex items-center gap-1 px-1.5 py-0.5 rounded bg-white text-[9px] font-bold text-stone/60 border border-stone-200">
                   <span className="text-[11px]">⌘</span>K
                 </span>
               </button>
+              <LanguageSwitcher />
             </div>
 
             {/* Mobile Actions */}
             <div className="md:hidden flex items-center gap-4">
+              <LanguageSwitcher />
               <button
                 className="p-2 rounded-lg text-stone-dark bg-stone-100"
                 onClick={onSearchOpen}
@@ -155,7 +160,7 @@ export default function Navbar({ onSearchOpen }) {
           />
           <div className="absolute right-0 top-0 h-full w-72 bg-white shadow-2xl flex flex-col p-6">
             <div className="flex justify-between items-center mb-8">
-              <p className="font-black text-lg text-stone-dark font-heading">Menú</p>
+              <p className="font-black text-lg text-stone-dark font-heading">{t('search.menu')}</p>
               <button onClick={() => setMobileOpen(false)} aria-label="Cerrar menú">
                 <X size={24} className="text-stone" />
               </button>
