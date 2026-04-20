@@ -1,6 +1,6 @@
 import { Music, Calendar, Star, Utensils } from 'lucide-react';
 import fiestaImg from '../assets/fiesta-tradicion.png';
-import quesoImg from '../assets/fiesta-queso.jpg';
+const quesoImg = "/assets/eventos/evento-17.jpeg";
 import GastronomyCarousel from '../components/GastronomyCarousel';
 import EventsCarousel from '../components/EventsCarousel';
 import CraftsCarousel from '../components/CraftsCarousel';
