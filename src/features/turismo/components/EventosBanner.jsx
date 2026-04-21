@@ -1,4 +1,4 @@
-import { Calendar, ArrowRight } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 
 export default function EventosBanner({ evento }) {
   return (
@@ -19,13 +19,6 @@ export default function EventosBanner({ evento }) {
         <h3 className="text-3xl font-black text-white mb-2 font-heading">{evento.nombre}</h3>
         <p className="text-white/80 text-sm max-w-md font-body">{evento.descripcion}</p>
       </div>
-      <a
-        href={evento.url || '#'}
-        className="relative flex-shrink-0 flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm transition-all duration-200 hover:scale-105 whitespace-nowrap bg-white font-body"
-        style={{ color: 'var(--color-sky)' }}
-      >
-        Ver programa <ArrowRight size={16} />
-      </a>
     </div>
   );
 }

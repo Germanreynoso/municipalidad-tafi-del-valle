@@ -55,9 +55,17 @@ export default function TurismoPage() {
           <h1 className="text-5xl sm:text-7xl font-black text-white mb-6 leading-tight font-heading max-w-2xl">
             Soy Turista
           </h1>
-          <p className="text-xl text-white/90 max-w-xl font-body leading-relaxed">
+          <p className="text-xl text-white/90 max-w-xl font-body leading-relaxed mb-8">
             Descubrí los paisajes, la cultura y la gastronomía del Valle Sagrado de Tafí.
           </p>
+          
+          {/* Badge Distinción */}
+          <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
+            <div className="w-2 h-2 rounded-full bg-sky-400 animate-pulse" />
+            <span className="text-[10px] font-bold text-white uppercase tracking-[0.2em]">
+              Municipio Turístico de Primer Orden
+            </span>
+          </div>
         </div>
       </div>
 

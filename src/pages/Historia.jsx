@@ -107,6 +107,23 @@ export default function Historia() {
                 </p>
               </div>
             </section>
+
+            <section className="prose prose-lg max-w-none">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+                  <Landmark size={28} />
+                </div>
+                <h2 className="text-3xl font-black text-stone-dark font-heading m-0 text-balance">Municipio Turístico</h2>
+              </div>
+              <div className="space-y-6">
+                <p className="text-lg text-stone font-body leading-relaxed">
+                  Tafí del Valle fue declarado oficialmente <strong>«Municipio Turístico»</strong> mediante la Ley 8.791, sancionada el 21 de mayo de 2015 y promulgada el 15 de junio de 2015. 
+                </p>
+                <p className="text-lg text-stone font-body leading-relaxed">
+                  Posteriormente, en mayo de 2018, fue reconocido específicamente como <strong>"Municipio Turístico de Primer Orden"</strong> por el Ente Tucumán Turismo, un hito que refleja el crecimiento exponencial de la zona y el compromiso con la mejora de la infraestructura y el fomento de la actividad turística.
+                </p>
+              </div>
+            </section>
           </div>
 
           {/* Sidebar Info */}
@@ -143,6 +160,18 @@ export default function Historia() {
                       <p className="text-[10px] font-bold uppercase text-sky mb-1">Invierno</p>
                       <p className="text-xl font-black text-sky font-heading">4°C</p>
                     </div>
+                  </div>
+                </div>
+
+                <div className="pt-6 border-t border-stone-light">
+                  <div className="bg-stone-dark text-white p-6 rounded-2xl shadow-lg">
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-white/50 mb-2">Reconocimiento</p>
+                    <p className="text-lg font-black font-heading leading-tight mb-2">
+                      Municipio Turístico de Primer Orden
+                    </p>
+                    <p className="text-[10px] text-white/70 font-body">
+                      Ley 8.791 (Prov. de Tucumán)
+                    </p>
                   </div>
                 </div>
               </div>
