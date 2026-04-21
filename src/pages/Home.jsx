@@ -31,10 +31,10 @@ const portals = [
 ];
 
 const stats = [
-  { valor: '12.000', label: 'Habitantes', icono: <Users size={20} /> },
-  { valor: '2.000m', label: 'Altura sobre el mar', icono: <Mountain size={20} /> },
+  { valor: '12.130', label: 'Habitantes', icono: <Users size={20} /> },
+  { valor: '2.014m', label: 'Altura sobre el mar', icono: <Mountain size={20} /> },
   { valor: '6', label: 'Atracciones destacadas', icono: <Camera size={20} /> },
-  { valor: '150km', label: 'Desde Tucumán capital', icono: <MapPin size={20} /> },
+  { valor: '107km', label: 'Desde Tucumán capital', icono: <MapPin size={20} /> },
 ];
 
 function formatFecha(isoDate) {
@@ -87,7 +87,7 @@ export default function Home() {
             Tafí del Valle
           </h1>
           <p className="text-lg sm:text-xl text-white/85 mb-10 max-w-xl leading-relaxed font-body">
-            El valle sagrado de los Calchaquíes, a 2.000 metros sobre el mar.
+            El valle sagrado de los Calchaquíes, a 2.014 metros sobre el mar.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link

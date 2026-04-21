@@ -143,6 +143,22 @@ export default function Historia() {
                 </div>
 
                 <div className="pb-6 border-b border-stone-light">
+                  <p className="text-xs font-bold uppercase tracking-widest text-stone mb-1">Población</p>
+                  <p className="text-2xl font-black text-primary font-heading">12.130 Hab.</p>
+                </div>
+
+                <div className="pb-6 border-b border-stone-light">
+                  <p className="text-xs font-bold uppercase tracking-widest text-stone mb-1">Altitud</p>
+                  <p className="text-2xl font-black text-primary font-heading">2.014 msnm</p>
+                </div>
+
+                <div className="pb-6 border-b border-stone-light">
+                  <p className="text-xs font-bold uppercase tracking-widest text-stone mb-1">Distancia</p>
+                  <p className="text-2xl font-black text-primary font-heading">107 Km</p>
+                  <p className="text-[10px] text-stone font-medium">Desde San Miguel de Tucumán</p>
+                </div>
+
+                <div className="pb-6 border-b border-stone-light">
                   <p className="text-xs font-bold uppercase tracking-widest text-stone mb-1">Clima</p>
                   <p className="text-lg font-semibold text-stone-dark font-body">
                     Semiárido templado a frío con nevadas invernales.

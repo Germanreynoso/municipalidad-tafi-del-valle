@@ -69,7 +69,7 @@ export default function PerfilValle() {
                   <h4 className="font-bold font-heading text-primary">Flora</h4>
                 </div>
                 <p className="text-sm text-stone font-body mb-4">
-                  Desde los valles hasta las altas cumbres (arriba de los 2.000m), la vegetación varía:
+                  Desde los valles hasta las altas cumbres (arriba de los 2.014m), la vegetación varía:
                 </p>
                 <ul className="text-xs space-y-2 text-stone-dark font-body">
                   <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-primary" /> Algarrobo blanco, churqui, tusca</li>
