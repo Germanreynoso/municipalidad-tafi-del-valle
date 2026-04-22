@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Hotel, Compass, Utensils } from 'lucide-react';
+import { Hotel, Compass, Utensils, Users } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { atracciones, eventoDestacado } from './data/atracciones.js';
 import AtraccionCard from './components/AtraccionCard.jsx';
@@ -73,10 +73,10 @@ export default function TurismoPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         
         {/* Quick Access Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
           <Link 
             to="/turismo/alojamiento"
-            className="group relative h-48 rounded-3xl overflow-hidden bg-sky-900 shadow-lg shadow-sky-900/20"
+            className="group relative h-48 rounded-3xl overflow-hidden bg-sky-900 shadow-lg shadow-sky-900/20 transition-all duration-300 hover:-translate-y-1"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-sky-400/20 to-transparent z-10" />
             <div className="absolute inset-0 flex flex-col justify-end p-8 z-20">
@@ -89,20 +89,20 @@ export default function TurismoPage() {
 
           <Link 
             to="/turismo/gastronomia"
-            className="group relative h-48 rounded-3xl overflow-hidden bg-orange-900 shadow-lg shadow-orange-900/20"
+            className="group relative h-48 rounded-3xl overflow-hidden bg-orange-900 shadow-lg shadow-orange-900/20 transition-all duration-300 hover:-translate-y-1"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-orange-400/20 to-transparent z-10" />
             <div className="absolute inset-0 flex flex-col justify-end p-8 z-20">
               <h3 className="text-2xl font-black text-white font-heading group-hover:translate-x-2 transition-transform duration-300 flex items-center gap-2">
                 <Utensils size={24} /> Gastronomía
               </h3>
-              <p className="text-white/70 text-sm font-body">Sabores regionales y parrillas</p>
+              <p className="text-white/70 text-sm font-body">Sabores regionales</p>
             </div>
           </Link>
 
           <Link 
             to="/turismo/que-hacer"
-            className="group relative h-48 rounded-3xl overflow-hidden bg-emerald-900 shadow-lg shadow-emerald-900/20"
+            className="group relative h-48 rounded-3xl overflow-hidden bg-emerald-900 shadow-lg shadow-emerald-900/20 transition-all duration-300 hover:-translate-y-1"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/20 to-transparent z-10" />
             <div className="absolute inset-0 flex flex-col justify-end p-8 z-20">
@@ -110,6 +110,19 @@ export default function TurismoPage() {
                 <Compass size={24} /> Qué hacer
               </h3>
               <p className="text-white/70 text-sm font-body">Aventura y excursiones</p>
+            </div>
+          </Link>
+
+          <Link 
+            to="/turismo/guias"
+            className="group relative h-48 rounded-3xl overflow-hidden bg-amber-900 shadow-lg shadow-amber-900/20 transition-all duration-300 hover:-translate-y-1"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-amber-400/20 to-transparent z-10" />
+            <div className="absolute inset-0 flex flex-col justify-end p-8 z-20">
+              <h3 className="text-2xl font-black text-white font-heading group-hover:translate-x-2 transition-transform duration-300 flex items-center gap-2">
+                <Users size={24} /> Guías
+              </h3>
+              <p className="text-white/70 text-sm font-body">Expertos registrados</p>
             </div>
           </Link>
         </div>

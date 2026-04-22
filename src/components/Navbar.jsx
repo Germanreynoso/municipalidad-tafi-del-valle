@@ -22,6 +22,7 @@ const navLinks = [
       { label: 'Alojamiento', to: '/turismo/alojamiento' },
       { label: 'Gastronomía', to: '/turismo/gastronomia' },
       { label: 'Qué hacer', to: '/turismo/que-hacer' },
+      { label: 'Guías de Turismo', to: '/turismo/guias' },
     ]
   },
 ];

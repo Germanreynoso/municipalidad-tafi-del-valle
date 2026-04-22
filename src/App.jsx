@@ -13,6 +13,7 @@ import TurismoPage from './features/turismo/TurismoPage.jsx';
 import AlojamientoPage from './features/turismo/AlojamientoPage.jsx';
 import CosasHacerPage from './features/turismo/CosasHacerPage.jsx';
 import GastronomiaPage from './features/turismo/GastronomiaPage.jsx';
+import GuiasPage from './features/turismo/GuiasPage.jsx';
 import InstitucionalPage from './features/institucional/InstitucionalPage.jsx';
 
 import { useState } from 'react';
@@ -58,6 +59,7 @@ const router = createBrowserRouter([
       { path: '/turismo/alojamiento', element: <AlojamientoPage /> },
       { path: '/turismo/que-hacer',   element: <CosasHacerPage /> },
       { path: '/turismo/gastronomia', element: <GastronomiaPage /> },
+      { path: '/turismo/guias',       element: <GuiasPage /> },
       { path: '/institucional', element: <InstitucionalPage /> },
     ],
   },
