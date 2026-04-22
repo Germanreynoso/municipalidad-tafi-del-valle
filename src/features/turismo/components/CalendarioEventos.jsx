@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Calendar, Music, Users, Star, MapPin } from 'lucide-react';
+import { Calendar, Music, Users, Star, MapPin, Info } from 'lucide-react';
 import { eventosCalendario } from '../data/eventos';
 
 const tipoIcons = {
@@ -52,41 +52,53 @@ export default function CalendarioEventos() {
                   <motion.div
                     key={evento.nombre}
                     whileHover={{ scale: 1.02 }}
-                    className={`p-6 rounded-3xl border transition-all duration-300 ${
+                    className={`rounded-3xl border transition-all duration-300 overflow-hidden ${
                       evento.destacado 
                         ? 'bg-amber-50 border-amber-200 shadow-xl shadow-amber-100 ring-2 ring-amber-400/20' 
                         : 'bg-white border-stone-100 shadow-sm hover:shadow-md'
                     }`}
                   >
-                    <div className="flex justify-between items-start mb-4">
-                      <span className="flex items-center gap-2 px-3 py-1 bg-stone-100 rounded-full text-[10px] font-bold text-stone-500 uppercase">
-                        {tipoIcons[evento.tipo] || <Info size={14} />} {evento.tipo}
-                      </span>
-                      {evento.destacado && (
-                        <span className="px-3 py-1 bg-amber-500 text-white text-[10px] font-black rounded-full uppercase italic tracking-tighter shadow-sm">
-                          Evento Máximo
-                        </span>
-                      )}
-                    </div>
-                    
-                    <h4 className="text-lg font-bold text-stone-900 mb-3 font-heading leading-snug">
-                      {evento.nombre}
-                    </h4>
-                    
-                    <p className="text-sm text-stone-600 leading-relaxed font-body">
-                      {evento.descripcion}
-                    </p>
-
-                    {evento.destacado && (
-                      <div className="mt-6 pt-4 border-t border-amber-200 flex items-center justify-between">
-                        <span className="text-xs font-bold text-amber-700">No te lo podés perder</span>
-                        <div className="flex -space-x-2">
-                          {[1,2,3].map(i => (
-                            <div key={i} className="w-6 h-6 rounded-full bg-amber-400 border-2 border-amber-50" />
-                          ))}
-                        </div>
+                    {evento.imagen && (
+                      <div className="h-52 sm:h-64 overflow-hidden relative group">
+                        <img 
+                          src={evento.imagen} 
+                          alt={evento.nombre}
+                          className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${evento.posicionImagen || 'object-center'}`}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60" />
                       </div>
                     )}
+                    <div className="p-6">
+                      <div className="flex justify-between items-start mb-4">
+                        <span className="flex items-center gap-2 px-3 py-1 bg-stone-100 rounded-full text-[10px] font-bold text-stone-500 uppercase">
+                          {tipoIcons[evento.tipo] || <Info size={14} />} {evento.tipo}
+                        </span>
+                        {evento.destacado && (
+                          <span className="px-3 py-1 bg-amber-500 text-white text-[10px] font-black rounded-full uppercase italic tracking-tighter shadow-sm">
+                            Evento Máximo
+                          </span>
+                        )}
+                      </div>
+                      
+                      <h4 className="text-lg font-bold text-stone-900 mb-3 font-heading leading-snug">
+                        {evento.nombre}
+                      </h4>
+                      
+                      <p className="text-sm text-stone-600 leading-relaxed font-body">
+                        {evento.descripcion}
+                      </p>
+
+                      {evento.destacado && (
+                        <div className="mt-6 pt-4 border-t border-amber-200 flex items-center justify-between">
+                          <span className="text-xs font-bold text-amber-700">No te lo podés perder</span>
+                          <div className="flex -space-x-2">
+                            {[1,2,3].map(i => (
+                              <div key={i} className="w-6 h-6 rounded-full bg-amber-400 border-2 border-amber-50" />
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
                   </motion.div>
                 ))}
               </div>
