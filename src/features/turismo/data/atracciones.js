@@ -125,6 +125,6 @@ export const eventoDestacado = {
   nombre: 'Fiesta Nacional del Queso',
   fecha: 'Febrero 2027',
   descripcion: 'La celebración más importante del Valle con música, gastronomía y artesanías.',
-  image: '/assets/turismo/fiestas.jpeg',
+  image: '/assets/eventos/evento-17.jpeg',
   url: '#',
 };

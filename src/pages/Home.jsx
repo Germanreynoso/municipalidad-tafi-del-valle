@@ -10,6 +10,7 @@ import somosTodosLogo from '../assets/SOMOS TODOS COLOR.png';
 import heroTafi from '../assets/hero-tafi.jpg';
 import residentesImg from '../assets/residentes.jpg';
 import turistaImg from '../assets/turista.jpg';
+import transparenciaImg from '../assets/transparencia.jpg';
 
 export default function Home() {
   const { t, i18n } = useTranslation(['home', 'common']);
@@ -77,6 +78,14 @@ export default function Home() {
           <p className="text-xs font-semibold tracking-[0.3em] uppercase text-white/70 mb-4 font-body">
             {t('home:hero.province')}
           </p>
+          
+          {/* Badge Distinción Home */}
+          <div className="mb-6 inline-flex items-center gap-3 px-4 py-1.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
+            <span className="text-[9px] font-bold text-white uppercase tracking-[0.2em]">
+              Municipio Turístico de Primer Orden
+            </span>
+          </div>
+
           <h1
             className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-6 leading-none font-heading"
             style={{ textShadow: '0 2px 24px rgba(0,0,0,0.4)' }}

@@ -9,10 +9,12 @@ export const eventosCalendario = [
       {
         id: 'fiestaChuscha',
         tipoId: 'festival',
+        imagen: '/assets/eventos/evento-13.jpeg'
       },
       {
         id: 'fiestaYerbiao',
         tipoId: 'tradition',
+        imagen: '/assets/eventos/evento-9.jpeg'
       },
       {
         id: 'fiestaQuesito',
@@ -27,6 +29,7 @@ export const eventosCalendario = [
         id: 'fiestaNacionalQueso',
         tipoId: 'nationalEvent',
         destacado: true,
+        imagen: '/assets/eventos/evento-17.jpeg'
       }
     ]
   },
@@ -36,6 +39,7 @@ export const eventosCalendario = [
       {
         id: 'fiestaArtesano',
         tipoId: 'culture',
+        imagen: '/assets/eventos/evento-20.jpeg'
       }
     ]
   },
@@ -45,6 +49,7 @@ export const eventosCalendario = [
       {
         id: 'vidaPasion',
         tipoId: 'religiosity',
+        imagen: '/assets/eventos/evento-19.jpeg'
       }
     ]
   },
@@ -54,6 +59,7 @@ export const eventosCalendario = [
       {
         id: 'fiestaLazo',
         tipoId: 'tradition',
+        imagen: '/assets/eventos/evento-18.jpeg'
       }
     ]
   },
@@ -63,6 +69,8 @@ export const eventosCalendario = [
       {
         id: 'fiestaPatronal',
         tipoId: 'religiosity',
+        imagen: '/assets/eventos/fiestas-patronales.jpeg',
+        posicionImagen: 'object-top'
       }
     ]
   },
@@ -72,6 +80,7 @@ export const eventosCalendario = [
       {
         id: 'inauguracionTemporada',
         tipoId: 'tradition',
+        imagen: '/assets/eventos/fiesta-del-gaucho.jpeg'
       }
     ]
   }

@@ -13,10 +13,12 @@ import TurismoPage from './features/turismo/TurismoPage.jsx';
 import AlojamientoPage from './features/turismo/AlojamientoPage.jsx';
 import CosasHacerPage from './features/turismo/CosasHacerPage.jsx';
 import GastronomiaPage from './features/turismo/GastronomiaPage.jsx';
+import GuiasPage from './features/turismo/GuiasPage.jsx';
 import InstitucionalPage from './features/institucional/InstitucionalPage.jsx';
 
 import { useState } from 'react';
 import GlobalSearch from './components/common/GlobalSearch.jsx';
+import CuriosityPopup from './components/common/CuriosityPopup.jsx';
 
 function Layout() {
   const location = useLocation();
@@ -26,6 +28,7 @@ function Layout() {
     <div className="min-h-screen flex flex-col bg-white-warm">
       <Navbar onSearchOpen={() => setIsSearchOpen(true)} />
       <GlobalSearch isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+      <CuriosityPopup />
       <main className="flex-1">
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
@@ -58,6 +61,7 @@ const router = createBrowserRouter([
       { path: '/turismo/alojamiento', element: <AlojamientoPage /> },
       { path: '/turismo/que-hacer',   element: <CosasHacerPage /> },
       { path: '/turismo/gastronomia', element: <GastronomiaPage /> },
+      { path: '/turismo/guias',       element: <GuiasPage /> },
       { path: '/institucional', element: <InstitucionalPage /> },
     ],
   },

@@ -46,6 +46,23 @@ export default function InstitucionalPage() {
             <div className="space-y-3">
               {documentos.map((d) => <DocumentoItem key={d.id} {...d} />)}
             </div>
+
+            {/* Official Status Card */}
+            <div className="mt-12 p-8 rounded-3xl border border-stone-light bg-stone-light/20">
+              <h3 className="text-xl font-black mb-4 text-stone-dark font-heading">Status Institucional</h3>
+              <div className="space-y-4">
+                <div>
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-stone mb-1">Declaración Oficial</p>
+                  <p className="text-sm font-semibold text-stone-dark">Municipio Turístico (Ley 8.791)</p>
+                  <p className="text-xs text-stone">Promulgada el 15 de junio de 2015</p>
+                </div>
+                <div>
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-stone mb-1">Categorización</p>
+                  <p className="text-sm font-semibold text-stone-dark text-primary">Municipio Turístico de Primer Orden</p>
+                  <p className="text-xs text-stone">Reconocido por el Ente Tucumán Turismo (Mayo 2018)</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
