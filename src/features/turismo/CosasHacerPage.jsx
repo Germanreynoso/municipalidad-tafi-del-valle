@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
-import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { actividades, categoriasActividades } from './data/cosasHacer.js';
-import { Search, Clock, Activity, ArrowRight } from 'lucide-react';
+import { Search, Clock, Activity, ArrowRight, MessageCircle, MapPin } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import OptimizedImage from '../../components/common/OptimizedImage';
 
@@ -24,6 +24,7 @@ const InstagramIcon = ({ size = 20 }) => (
 );
 
 export default function CosasHacerPage() {
+  const { t } = useTranslation('tourism');
   const [filtro, setFiltro] = useState('todos');
   const [search, setSearch] = useState('');
 
@@ -92,7 +93,7 @@ export default function CosasHacerPage() {
                 boxShadow: filtro === cat ? '0 10px 15px -5px rgba(0,0,0,0.1)' : 'none'
               }}
             >
-              {cat}
+              {t(`activities.categories.${cat}`)}
             </button>
           ))}
         </div>
@@ -142,9 +143,16 @@ export default function CosasHacerPage() {
                     {act.nombre}
                   </h3>
                   
-                  <p className="text-stone-500 font-body leading-relaxed mb-8 flex-grow">
+                  <p className="text-stone-500 font-body leading-relaxed mb-4 flex-grow">
                     {act.descripcion}
                   </p>
+
+                  {act.direccion && (
+                    <div className="flex items-start gap-2 mb-6 text-xs text-stone-400 font-body italic">
+                      <MapPin size={14} className="text-emerald-500 shrink-0 mt-0.5" />
+                      {act.direccion}
+                    </div>
+                  )}
 
                   <div className="mt-auto">
                     {act.instagram ? (
@@ -156,6 +164,16 @@ export default function CosasHacerPage() {
                       >
                         <InstagramIcon size={18} />
                         Explorar en Instagram
+                      </a>
+                    ) : act.whatsapp ? (
+                      <a 
+                        href={act.whatsapp}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="w-full py-4 flex items-center justify-center gap-3 rounded-2xl bg-[#25D366] text-white hover:bg-[#128C7E] transition-all duration-300 shadow-lg shadow-emerald-500/20 font-bold text-sm"
+                      >
+                        <MessageCircle size={18} />
+                        Consultar por WhatsApp
                       </a>
                     ) : (
                       <button className="w-full py-4 flex items-center justify-center gap-3 rounded-2xl bg-stone-900 text-white hover:bg-stone-800 transition-all duration-300 font-bold text-sm">

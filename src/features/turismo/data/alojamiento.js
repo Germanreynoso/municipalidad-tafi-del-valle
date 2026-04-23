@@ -140,8 +140,8 @@ export const alojamientos = [
     "nombre": "HOSTEL LA CUMBRE",
     "categoria": "otros",
     "direccion": "Av. Perón 120",
-    "telefono": "3814 658 450",
-    "whatsapp": "https://wa.me/3814658450",
+    "telefono": "3814 658 454",
+    "whatsapp": "https://wa.me/3814658454",
     "descripcion": "Alojamiento habilitado por la Municipalidad de Tafí del Valle."
   },
   {

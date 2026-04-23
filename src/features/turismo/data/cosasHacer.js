@@ -28,6 +28,17 @@ export const actividades = [
     image: '/assets/turismo/actividades/pinosport.jpg',
     dificultad: 'Media',
     instagram: 'https://www.instagram.com/aventura_pinosport?igsh=MW5la3ZtMWV6NzZ3MA==',
+  },
+  {
+    id: 'yungasadventure',
+    nombre: 'EVT Yungas Adventure and Travel (La Cumbre)',
+    categoria: 'aventura',
+    duracion: 'Medio día / Completo',
+    descripcion: 'Excursiones en 4x4, Trekking, Mountain Bike y Kayak por los rincones más impactantes del valle.',
+    image: '/assets/turismo/actividades/yungas.jpg',
+    dificultad: 'Variable',
+    direccion: 'Av. Pte Perón 120',
+    whatsapp: 'https://wa.me/3814658454',
   }
 ];
 

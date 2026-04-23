@@ -1,6 +1,7 @@
-import { atracciones } from '../features/turismo/data/atracciones';
+import { atracciones, eventoDestacado } from '../features/turismo/data/atracciones';
 import { gastronomia } from '../features/turismo/data/gastronomia';
 import { alojamientos } from '../features/turismo/data/alojamiento';
+import { actividades } from '../features/turismo/data/cosasHacer';
 
 export const searchIndex = [
   // Páginas Estáticas
@@ -16,11 +17,20 @@ export const searchIndex = [
   // Atracciones
   ...atracciones.map(a => ({
     title: a.nombre,
-    description: a.descripcion,
+    description: a.description || a.descripcion,
     category: 'Atracción',
-    to: `/turismo`, // Podríamos extender esto para abrir el modal automáticamente
+    to: `/turismo`,
     type: 'atraccion',
     id: a.id
+  })),
+
+  // Actividades (Qué hacer)
+  ...actividades.map(act => ({
+    title: act.nombre || act.id,
+    description: 'Turismo aventura, excursiones y actividades outdoor.',
+    category: 'Actividad',
+    to: '/turismo/que-hacer',
+    type: 'aventura'
   })),
 
   // Gastronomía
