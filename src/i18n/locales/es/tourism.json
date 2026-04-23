@@ -208,6 +208,13 @@
         "descripcion": "Alquiler de bicicletas, mountain bike guiado y turismo aventura deportivo.",
         "duracion": "A convenir",
         "dificultad": "Media"
+      },
+      "yungasadventure": {
+        "nombre": "EVT Yungas Adventure and Travel (La Cumbre)",
+        "descripcion": "Excursiones en 4x4, Trekking, Mountain Bike y Kayak por los rincones más impactantes del valle.",
+        "duracion": "Medio día / Completo",
+        "dificultad": "Variable",
+        "direccion": "Av. Pte Perón 120"
       }
     }
   },

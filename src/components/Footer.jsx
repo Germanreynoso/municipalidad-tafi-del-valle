@@ -125,6 +125,9 @@ export default function Footer() {
             <p className="text-xs text-center font-body" style={{ color: 'rgba(255,255,255,0.3)' }}>
               {t('footer.copyright')}
             </p>
+            <p className="text-[10px] text-center mt-2 font-body tracking-wider" style={{ color: 'rgba(255,255,255,0.15)' }}>
+              Code & Design with Germán Gonzalo Reynoso
+            </p>
           </div>
         </div>
       </div>

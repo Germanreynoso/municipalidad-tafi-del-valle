@@ -16,6 +16,12 @@ export const actividades = [
     categoria: 'deportes',
     image: '/assets/turismo/actividades/pinosport.jpg',
     instagram: 'https://www.instagram.com/aventura_pinosport?igsh=MW5la3ZtMWV6NzZ3MA==',
+  },
+  {
+    id: 'yungasadventure',
+    categoria: 'aventura',
+    image: '/assets/turismo/actividades/yungas.jpg',
+    whatsapp: 'https://wa.me/3814658454',
   }
 ];
 
