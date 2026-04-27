@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 import { Hotel, Compass, Utensils, Users } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -11,10 +12,11 @@ import WeatherWidget from '../../components/common/WeatherWidget.jsx';
 import LocationSection from './components/LocationSection.jsx';
 import turismoHeroImg from '../../assets/turismo-hero.jpeg';
 
-const categorias = ['todos', 'naturaleza', 'cultura', 'aventura', 'gastronomía'];
+const categorias = ['all', 'naturaleza', 'cultura', 'aventura', 'gastronomía'];
 
 export default function TurismoPage() {
-  const [filtro, setFiltro] = useState('todos');
+  const { t } = useTranslation(['tourism', 'common']);
+  const [filtro, setFiltro] = useState('all');
   const [selectedAttr, setSelectedAttr] = useState(null);
   const location = useLocation();
 
@@ -23,13 +25,12 @@ export default function TurismoPage() {
       const attr = atracciones.find(a => a.id === location.state.openAttrId);
       if (attr) {
         setSelectedAttr(attr);
-        // Clear state to prevent reopening on refresh
         window.history.replaceState({}, document.title);
       }
     }
   }, [location]);
 
-  const filtradas = filtro === 'todos' ? atracciones : atracciones.filter((a) => a.categoria === filtro);
+  const filtradas = filtro === 'all' ? atracciones : atracciones.filter((a) => a.categoria === filtro);
 
   return (
     <div className="bg-white">
@@ -50,14 +51,14 @@ export default function TurismoPage() {
             <WeatherWidget />
           </div>
           <p className="text-xs font-semibold tracking-widest uppercase mb-4 text-sky-400 font-body">
-            <Link to="/" className="hover:text-white transition-colors">Inicio</Link>
-            {' / '}Portal Turístico
+            <Link to="/" className="hover:text-white transition-colors">{t('tourism:labels.back')}</Link>
+            {' / '}{t('tourism:labels.portal')}
           </p>
           <h1 className="text-5xl sm:text-7xl font-black text-white mb-6 leading-tight font-heading max-w-2xl">
-            Soy Turista
+            {t('tourism:hero.title')}
           </h1>
-          <p className="text-xl text-white/90 max-w-xl font-body leading-relaxed mb-8">
-            Descubrí los paisajes, la cultura y la gastronomía del Valle Sagrado de Tafí.
+          <p className="text-xl text-white/90 max-w-xl font-body leading-relaxed">
+            {t('tourism:hero.subtitle')}
           </p>
           
           {/* Badge Distinción */}
@@ -82,9 +83,9 @@ export default function TurismoPage() {
             <div className="absolute inset-0 bg-gradient-to-br from-sky-400/20 to-transparent z-10" />
             <div className="absolute inset-0 flex flex-col justify-end p-8 z-20">
               <h3 className="text-2xl font-black text-white font-heading group-hover:translate-x-2 transition-transform duration-300 flex items-center gap-2">
-                <Hotel size={24} /> Alojamiento
+                <Hotel size={24} /> {t('tourism:links.accommodation.title')}
               </h3>
-              <p className="text-white/70 text-sm font-body">Hoteles, cabañas y más</p>
+              <p className="text-white/70 text-sm font-body">{t('tourism:links.accommodation.description')}</p>
             </div>
           </Link>
 
@@ -95,9 +96,9 @@ export default function TurismoPage() {
             <div className="absolute inset-0 bg-gradient-to-br from-orange-400/20 to-transparent z-10" />
             <div className="absolute inset-0 flex flex-col justify-end p-8 z-20">
               <h3 className="text-2xl font-black text-white font-heading group-hover:translate-x-2 transition-transform duration-300 flex items-center gap-2">
-                <Utensils size={24} /> Gastronomía
+                <Utensils size={24} /> {t('tourism:links.gastronomy.title')}
               </h3>
-              <p className="text-white/70 text-sm font-body">Sabores regionales</p>
+              <p className="text-white/70 text-sm font-body">{t('tourism:links.gastronomy.description')}</p>
             </div>
           </Link>
 
@@ -108,9 +109,9 @@ export default function TurismoPage() {
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/20 to-transparent z-10" />
             <div className="absolute inset-0 flex flex-col justify-end p-8 z-20">
               <h3 className="text-2xl font-black text-white font-heading group-hover:translate-x-2 transition-transform duration-300 flex items-center gap-2">
-                <Compass size={24} /> Qué hacer
+                <Compass size={24} /> {t('tourism:links.activities.title')}
               </h3>
-              <p className="text-white/70 text-sm font-body">Aventura y excursiones</p>
+              <p className="text-white/70 text-sm font-body">{t('tourism:links.activities.description')}</p>
             </div>
           </Link>
 
@@ -132,7 +133,7 @@ export default function TurismoPage() {
         <div className="mb-20">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div>
-              <h2 className="text-4xl font-black text-stone-900 font-heading mb-4">Imperdibles de Tafí</h2>
+              <h2 className="text-4xl font-black text-stone-900 font-heading mb-4">{t('tourism:sections.highlights')}</h2>
               <div className="w-20 h-1.5 bg-sky-500 rounded-full" />
             </div>
             
@@ -148,7 +149,7 @@ export default function TurismoPage() {
                       : 'bg-stone-100 text-stone-500 hover:bg-stone-200'
                   }`}
                 >
-                  {cat}
+                  {t(`tourism:categories.${cat}`)}
                 </button>
               ))}
             </div>

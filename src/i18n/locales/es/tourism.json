@@ -165,7 +165,8 @@
       "patioEmpanada": "Variedad de empanadas tucumanas hechas al horno de barro.",
       "donJose": "Las clásicas empanadas de Tafí del Valle.",
       "cris": "Repostería artesanal y el mejor té del valle.",
-      "querencia": "Comidas caseras con atención personalizada."
+      "querencia": "Comidas caseras con atención personalizada.",
+      "lasCarreras": "Producción artesanal de Queso de Tafí con Indicación Geográfica y restaurante gourmet."
     }
   },
   "activities": {
@@ -215,6 +216,13 @@
         "duracion": "Medio día / Completo",
         "dificultad": "Variable",
         "direccion": "Av. Pte Perón 120"
+      },
+      "rutadelqueso": {
+        "nombre": "La Ruta del Queso",
+        "descripcion": "Circuito por las estancias queseras más antiguas del valle, descubriendo el proceso artesanal con IG.",
+        "duracion": "3 a 4 horas",
+        "dificultad": "Baja",
+        "direccion": "Diferentes estancias del valle"
       }
     }
   },

@@ -1,8 +1,12 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { X, MapPin, Info } from 'lucide-react';
 
 export default function AtraccionModal({ onClose, atraccion }) {
+  const { t } = useTranslation(['tourism', 'common']);
   if (!atraccion) return null;
+
+  const { id, categoria, image } = atraccion;
 
   return (
     <>
@@ -23,8 +27,8 @@ export default function AtraccionModal({ onClose, atraccion }) {
         <div className="bg-white rounded-[2.5rem] overflow-hidden max-w-3xl w-full max-h-[90vh] shadow-2xl pointer-events-auto flex flex-col border border-stone-200">
           <div className="relative h-72 sm:h-96 shrink-0">
             <img
-              src={atraccion.image}
-              alt={atraccion.nombre}
+              src={image}
+              alt={t(`tourism:atracciones.${id}.nombre`)}
               className="w-full h-full object-cover"
             />
             <button
@@ -36,11 +40,11 @@ export default function AtraccionModal({ onClose, atraccion }) {
             <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10">
               <div className="flex flex-wrap gap-2 mb-3">
                 <span className="inline-block px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.2em] text-white bg-sky-500/80 backdrop-blur-md shadow-lg shadow-sky-500/20">
-                  {atraccion.categoria}
+                  {t(`tourism:categories.${categoria}`)}
                 </span>
               </div>
               <h2 className="text-3xl sm:text-5xl font-black text-white font-heading leading-tight drop-shadow-lg">
-                {atraccion.nombre}
+                {t(`tourism:atracciones.${id}.nombre`)}
               </h2>
             </div>
           </div>
@@ -51,18 +55,18 @@ export default function AtraccionModal({ onClose, atraccion }) {
                 <div className="w-8 h-8 rounded-lg bg-sky-50 flex items-center justify-center">
                   <MapPin size={18} className="text-sky-500" />
                 </div>
-                <span>{atraccion.distancia}</span>
+                <span>{t(`tourism:atracciones.${id}.distancia`)}</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center">
                   <Info size={18} className="text-emerald-500" />
                 </div>
-                <span className="capitalize">{atraccion.categoria}</span>
+                <span className="capitalize">{t(`tourism:categories.${categoria}`)}</span>
               </div>
             </div>
 
             <div className="prose prose-stone max-w-none prose-p:leading-relaxed prose-p:text-lg prose-p:text-stone-600">
-              {atraccion.descripcionLarga?.split('\n').map((paragraph, idx) => (
+              {t(`tourism:atracciones.${id}.descripcionLarga`)?.split('\n').map((paragraph, idx) => (
                 <p key={idx} className="mb-6">
                   {paragraph}
                 </p>
@@ -75,7 +79,7 @@ export default function AtraccionModal({ onClose, atraccion }) {
               onClick={onClose}
               className="px-8 py-4 rounded-2xl font-black text-xs uppercase tracking-widest bg-stone-900 text-white hover:bg-stone-800 transition-all shadow-xl shadow-stone-900/10 hover:-translate-y-1 active:translate-y-0"
             >
-              Entendido
+              {t('common:buttons.understood', { defaultValue: 'Entendido' })}
             </button>
           </div>
         </div>

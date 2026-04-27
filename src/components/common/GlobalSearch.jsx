@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, X, ArrowRight, MapPin, Utensils, Hotel, Calendar, Command } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { searchIndex } from '../../data/searchIndex';
 
 export default function GlobalSearch({ isOpen, onClose }) {
@@ -10,6 +11,7 @@ export default function GlobalSearch({ isOpen, onClose }) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const navigate = useNavigate();
   const inputRef = useRef(null);
+  const { t, i18n } = useTranslation('common');
 
   useEffect(() => {
     if (isOpen) {
@@ -24,7 +26,7 @@ export default function GlobalSearch({ isOpen, onClose }) {
     const handleKeyDown = (e) => {
       if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();
-        onClose ? onClose() : null; // This logic would be in the parent, but for hotkey handling
+        onClose ? onClose() : null;
       }
       if (!isOpen) return;
 
@@ -52,6 +54,8 @@ export default function GlobalSearch({ isOpen, onClose }) {
       return;
     }
 
+    // Nota: El searchIndex por ahora es estático y está en español.
+    // Una mejora futura sería que el searchIndex use claves I18N.
     const filtered = searchIndex.filter(item => 
       item.title.toLowerCase().includes(query.toLowerCase()) ||
       item.category.toLowerCase().includes(query.toLowerCase()) ||
@@ -78,12 +82,31 @@ export default function GlobalSearch({ isOpen, onClose }) {
 
   const getIcon = (category) => {
     switch (category) {
-      case 'Turismo': return <MapPin size={18} />;
-      case 'Gastronomía': return <Utensils size={18} />;
-      case 'Alojamiento': return <Hotel size={18} />;
-      case 'Cultura': return <Calendar size={18} />;
+      case 'Turismo':
+      case 'Tourism': return <MapPin size={18} />;
+      case 'Gastronomía':
+      case 'Gastronomy': return <Utensils size={18} />;
+      case 'Alojamiento':
+      case 'Accommodation': return <Hotel size={18} />;
+      case 'Cultura':
+      case 'Culture': return <Calendar size={18} />;
       default: return <Search size={18} />;
     }
+  };
+
+  const mapCategory = (category) => {
+    const catMap = {
+      'Página': 'page',
+      'Municipio': 'municipality',
+      'Cultura': 'culture',
+      'Turismo': 'tourism',
+      'Atracción': 'attraction',
+      'Gastronomía': 'gastronomy',
+      'Alojamiento': 'accommodation',
+      'Emergencias': 'emergencies'
+    };
+    const key = catMap[category] || category.toLowerCase();
+    return t(`search.categories.${key}`, { defaultValue: category });
   };
 
   return (
@@ -110,7 +133,7 @@ export default function GlobalSearch({ isOpen, onClose }) {
               <input
                 ref={inputRef}
                 type="text"
-                placeholder="¿Qué estás buscando en Tafí? (Ej: Dique, Quesos, Hoteles...)"
+                placeholder={t('search.placeholderDetailed')}
                 className="flex-1 bg-transparent border-none outline-none text-xl text-stone-dark font-body placeholder:text-stone/40"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
@@ -135,9 +158,9 @@ export default function GlobalSearch({ isOpen, onClose }) {
                   <div className="w-16 h-16 bg-primary-light rounded-2xl flex items-center justify-center text-primary mx-auto mb-4">
                     <Search size={32} />
                   </div>
-                  <h3 className="text-lg font-black text-stone-dark font-heading">Buscador Inteligente</h3>
+                  <h3 className="text-lg font-black text-stone-dark font-heading">{t('search.smartSearch')}</h3>
                   <p className="text-stone font-body text-sm mt-2 max-w-xs mx-auto">
-                    Busca lugares, gastronomía, alojamiento o información municipal de forma instantánea.
+                    {t('search.smartSearchDesc')}
                   </p>
                 </div>
               ) : results.length > 0 ? (
@@ -162,7 +185,7 @@ export default function GlobalSearch({ isOpen, onClose }) {
                           <span className={`text-[9px] uppercase font-bold tracking-widest px-1.5 py-0.5 rounded ${
                             selectedIndex === index ? 'bg-white/20 text-white' : 'bg-stone-200 text-stone-dark'
                           }`}>
-                            {item.category}
+                            {mapCategory(item.category)}
                           </span>
                         </div>
                         <p className={`text-xs font-body truncate ${
@@ -177,8 +200,8 @@ export default function GlobalSearch({ isOpen, onClose }) {
                 </div>
               ) : query.length >= 2 ? (
                 <div className="py-12 text-center text-stone">
-                  <p className="font-body">No encontramos resultados para "<span className="font-bold">{query}</span>"</p>
-                  <p className="text-sm mt-1">Prueba con palabras más genéricas como "Dique" o "Parrilla".</p>
+                  <p className="font-body">{t('search.noResults')} "<span className="font-bold">{query}</span>"</p>
+                  <p className="text-sm mt-1">{t('search.noResultsDesc')}</p>
                 </div>
               ) : null}
             </div>
@@ -186,10 +209,10 @@ export default function GlobalSearch({ isOpen, onClose }) {
             {/* Footer */}
             <div className="px-6 py-3 bg-stone-50 border-t border-stone-100 flex items-center justify-between text-[10px] text-stone font-bold uppercase tracking-widest">
               <div className="flex gap-4">
-                <span className="flex items-center gap-1">↑↓ Navegar</span>
-                <span className="flex items-center gap-1">↲ Seleccionar</span>
+                <span className="flex items-center gap-1">↑↓ {t('search.navigation')}</span>
+                <span className="flex items-center gap-1">↲ {t('search.select')}</span>
               </div>
-              <span>ESC para cerrar</span>
+              <span>{t('search.close')}</span>
             </div>
           </motion.div>
         </div>

@@ -1,0 +1,73 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "municipality": "Municipio",
+    "authorities": "Autoridades",
+    "history": "Historia",
+    "valleyProfile": "Perfil del Valle",
+    "traditions": "Fiestas y Tradiciones",
+    "ordinances": "Ordenanzas",
+    "tourism": "Turismo",
+    "mainPortal": "Portal Principal",
+    "accommodation": "Alojamiento",
+    "gastronomy": "Gastronomía",
+    "whatToDo": "Qué hacer"
+  },
+  "search": {
+    "placeholder": "¿Qué buscas?",
+    "placeholderDetailed": "¿Qué estás buscando en Tafí? (Ej: Dique, Quesos, Hoteles...)",
+    "menu": "Menú",
+    "smartSearch": "Buscador Inteligente",
+    "smartSearchDesc": "Busca lugares, gastronomía, alojamiento o información municipal de forma instantánea.",
+    "noResults": "No encontramos resultados para ",
+    "noResultsDesc": "Prueba con palabras más genéricas como \"Dique\" o \"Parrilla\".",
+    "navigation": "Navegar",
+    "select": "Seleccionar",
+    "close": "ESC para cerrar",
+    "categories": {
+      "page": "Página",
+      "municipality": "Municipio",
+      "culture": "Cultura",
+      "tourism": "Turismo",
+      "attraction": "Atracción",
+      "gastronomy": "Gastronomía",
+      "accommodation": "Alojamiento",
+      "emergencies": "Emergencias"
+    }
+  },
+  "buttons": {
+    "readMore": "Leer más",
+    "guide": "Guía Turística",
+    "understood": "Entendido"
+  },
+  "months": {
+    "january": "Enero",
+    "february": "Febrero",
+    "march": "Marzo",
+    "april": "Abril",
+    "may": "Mayo",
+    "june": "Junio",
+    "july": "Julio",
+    "august": "Agosto",
+    "september": "Septiembre",
+    "october": "Octubre",
+    "november": "Noviembre",
+    "december": "Diciembre",
+    "holyWeek": "Semana Santa"
+  },
+  "eventTypes": {
+    "dance": "Danza",
+    "festival": "Festival",
+    "tradition": "Tradición",
+    "folclore": "Folclore",
+    "nationalEvent": "Evento Nacional",
+    "culture": "Cultura",
+    "religiosity": "Religiosidad"
+  },
+  "footer": {
+    "municipality": "Municipio",
+    "services": "Servicios",
+    "mission": "Comprometidos con el desarrollo sustentable y la calidad de vida de los habitantes del Valle Sagrado.",
+    "copyright": "© 2026 Municipalidad de Tafí del Valle — Provincia de Tucumán, Argentina"
+  }
+}

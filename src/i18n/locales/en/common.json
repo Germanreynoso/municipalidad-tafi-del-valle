@@ -1,0 +1,73 @@
+{
+  "nav": {
+    "home": "Home",
+    "municipality": "Municipality",
+    "authorities": "Authorities",
+    "history": "History",
+    "valleyProfile": "Valley Profile",
+    "traditions": "Festivals & Traditions",
+    "ordinances": "Ordinances",
+    "tourism": "Tourism",
+    "mainPortal": "Main Portal",
+    "accommodation": "Accommodation",
+    "gastronomy": "Gastronomy",
+    "whatToDo": "Things to do"
+  },
+  "search": {
+    "placeholder": "What are you looking for?",
+    "placeholderDetailed": "What are you looking for in Tafí? (E.g.: Dam, Cheeses, Hotels...)",
+    "menu": "Menu",
+    "smartSearch": "Smart Search",
+    "smartSearchDesc": "Search for places, gastronomy, accommodation, or municipal information instantly.",
+    "noResults": "We couldn't find results for ",
+    "noResultsDesc": "Try more general words like \"Dam\" or \"Grill\".",
+    "navigation": "Navigate",
+    "select": "Select",
+    "close": "ESC to close",
+    "categories": {
+      "page": "Page",
+      "municipality": "Municipality",
+      "culture": "Culture",
+      "tourism": "Tourism",
+      "attraction": "Attraction",
+      "gastronomy": "Gastronomy",
+      "accommodation": "Accommodation",
+      "emergencies": "Emergencies"
+    }
+  },
+  "buttons": {
+    "readMore": "Read more",
+    "guide": "Tourism Guide",
+    "understood": "Understood"
+  },
+  "months": {
+    "january": "January",
+    "february": "February",
+    "march": "March",
+    "april": "April",
+    "may": "May",
+    "june": "June",
+    "july": "July",
+    "august": "August",
+    "september": "September",
+    "october": "October",
+    "november": "November",
+    "december": "December",
+    "holyWeek": "Holy Week"
+  },
+  "eventTypes": {
+    "dance": "Dance",
+    "festival": "Festival",
+    "tradition": "Tradition",
+    "folclore": "Folklore",
+    "nationalEvent": "National Event",
+    "culture": "Culture",
+    "religiosity": "Religiosity"
+  },
+  "footer": {
+    "municipality": "Municipality",
+    "services": "Services",
+    "mission": "Committed to sustainable development and the quality of life of the inhabitants of the Sacred Valley.",
+    "copyright": "© 2026 Municipality of Tafí del Valle — Tucumán Province, Argentina"
+  }
+}

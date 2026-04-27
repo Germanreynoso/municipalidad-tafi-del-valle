@@ -26,7 +26,13 @@ export const searchIndex = [
 
   // Actividades (Qué hacer)
   ...actividades.map(act => ({
-    title: act.nombre || act.id,
+    title: {
+      'elpuesto': 'El Puesto Actividades Outdoor',
+      'cerrosycoplas': 'Cerros y Coplas',
+      'pinosport': 'Aventura Pinosport',
+      'yungasadventure': 'EVT Yungas Adventure and Travel (La Cumbre)',
+      'rutadelqueso': 'La Ruta del Queso'
+    }[act.id] || act.id,
     description: 'Turismo aventura, excursiones y actividades outdoor.',
     category: 'Actividad',
     to: '/turismo/que-hacer',
@@ -36,7 +42,7 @@ export const searchIndex = [
   // Gastronomía
   ...gastronomia.map(g => ({
     title: g.nombre,
-    description: g.descripcion,
+    description: 'Establecimiento gastronómico destacado en Tafí del Valle.',
     category: 'Gastronomía',
     external: g.link,
     type: 'restaurante'
