@@ -37,7 +37,7 @@ export default function Footer() {
                 <img 
                   src={institutionalLogo} 
                   alt="Municipalidad de Tafí del Valle" 
-                  className="h-32 w-auto brightness-0 invert opacity-80"
+                  className="h-32 w-auto transition-transform duration-200"
                 />
               </div>
               <p className="text-sm leading-relaxed mb-6 font-body" style={{ color: 'rgba(255,255,255,0.5)' }}>
