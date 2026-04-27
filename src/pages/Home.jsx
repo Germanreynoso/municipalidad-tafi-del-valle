@@ -5,21 +5,13 @@ import { fadeUp, stagger, slideLeft } from '../styles/motion.js';
 import PortalCard from '../components/PortalCard.jsx';
 import WeatherWidget from '../components/common/WeatherWidget.jsx';
 import { noticias } from '../features/institucional/data/noticias.js';
+import LocationCard from '../features/turismo/components/LocationCard.jsx';
 import somosTodosLogo from '../assets/SOMOS TODOS COLOR.png';
 import heroTafi from '../assets/hero-tafi.jpg';
-import residentesImg from '../assets/residentes.jpg';
 import turistaImg from '../assets/turista.jpg';
 import transparenciaImg from '../assets/transparencia.jpg';
 
 const portals = [
-  {
-    title: 'Soy Residente',
-    subtitle: 'Portal Ciudadano',
-    description: 'Trámites, pagos de tasas, reclamos y servicios municipales para vecinos.',
-    image: residentesImg,
-    to: '/ciudadano',
-    accentColor: '--color-primary',
-  },
   {
     title: 'Soy Turista',
     subtitle: 'Portal Turístico',
@@ -117,7 +109,7 @@ export default function Home() {
           </h2>
         </Motion.div>
         <Motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto"
           variants={stagger}
           initial="hidden"
           whileInView="visible"
@@ -128,6 +120,9 @@ export default function Home() {
               <PortalCard {...portal} />
             </Motion.div>
           ))}
+          <Motion.div variants={fadeUp}>
+            <LocationCard />
+          </Motion.div>
         </Motion.div>
       </section>
 

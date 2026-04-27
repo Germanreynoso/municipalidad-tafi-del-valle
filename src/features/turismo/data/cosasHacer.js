@@ -39,7 +39,17 @@ export const actividades = [
     dificultad: 'Variable',
     direccion: 'Av. Pte Perón 120',
     whatsapp: 'https://wa.me/3814658454',
+  },
+  {
+    id: 'rutadelqueso',
+    nombre: 'La Ruta del Queso',
+    categoria: 'cultura',
+    duracion: '3 a 4 horas',
+    descripcion: 'Circuito por las estancias queseras más antiguas del valle, descubriendo el proceso artesanal con IG.',
+    image: '/assets/queso-tafi/producto.png',
+    dificultad: 'Baja',
+    direccion: 'Diferentes estancias del valle',
   }
 ];
 
-export const categoriasActividades = ['todos', 'naturaleza', 'aventura', 'deportes'];
+export const categoriasActividades = ['todos', 'naturaleza', 'aventura', 'deportes', 'cultura'];

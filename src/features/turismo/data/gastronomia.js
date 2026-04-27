@@ -131,7 +131,14 @@ export const gastronomia = [
     categoria: 'restaurante',
     link: 'https://share.google/t60bjvyxddidCM6ji',
     descripcion: 'Comidas caseras con atención personalizada.',
+  },
+  {
+    id: 20,
+    nombre: 'Estancia Las Carreras',
+    categoria: 'estancia quesera',
+    link: 'https://www.estancialascarreras.com/',
+    descripcion: 'Producción artesanal de Queso de Tafí con Indicación Geográfica y restaurante gourmet.',
   }
 ];
 
-export const categoriasGastronomia = ['todos', 'restaurante', 'parrilla', 'regional', 'empanadas', 'bar', 'casa de té'];
+export const categoriasGastronomia = ['todos', 'restaurante', 'parrilla', 'regional', 'empanadas', 'bar', 'casa de té', 'estancia quesera'];

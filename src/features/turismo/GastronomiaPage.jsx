@@ -2,6 +2,8 @@ import { useState, useMemo } from 'react';
 import { gastronomia, categoriasGastronomia } from './data/gastronomia.js';
 import { Search, MapPin, Utensils, Star, ArrowRight, ExternalLink } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import QuesoTafinistoSection from './components/QuesoTafinistoSection.jsx';
+
 
 export default function GastronomiaPage() {
   const [filtro, setFiltro] = useState('todos');
@@ -64,6 +66,9 @@ export default function GastronomiaPage() {
           </motion.div>
         </div>
       </div>
+
+      {/* Featured: Queso Tafinisto Section */}
+      <QuesoTafinistoSection />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-32">
         {/* Filters */}

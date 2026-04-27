@@ -8,6 +8,7 @@ import EventosBanner from './components/EventosBanner.jsx';
 import AtraccionModal from './components/AtraccionModal.jsx';
 import CalendarioEventos from './components/CalendarioEventos.jsx';
 import WeatherWidget from '../../components/common/WeatherWidget.jsx';
+import LocationSection from './components/LocationSection.jsx';
 import turismoHeroImg from '../../assets/turismo-hero.jpeg';
 
 const categorias = ['todos', 'naturaleza', 'cultura', 'aventura', 'gastronomía'];
@@ -169,6 +170,9 @@ export default function TurismoPage() {
 
         {/* Calendario de Eventos */}
         <CalendarioEventos />
+
+        {/* Cómo Llegar / Mapa */}
+        <LocationSection />
       </div>
 
       {/* Modal de Detalles */}
