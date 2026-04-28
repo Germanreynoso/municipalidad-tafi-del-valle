@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
-import { ChevronDown, X, Menu, Search } from 'lucide-react';
+import { ChevronDown, X, Menu, Search, Mail, Phone } from 'lucide-react';
 import institutionalLogo from '../assets/MUNICIPALIDAD INSTITUCIONAL COLOR.png';
 import LanguageSwitcher from './common/LanguageSwitcher';
 
@@ -58,6 +58,21 @@ export default function Navbar({ onSearchOpen }) {
 
   return (
     <>
+      {/* Top Contact Banner */}
+      <div className="bg-sky-900 text-white py-2 px-4 relative z-[60]">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center sm:justify-end gap-x-6 gap-y-1.5 text-xs font-bold font-body tracking-wide">
+          <a href="mailto:tafidelvalle.es.tudestino@gmail.com" className="flex items-center gap-2 hover:text-sky-200 transition-colors">
+            <Mail size={14} className="opacity-80" />
+            tafidelvalle.es.tudestino@gmail.com
+          </a>
+          <div className="hidden sm:block w-1 h-1 rounded-full bg-white/30" />
+          <a href="https://wa.me/5493867607038" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-sky-200 transition-colors">
+            <Phone size={14} className="opacity-80" />
+            +54 9 3867 607038 <span className="opacity-75 font-normal ml-1">(La casa del Turista)</span>
+          </a>
+        </div>
+      </div>
+
       <nav
         className="sticky top-0 z-50 transition-all duration-300"
         style={{

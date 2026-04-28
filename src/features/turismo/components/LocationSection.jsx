@@ -13,7 +13,8 @@ export default function LocationSection() {
       icon: <Bus className="text-sky-500" />,
       title: "En Ómnibus",
       desc: "Empresa Aconquija ofrece salidas diarias desde la Terminal de San Miguel de Tucumán.",
-      duration: "3h aprox."
+      duration: "3h aprox.",
+      link: { url: "https://transporteaconquija.com.ar/", text: "Ver horarios y pasajes" }
     }
   ];
 
@@ -60,6 +61,16 @@ export default function LocationSection() {
                         </span>
                       </div>
                       <p className="text-sm text-stone-500 font-body leading-relaxed">{option.desc}</p>
+                      {option.link && (
+                        <a 
+                          href={option.link.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1 mt-3 text-xs font-bold text-sky-600 hover:text-sky-700 transition-colors uppercase tracking-wider"
+                        >
+                          {option.link.text} <ArrowRight size={14} />
+                        </a>
+                      )}
                     </div>
                   </motion.div>
                 ))}

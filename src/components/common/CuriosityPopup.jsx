@@ -1,17 +1,27 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { curiosidades } from '../../data/curiosidades';
-import mascotImg from '../../assets/mascota.png';
+import mascotOveja from '../../assets/mascota.png';
+import mascotLlama from '../../assets/llama.png';
 import { X } from 'lucide-react';
 
 export default function CuriosityPopup() {
   const [isVisible, setIsVisible] = useState(false);
   const [curiosidad, setCuriosidad] = useState(null);
+  const [selectedMascot, setSelectedMascot] = useState(mascotLlama);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       const randomFact = curiosidades[Math.floor(Math.random() * curiosidades.length)];
       setCuriosidad(randomFact);
+      
+      // Alternar mascotas: la primera vez sale la llama, luego se turnan
+      const lastMascot = localStorage.getItem('lastMascot');
+      const nextMascot = lastMascot === 'llama' ? 'oveja' : 'llama';
+      
+      setSelectedMascot(nextMascot === 'llama' ? mascotLlama : mascotOveja);
+      localStorage.setItem('lastMascot', nextMascot);
+      
       setIsVisible(true);
     }, 3000);
     return () => clearTimeout(timer);
@@ -74,7 +84,7 @@ export default function CuriosityPopup() {
 
             {/* Mascota superpuesta — esquina inferior derecha del card */}
             <motion.img
-              src={mascotImg}
+              src={selectedMascot}
               alt="Mascota"
               animate={{ y: [0, -5, 0] }}
               transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}

@@ -7,6 +7,7 @@ import PortalCard from '../components/PortalCard.jsx';
 import WeatherWidget from '../components/common/WeatherWidget.jsx';
 import { noticias } from '../features/institucional/data/noticias.js';
 import LocationCard from '../features/turismo/components/LocationCard.jsx';
+import OportunidadesList from '../features/ciudadano/components/OportunidadesList.jsx';
 import somosTodosLogo from '../assets/SOMOS TODOS COLOR.png';
 import heroTafi from '../assets/hero-tafi.jpg';
 import turistaImg from '../assets/turista.jpg';
@@ -152,6 +153,13 @@ export default function Home() {
               </Motion.div>
             ))}
           </Motion.div>
+        </div>
+      </section>
+
+      {/* Oportunidades Section */}
+      <section className="py-24 bg-white overflow-hidden border-t border-stone-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <OportunidadesList />
         </div>
       </section>
 

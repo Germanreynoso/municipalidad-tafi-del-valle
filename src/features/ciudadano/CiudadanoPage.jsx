@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { tramites, servicios } from './data/tramites.js';
 import TramiteCard from './components/TramiteCard.jsx';
 import ServiciosList from './components/ServiciosList.jsx';
+import OportunidadesList from './components/OportunidadesList.jsx';
 
 export default function CiudadanoPage() {
   return (
@@ -39,6 +40,8 @@ export default function CiudadanoPage() {
             <ServiciosList servicios={servicios} />
           </div>
         </div>
+        
+        <OportunidadesList />
       </div>
 
       {/* CTA */}
