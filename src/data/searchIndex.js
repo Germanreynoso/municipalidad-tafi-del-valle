@@ -25,19 +25,30 @@ export const searchIndex = [
   })),
 
   // Actividades (Qué hacer)
-  ...actividades.map(act => ({
-    title: {
+  ...actividades.map(act => {
+    const actTitles = {
       'elpuesto': 'El Puesto Actividades Outdoor',
       'cerrosycoplas': 'Cerros y Coplas',
       'pinosport': 'Aventura Pinosport',
       'yungasadventure': 'EVT Yungas Adventure and Travel (La Cumbre)',
       'rutadelqueso': 'La Ruta del Queso'
-    }[act.id] || act.id,
-    description: 'Turismo aventura, excursiones y actividades outdoor.',
-    category: 'Actividad',
-    to: '/turismo/que-hacer',
-    type: 'aventura'
-  })),
+    };
+    const actDescriptions = {
+      'elpuesto': 'Turismo aventura, cabalgatas y experiencias premium en el valle.',
+      'cerrosycoplas': 'Excursiones guiadas, trekking, cabalgatas y vivencias culturales en la montaña.',
+      'pinosport': 'Alquiler de bicicletas, mountain bike guiado y turismo aventura deportivo.',
+      'yungasadventure': 'Excursiones en 4x4, Trekking, Mountain Bike y Kayak por los rincones más impactantes.',
+      'rutadelqueso': 'Circuito por las estancias queseras más antiguas del valle, descubriendo el proceso artesanal con IG.'
+    };
+    
+    return {
+      title: actTitles[act.id] || act.id,
+      description: actDescriptions[act.id] || 'Turismo aventura, excursiones y actividades outdoor.',
+      category: 'Actividad',
+      to: '/turismo/que-hacer',
+      type: 'aventura'
+    };
+  }),
 
   // Gastronomía
   ...gastronomia.map(g => ({
