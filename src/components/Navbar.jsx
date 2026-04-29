@@ -20,7 +20,7 @@ export default function Navbar({ onSearchOpen }) {
         { label: t('nav.history'), to: '/historia' },
         { label: t('nav.valleyProfile'), to: '/perfil-valle' },
         { label: t('nav.traditions'), to: '/tradiciones' },
-        { label: t('nav.ordinances'), to: '#' },
+        { label: t('nav.ordinances'), to: '/ordenanzas' },
       ],
     },
     { 

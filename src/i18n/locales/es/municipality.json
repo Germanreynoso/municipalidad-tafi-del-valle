@@ -5,23 +5,23 @@
     "breadcrumb": "Municipio",
     "nameOrigin": {
       "title": "Origen del Nombre",
-      "content": "El nombre **Tafí** deriva del vocablo diaguita **TAKTILLAKTA**, que quiere decir <span class=\"text-primary font-semibold\">\"pueblo de entrada espléndida\"</span>. Esta villa está enclavada entre las montañas, en la región central del oeste de Tucumán y es una combinación perfecta de montañas y ríos que la convierten en uno de los destinos más elegidos por el turismo nacional e internacional."
+      "content": "El nombre <strong>Tafí</strong> deriva del vocablo diaguita <strong>TAKTILLAKTA</strong>, que quiere decir <span class=\"text-primary font-semibold\">\"pueblo de entrada espléndida\"</span>. Esta villa está enclavada entre las montañas, en la región central del oeste de Tucumán y es una combinación perfecta de montañas y ríos que la convierten en uno de los destinos más elegidos por el turismo nacional e internacional."
     },
     "cultures": {
       "title": "Culturas Originarias",
-      "content": "Todo el Valle de Tafí fue sede de importantes culturas originarias, lo prueban los numerosos testimonios hallados. Se destacan los **menhires**, monolitos de piedra, obra de una antiquísima civilización y con significados aún no precisados."
+      "content": "Todo el Valle de Tafí fue sede de importantes culturas originarias, lo prueban los numerosos testimonios hallados. Se destacan los <strong>menhires</strong>, monolitos de piedra, obra de una antiquísima civilización y con significados aún no precisados."
     },
     "archaeology": {
       "title": "Arqueología",
-      "content": "En todo el valle se conservan vestigios de la cultura que lo habitó, testigo de una rica herencia y del paso del tiempo de habitantes laboriosos y organizados, con una proyección de más de **3000 años de antigüedad**.",
+      "content": "En todo el valle se conservan vestigios de la cultura que lo habitó, testigo de una rica herencia y del paso del tiempo de habitantes laboriosos y organizados, con una proyección de más de <strong>3000 años de antigüedad</strong>.",
       "yacimientosTitle": "Yacimientos Principales",
-      "yacimientosContent": "Carapunco, Las Bolsas, Las Carreras, Malvinas, La Costa y **Casas Viejas** (la leyenda lo señala como el primer asentamiento poblacional de la conquista en el norte del país).",
-      "museum": "En el **Museo Jesuítico de La Banda** se conserva una colección de gran valor: pucos, urnas funerarias, cántaros y utensilios que narran la vida cotidiana de siglos pasados."
+      "yacimientosContent": "Carapunco, Las Bolsas, Las Carreras, Malvinas, La Costa y <strong>Casas Viejas</strong> (la leyenda lo señala como el primer asentamiento poblacional de la conquista en el norte del país).",
+      "museum": "En el <strong>Museo Jesuítico de La Banda</strong> se conserva una colección de gran valor: pucos, urnas funerarias, cántaros y utensilios que narran la vida cotidiana de siglos pasados."
     },
     "colonial": {
       "title": "Periodo Colonial y Modernidad",
-      "p1": "Después de la llegada de los españoles, las tierras donde está asentada la villa pertenecieron a la **Compañía de Jesús**, desde 1718 hasta su expulsión, ordenada por la corona española en 1767.",
-      "p2": "A mediados del siglo pasado, en el año 1943, con motivo de la apertura de la **Ruta Provincial 307**, comenzó a poblarse con casas de veraneo y se consolidó como la principal villa veraniega de la provincia."
+      "p1": "Después de la llegada de los españoles, las tierras donde está asentada la villa pertenecieron a la <strong>Compañía de Jesús</strong>, desde 1718 hasta su expulsión, ordenada por la corona española en 1767.",
+      "p2": "A mediados del siglo pasado, en el año 1943, con motivo de la apertura de la <strong>Ruta Provincial 307</strong>, comenzó a poblarse con casas de veraneo y se consolidó como la principal villa veraniega de la provincia."
     },
     "sidebar": {
       "title": "Información General",
@@ -41,7 +41,7 @@
       "title": "Entorno Natural",
       "hydrography": {
         "title": "Hidrografía",
-        "content": "El corazón hídrico de la región es el **Río Tafí**, que recorre el valle nutriendo sus tierras. Sus principales afluentes son:",
+        "content": "El corazón hídrico de la región es el <strong>Río Tafí</strong>, que recorre el valle nutriendo sus tierras. Sus principales afluentes son:",
         "rivers": ["El Mollar", "La Ovejería", "El Blanquito"]
       },
       "flora": {

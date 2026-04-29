@@ -5,23 +5,23 @@
     "breadcrumb": "Municipality",
     "nameOrigin": {
       "title": "Origin of the Name",
-      "content": "The name **Tafí** derives from the Diaguita word **TAKTILLAKTA**, which means <span class=\"text-primary font-semibold\">\"town of splendid entrance\"</span>. This village is nestled between mountains in the central-western region of Tucumán and is a perfect combination of mountains and rivers that make it one of the most chosen destinations for national and international tourism."
+      "content": "The name <strong>Tafí</strong> derives from the Diaguita word <strong>TAKTILLAKTA</strong>, which means <span class=\"text-primary font-semibold\">\"town of splendid entrance\"</span>. This village is nestled between mountains in the central-western region of Tucumán and is a perfect combination of mountains and rivers that make it one of the most chosen destinations for national and international tourism."
     },
     "cultures": {
       "title": "Original Cultures",
-      "content": "The entire Tafí Valley was home to important original cultures, as evidenced by the numerous testimonies found. Notable are the **menhirs**, stone monoliths created by an ancient civilization with meanings yet to be specified."
+      "content": "The entire Tafí Valley was home to important original cultures, as evidenced by the numerous testimonies found. Notable are the <strong>menhirs</strong>, stone monoliths created by an ancient civilization with meanings yet to be specified."
     },
     "archaeology": {
       "title": "Archaeology",
-      "content": "Throughout the valley, remains of the culture that inhabited it are preserved, witnessing a rich heritage and the passage of time of industrious and organized inhabitants, with a history of more than **3000 years**.",
+      "content": "Throughout the valley, remains of the culture that inhabited it are preserved, witnessing a rich heritage and the passage of time of industrious and organized inhabitants, with a history of more than <strong>3000 years</strong>.",
       "yacimientosTitle": "Main Archaeological Sites",
-      "yacimientosContent": "Carapunco, Las Bolsas, Las Carreras, Malvinas, La Costa, and **Casas Viejas** (legend points to it as the first settlement of the conquest in northern Argentina).",
-      "museum": "In the **La Banda Jesuit Museum**, a valuable collection is preserved: bowls, funerary urns, pitchers, and utensils that narrate the daily life of past centuries."
+      "yacimientosContent": "Carapunco, Las Bolsas, Las Carreras, Malvinas, La Costa, and <strong>Casas Viejas</strong> (legend points to it as the first settlement of the conquest in northern Argentina).",
+      "museum": "In the <strong>La Banda Jesuit Museum</strong>, a valuable collection is preserved: bowls, funerary urns, pitchers, and utensils that narrate the daily life of past centuries."
     },
     "colonial": {
       "title": "Colonial Period and Modernity",
-      "p1": "After the arrival of the Spaniards, the lands where the village is located belonged to the **Society of Jesus** (Jesuits) from 1718 until their expulsion, ordered by the Spanish crown in 1767.",
-      "p2": "In the mid-20th century, in 1943, following the opening of **Provincial Route 307**, it began to be populated with summer houses and consolidated as the main summer village of the province."
+      "p1": "After the arrival of the Spaniards, the lands where the village is located belonged to the <strong>Society of Jesus</strong> (Jesuits) from 1718 until their expulsion, ordered by the Spanish crown in 1767.",
+      "p2": "In the mid-20th century, in 1943, following the opening of <strong>Provincial Route 307</strong>, it began to be populated with summer houses and consolidated as the main summer village of the province."
     },
     "sidebar": {
       "title": "General Information",
@@ -41,7 +41,7 @@
       "title": "Natural Environment",
       "hydrography": {
         "title": "Hydrography",
-        "content": "The water heart of the region is the **Tafí River**, which flows through the valley nourishing its lands. Its main tributaries are:",
+        "content": "The water heart of the region is the <strong>Tafí River</strong>, which flows through the valley nourishing its lands. Its main tributaries are:",
         "rivers": ["El Mollar", "La Ovejería", "El Blanquito"]
       },
       "flora": {

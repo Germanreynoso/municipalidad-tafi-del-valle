@@ -39,6 +39,7 @@ export default function InstitucionalPage() {
               {noticias.map((n) => <NoticiaCard key={n.id} {...n} />)}
             </div>
           </div>
+          
           <div>
             <h2 className="text-3xl font-black mb-8 text-stone-dark font-heading">
               {t('municipality:institutional.documentsTitle')}

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Award, BookOpen, Utensils, History, MapPin, CheckCircle2, FlaskConical, TrendingUp } from 'lucide-react';
+import { Award, BookOpen, Utensils, History, MapPin, CheckCircle2, FlaskConical, TrendingUp, Calendar, Globe, ShieldCheck, Quote, Landmark } from 'lucide-react';
 
 export default function QuesoTafinistoSection() {
   const highlights = [
@@ -10,13 +10,13 @@ export default function QuesoTafinistoSection() {
     },
     {
       icon: <History className="text-amber-500" />,
-      title: "Historia Jesuítica",
-      desc: "Una tradición que nació en 1718 con los monjes jesuíticos y se preservó inalterable por tres siglos."
+      title: "Tradición Centenaria",
+      desc: "Fabricados desde el siglo XVIII, su prestigio ya era reconocido en la época colonial e incluso premiados en Europa."
     },
     {
       icon: <Utensils className="text-amber-500" />,
       title: "Identidad Única",
-      desc: "Su sabor equilibra notas lácticas, manteca y oliva, reflejando la flora y microbiota única del valle."
+      desc: "Su peculiar gustito proviene de elementos autóctonos como el pasto algarrobillo y los lamederos de las montañas."
     }
   ];
 
@@ -34,7 +34,7 @@ export default function QuesoTafinistoSection() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-50 rounded-full mb-8 border border-amber-100">
               <Award size={18} className="text-amber-600" />
-              <span className="text-[10px] font-bold text-amber-700 uppercase tracking-[0.2em]">Indicación Geográfica Registrada</span>
+              <span className="text-[10px] font-bold text-amber-700 uppercase tracking-[0.2em]">Sello Oficial de Origen</span>
             </div>
             
             <h2 className="text-5xl md:text-7xl font-black text-stone-900 mb-8 font-heading leading-tight">
@@ -43,7 +43,7 @@ export default function QuesoTafinistoSection() {
             </h2>
             
             <p className="text-stone-600 text-lg font-body leading-relaxed mb-8">
-              Auténtico, ancestral y ahora con <strong className="text-stone-900 font-black tracking-tight">Reconocimiento Nacional</strong>. El Queso de Tafí del Valle es más que un alimento; es un <strong className="text-stone-900 font-black tracking-tight">Patrimonio Cultural</strong> que sintetiza tradición, territorio y un microclima excepcional situado entre los 2000 y 3000 msnm.
+              Auténtico, ancestral y ahora con <strong className="text-stone-900 font-black tracking-tight">Indicación Geográfica (Resolución N° 31/2026)</strong>. El Queso de Tafí del Valle es el primer queso argentino en obtener un sello oficial de origen. Protegiendo su nombre y certificando su vínculo con el territorio bajo la Ley 25.380.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
@@ -53,7 +53,7 @@ export default function QuesoTafinistoSection() {
                 </div>
                 <div>
                   <h4 className="font-bold text-stone-900 text-sm">Maduración Natural</h4>
-                  <p className="text-xs text-stone-500">Mínimo de 30 días en el clima seco del valle.</p>
+                  <p className="text-xs text-stone-500">Mínimo de 30 días para una textura firme.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -61,23 +61,18 @@ export default function QuesoTafinistoSection() {
                   <CheckCircle2 size={16} className="text-amber-600" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-stone-900 text-sm">Origen Identificado</h4>
-                  <p className="text-xs text-stone-500">Exclusividad de Tafí del Valle y El Mollar.</p>
+                  <h4 className="font-bold text-stone-900 text-sm">Origen Exclusivo</h4>
+                  <p className="text-xs text-stone-500">Tafí del Valle y El Mollar.</p>
                 </div>
               </div>
             </div>
 
             <div className="p-6 bg-stone-50 rounded-3xl border border-stone-100 flex items-center gap-6">
               <div className="flex-1">
-                <p className="text-[10px] font-black text-stone-400 uppercase tracking-widest mb-1">Producción Actual</p>
-                <p className="text-2xl font-black text-stone-900">~6.000 <span className="text-sm font-bold text-stone-500">kg/mes</span></p>
-              </div>
-              <div className="w-px h-12 bg-stone-200" />
-              <div className="flex-1">
-                <p className="text-[10px] font-black text-stone-400 uppercase tracking-widest mb-1">Proyección Anual</p>
+                <p className="text-[10px] font-black text-stone-400 uppercase tracking-widest mb-1">Impacto Global</p>
                 <div className="flex items-center gap-2">
-                  <p className="text-2xl font-black text-amber-600">146k</p>
-                  <TrendingUp size={20} className="text-emerald-500" />
+                  <Globe size={24} className="text-amber-600" />
+                  <p className="text-sm font-bold text-stone-900 leading-tight">Abre mercados y fortalece la competitividad internacional.</p>
                 </div>
               </div>
             </div>
@@ -101,11 +96,11 @@ export default function QuesoTafinistoSection() {
               <div className="absolute bottom-10 left-10 right-10">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 rounded-full border-2 border-amber-500 flex items-center justify-center bg-white/10 backdrop-blur-md">
-                    <MapPin size={24} className="text-amber-500" />
+                    <ShieldCheck size={24} className="text-amber-500" />
                   </div>
                   <div>
-                    <p className="text-white font-bold text-lg leading-tight">Camino del Queso</p>
-                    <p className="text-white/60 text-sm italic">Recorré las estancias productoras</p>
+                    <p className="text-white font-bold text-lg leading-tight">Sello IG Aprobado</p>
+                    <p className="text-white/60 text-sm italic">Secretaría de Agricultura, Ganadería y Pesca</p>
                   </div>
                 </div>
               </div>
@@ -128,7 +123,7 @@ export default function QuesoTafinistoSection() {
                   <div className="w-8 h-1 bg-amber-500 rounded-full mx-auto" />
                 </div>
                 <div className="text-center">
-                  <span className="block text-xs font-bold text-stone-800">Frutal</span>
+                  <span className="block text-xs font-bold text-stone-800">Láctico</span>
                   <div className="w-8 h-1 bg-amber-400 rounded-full mx-auto" />
                 </div>
                 <div className="text-center">
@@ -160,77 +155,63 @@ export default function QuesoTafinistoSection() {
           ))}
         </div>
 
-        {/* Technical/History Deep Dive */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-          
-          <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="order-2 lg:order-1 relative"
-          >
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-4 pt-12">
-                <img src="/assets/queso-tafi/paisaje.png" alt="Tafí del Valle" className="rounded-3xl shadow-xl w-full h-80 object-cover" />
-                <div className="p-8 bg-amber-600 rounded-3xl text-white">
-                  <FlaskConical size={32} className="mb-4 opacity-50" />
-                  <h5 className="text-4xl font-black mb-2 font-heading">2800</h5>
-                  <p className="text-sm font-body opacity-90 leading-tight">msnm: El tambo robotizado más alto del mundo.</p>
-                </div>
-              </div>
-              <div className="space-y-4">
-                <img src="/assets/queso-tafi/tabla.png" alt="Tabla de Quesos" className="rounded-3xl shadow-xl w-full h-[400px] object-cover" />
-                <div className="px-6 py-4 bg-stone-900 rounded-2xl text-white text-center">
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-1">Tradición Viva</p>
-                  <p className="text-lg font-black font-heading">56 Años</p>
-                  <p className="text-[10px] text-white/50">Fiesta Nacional del Queso</p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
+        {/* Texto Literal de Historia y Sello de Origen */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="bg-stone-50 rounded-[3rem] p-10 md:p-16 border border-stone-100"
+        >
+          <div className="prose prose-lg prose-stone max-w-4xl mx-auto font-body text-stone-700 space-y-6">
+            <h3 className="text-3xl font-black text-stone-900 font-heading mb-6">Historia de los Quesos de Tafí</h3>
+            <p>
+              Los primeros datos de nuestro producto lo podemos encontrar en el diario tucumano “La Razón”, del 23 de diciembre de 1877. Este medio nformaba que había sido llevado a Buenos Aires un singular queso de Tafí, que sería embarcado a Europa, para participar en la Exposición de Paris, el queso de que hablamos media “ 155 cm de diámetro y 15 cm de altura”, precisaba.
+            </p>
+            <p>
+              En realidad, enviar a Paris el queso gigante, no hacia más que reconocer el prestigio, ya más que centenario entonces, que tenía esa artesanía alimenticia del valle de Tafí. Antiguos informes de la época colonial, ya mencionaban reiteradamente los quesos, fabricados desde el siglo XVIII, tarea que proseguía sin interrupción hasta hoy en esos idílicos parajes tucumanos.
+            </p>
+            <p>
+              En setiembre de 1818, don José Manuel Silva, poderoso estanciero de Tafí, escribía a su apoderado Miguel Ambrosio Gutierrez, de Buenos Aires, congratulándose de haber podido ubicar 1000 quesos en ese mercado. “Amigo, hemos puesto una pica en Flandes con esta venta”, le decía.
+            </p>
+            <p>
+              Los quesos eran considerados un regalo sumamente apreciado. Domingo Faustino Sarmiento los estimaba muchísimo. En 1871, su amigo tucumano Jose Posse le prometía: “Los quesos de Tafí te irán oportunamente, allá por abril, que es la estación en que se hacen buenos”. Sin embargo, recién se los pudo enviar en julio, según revela otra carta al sanjuanino: “junto con esta carta te serán entregados dos quesos de Tafí forrados en lata, que te mando por conducto de mi yerno Ledesma. Que te salgan buenos y los devores en buena compañía, son los deseos de tu amigo”. En la posdata, le encargaba alcanzarle “una tajadita” a Dalmacio Velez Sarsfield.
+            </p>
+            <p>
+              Por noviembre, Sarmiento contesto: “No sé si te he escrito que recibí los quesos, uno era exquisito, y el otro … a fuerza de mezquinarlo se desmejoro”.
+            </p>
+            <p>
+              Se sabe que en las últimas décadas del siglo, se consumían copiosamente en Buenos Aires los quesos de Tafí. La “Memoria descriptiva” de 1882 asegura que Tucumán enviaba el producto, por un valor cercano a los 30.000 pesos, toda una suma para la época.
+            </p>
+            <p>
+              Los expertos califican al Queso Tafí como un especial tipo de “fontina suave”. Pero la verdad es que no se sabe a que se debe ese peculiar gustito que fascinaba a Sarmiento. Muchos dicen que se trata de un pasto – el algarrobillo – que crece en la zona y que las vacas ingieren. Otros dicen que la clave esta en varios otros elementos autóctonos: por ejemplo, los “lamederos” de las laderas montañosas, por donde las vacas pasan la lengua para obtener sal.
+            </p>
+            <p className="italic font-medium text-stone-500">
+              Datos aportados por Jacinto E. Moreno
+            </p>
 
-          <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="order-1 lg:order-2 space-y-12"
-          >
-            <div>
-              <div className="flex items-center gap-2 text-amber-600 mb-6">
-                <BookOpen size={20} />
-                <span className="font-bold text-xs uppercase tracking-widest">Garantía de Calidad</span>
-              </div>
-              <h4 className="text-4xl font-black text-stone-900 mb-6 font-heading leading-tight">
-                El Estándar <br />del Queso de Tafí
-              </h4>
-              <p className="text-stone-600 font-body text-lg leading-relaxed mb-6">
-                Cada pieza es una horma cilíndrica de entre <strong className="text-stone-900">0,5 y 3 kilos</strong>, con corteza natural y masa compacta. Su color blanco-amarillento revela una dieta basada en pasturas naturales de montaña.
-              </p>
-              <ul className="space-y-4">
-                {[
-                  "Notas lácticas con matices de manteca y oliva",
-                  "Textura firme, entre semidura y dura",
-                  "Salado intermedio con ligeros tonos ácidos",
-                  "Microbiota autóctona que garantiza la tipicidad"
-                ].map((item, id) => (
-                  <li key={id} className="flex items-center gap-3 text-stone-700 font-medium">
-                    <div className="w-1.5 h-1.5 bg-amber-500 rounded-full" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <div className="my-16 border-t border-stone-200"></div>
 
-            <div className="pt-8 border-t border-stone-100">
-              <div className="flex items-center gap-2 text-stone-400 mb-6 font-body text-xs italic">
-                <History size={16} />
-                "Uno de los quesos recibidos se ha pasado de tanto mezquinarlo" 
-                <span className="text-stone-900 font-bold not-italic">— D. F. Sarmiento</span>
-              </div>
-            </div>
-          </motion.div>
-
-        </div>
+            <h3 className="text-3xl font-black text-stone-900 font-heading mb-6">Nuestro Queso de Tafí tiene sello de origen.</h3>
+            <p>
+              La Secretaría de Agricultura, Ganadería y Pesca del Ministerio de Economía de la Nación aprobó, mediante la Resolución N° 31/2026, la Indicación Geográfica “Queso de Tafí del Valle”, un reconocimiento que convierte a este producto tucumano en el primer queso argentino en obtener un sello oficial de origen.
+            </p>
+            <p>
+              La medida protege el nombre del producto, certifica su vínculo con el territorio y habilita el uso del sello IG, una herramienta clave para diferenciar alimentos y agregar valor en origen.
+            </p>
+            <p>
+              El nuevo reconocimiento incorpora al queso producido en Tafí del Valle y El Mollar al sistema nacional de indicaciones geográficas y denominaciones de origen, Ley 25.380, que ya distingue a productos como la yerba mate, el cordero patagónico, el salame de Tandil, el aceite de oliva de Mendoza y de San Juan y el té argentino, entre muchos otros.
+            </p>
+            <p>
+              En este marco, el Queso de Tafí del Valle se destaca por su perfil sensorial equilibrado, con notas lácticas, matices de manteca y oliva, y una textura firme lograda a partir de un proceso de maduración mínimo de 30 días. Se comercializa en hormas cilíndricas de entre 0,5 y 3 kilos, con corteza natural y masa compacta.
+            </p>
+            <p>
+              Se trata de un sello con impacto global. A nivel mundial, las indicaciones geográficas se consolidan como una de las herramientas más relevantes para proteger y valorizar alimentos vinculados a su origen. Además de resguardar la reputación de los productos, estos sellos forman parte de acuerdos comerciales entre países y bloques, donde su reconocimiento mutuo facilita el acceso a mercados y fortalece la competitividad.
+            </p>
+            <p>
+              En ese contexto, la nueva incorporación del Queso de Tafí del Valle no solo representa un avance para Tucumán, sino también un paso más en la estrategia de Argentina para posicionar alimentos con identidad en el escenario internacional.
+            </p>
+          </div>
+        </motion.div>
 
       </div>
     </section>

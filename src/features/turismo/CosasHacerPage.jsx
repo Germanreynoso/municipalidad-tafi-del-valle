@@ -121,9 +121,14 @@ export default function CosasHacerPage() {
                     height={256}
                   />
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-300 pointer-events-none" />
-                  <div className="absolute top-4 right-4 z-10">
+                  <div className="absolute top-4 right-4 z-10 flex flex-col gap-2 items-end">
+                    {act.id === 'rutadelqueso' && (
+                      <span className="px-3 py-1 bg-amber-500 text-white text-[10px] font-black uppercase tracking-wider rounded-lg shadow-sm">
+                        Próximamente
+                      </span>
+                    )}
                     <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-stone-800 text-[10px] font-black uppercase tracking-wider rounded-lg shadow-sm border border-stone-100">
-                      {t(`activities.categories.${act.categoria}`)}
+                      {act.id === 'rutadelqueso' ? 'Actividades' : t(`activities.categories.${act.categoria}`)}
                     </span>
                   </div>
                 </div>
@@ -155,7 +160,11 @@ export default function CosasHacerPage() {
                   )}
 
                   <div className="mt-auto">
-                    {act.instagram ? (
+                    {act.id === 'rutadelqueso' ? (
+                      <div className="w-full py-4 flex items-center justify-center gap-3 rounded-2xl bg-amber-50 text-amber-600 font-bold text-sm border border-amber-100">
+                        Muy pronto
+                      </div>
+                    ) : act.instagram ? (
                       <a 
                         href={act.instagram}
                         target="_blank"

@@ -14,6 +14,7 @@ import AlojamientoPage from './features/turismo/AlojamientoPage.jsx';
 import CosasHacerPage from './features/turismo/CosasHacerPage.jsx';
 import GastronomiaPage from './features/turismo/GastronomiaPage.jsx';
 import GuiasPage from './features/turismo/GuiasPage.jsx';
+import Ordenanzas from './pages/Ordenanzas.jsx';
 import InstitucionalPage from './features/institucional/InstitucionalPage.jsx';
 
 import { useState } from 'react';
@@ -56,6 +57,7 @@ const router = createBrowserRouter([
       { path: '/perfil-valle',  element: <PerfilValle /> },
       { path: '/tradiciones',   element: <Tradiciones /> },
       { path: '/autoridades',   element: <Autoridades /> },
+      { path: '/ordenanzas',    element: <Ordenanzas /> },
       { path: '/ciudadano',     element: <CiudadanoPage /> },
       { path: '/turismo',       element: <TurismoPage /> },
       { path: '/turismo/alojamiento', element: <AlojamientoPage /> },
