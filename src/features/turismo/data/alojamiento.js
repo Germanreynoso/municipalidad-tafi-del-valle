@@ -751,6 +751,16 @@ export const alojamientos = [
     "whatsapp": "https://wa.me/3815889570",
     "instagram": "https://www.instagram.com/balcones_detafi/",
     "descripcion": "Alojamiento habilitado por la Municipalidad de Tafí del Valle."
+  },
+  {
+    "id": 76,
+    "nombre": "EL VIGÍA DEL VALLE - VILLAGE DE ALTA MONTAÑA",
+    "categoria": "cabañas",
+    "direccion": "Barrio La Banda - Calle El Tala 97",
+    "telefono": "113 218 0810",
+    "whatsapp": "https://wa.me/5491132180810",
+    "instagram": "https://www.instagram.com/elvigiadelvalle/",
+    "descripcion": "Alojamiento habilitado por la Municipalidad de Tafí del Valle."
   }
 ];
 

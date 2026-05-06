@@ -87,7 +87,7 @@ export default function QuesoTafinistoSection() {
           >
             <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl">
               <img 
-                src="/assets/queso-tafi/producto.png" 
+                src="/assets/queso-tafi/queso-ig-hero.jpg" 
                 alt="Queso Tafinisto Artesanal" 
                 className="w-full h-[600px] object-cover hover:scale-105 transition-transform duration-700"
               />
@@ -210,6 +210,24 @@ export default function QuesoTafinistoSection() {
             <p>
               En ese contexto, la nueva incorporación del Queso de Tafí del Valle no solo representa un avance para Tucumán, sino también un paso más en la estrategia de Argentina para posicionar alimentos con identidad en el escenario internacional.
             </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+              {[1, 2, 3].map((num) => (
+                <motion.div
+                  key={num}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: num * 0.1 }}
+                  className="rounded-3xl overflow-hidden shadow-lg aspect-square"
+                >
+                  <img 
+                    src={`/assets/queso-tafi/queso-ig-${num}.jpg`} 
+                    alt={`Queso Tafinisto detalle ${num}`} 
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                  />
+                </motion.div>
+              ))}
+            </div>
           </div>
         </motion.div>
 
