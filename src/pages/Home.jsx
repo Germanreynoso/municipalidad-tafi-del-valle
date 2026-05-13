@@ -32,7 +32,7 @@ export default function Home() {
     { valor: '12.000', label: t('home:stats.inhabitants'), icono: <Users size={20} /> },
     { valor: '2.000m', label: t('home:stats.altitude'), icono: <Mountain size={20} /> },
     { valor: '6', label: t('home:stats.attractions'), icono: <Camera size={20} /> },
-    { valor: '150km', label: t('home:stats.distance'), icono: <MapPin size={20} /> },
+    { valor: '107km', label: t('home:stats.distance'), icono: <MapPin size={20} /> },
   ];
 
   const formatFecha = (isoDate) => {

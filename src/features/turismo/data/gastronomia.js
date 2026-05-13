@@ -138,6 +138,41 @@ export const gastronomia = [
     categoria: 'estancia quesera',
     link: 'https://www.estancialascarreras.com/',
     descripcionId: 'lasCarreras',
+  },
+  {
+    id: 21,
+    nombre: 'Flor de Saúco de La Villa',
+    categoria: 'casa de té',
+    link: 'https://maps.app.goo.gl/ovQKVVRtWi6ESNKv9',
+    descripcionId: 'florSaucoVilla',
+  },
+  {
+    id: 22,
+    nombre: 'Flor de Saúco de Las Nubes',
+    categoria: 'casa de té',
+    link: 'https://maps.app.goo.gl/wP1CzDwWWsQNUVk39?g_st=aw',
+    descripcionId: 'florSaucoNubes',
+  },
+  {
+    id: 23,
+    nombre: 'Popey',
+    categoria: 'restaurante',
+    link: 'https://maps.app.goo.gl/8wCYNMYyU535H4GF7?g_st=aw',
+    descripcionId: 'popey',
+  },
+  {
+    id: 24,
+    nombre: 'Las Rosas de La Villa',
+    categoria: 'casa de té',
+    link: 'https://maps.app.goo.gl/XjR1rVXqMJJRJo3g8?g_st=aw',
+    descripcionId: 'rosasVilla',
+  },
+  {
+    id: 25,
+    nombre: 'Las Rosas de Las Queñuas',
+    categoria: 'casa de té',
+    link: 'https://maps.app.goo.gl/y15iD6aCL6FabcLL6?g_st=aw',
+    descripcionId: 'rosasQueñuas',
   }
 ];
 
