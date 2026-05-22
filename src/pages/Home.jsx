@@ -12,6 +12,8 @@ import somosTodosLogo from '../assets/SOMOS TODOS COLOR.png';
 import heroTafi from '../assets/hero-tafi.jpg';
 import turistaImg from '../assets/turista.jpg';
 import transparenciaImg from '../assets/transparencia.jpg';
+import AmbienteCarousel from '../components/AmbienteCarousel.jsx';
+
 
 export default function Home() {
   const { t, i18n } = useTranslation(['home', 'common']);
@@ -156,8 +158,13 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Ambiente Carousel Section */}
+      <section className="bg-white overflow-hidden border-t border-stone-200">
+        <AmbienteCarousel />
+      </section>
+
       {/* Oportunidades Section */}
-      <section className="py-24 bg-white overflow-hidden border-t border-stone-200">
+      <section className="py-24 bg-stone-light overflow-hidden border-t border-stone-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <OportunidadesList />
         </div>
