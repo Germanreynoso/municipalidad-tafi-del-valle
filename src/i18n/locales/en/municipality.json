@@ -120,6 +120,25 @@
       "sabor": {
         "title": "Taste of Antiquity",
         "desc": "Cheeses manufactured with a Jesuit artisanal process."
+      },
+      "liveStreams": {
+        "title": "Relive the Cheese Festival",
+        "subtitle": "Enjoy the full live streams of the 56th National Cheese Festival",
+        "watchOnYoutube": "Watch on YouTube",
+        "nights": {
+          "night1": {
+            "title": "First Night (Friday)",
+            "desc": "Lucio “El Indio” Rojas, Los Bybys, and great artists."
+          },
+          "night2": {
+            "title": "Second Night (Saturday)",
+            "desc": "El Chaqueño Palavecino, Néstor Garnica, Q' Lokura, and more."
+          },
+          "night3": {
+            "title": "Third Night (Sunday)",
+            "desc": "Lázaro Caballero, Sergio Galleguillo, and grand closing."
+          }
+        }
       }
     },
     "crafts": {

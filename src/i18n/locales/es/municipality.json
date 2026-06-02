@@ -120,6 +120,25 @@
       "sabor": {
         "title": "Sabor de Antigüedad",
         "desc": "Quesos fabricados con un proceso artesanal jesuita."
+      },
+      "liveStreams": {
+        "title": "Reviví la Fiesta del Queso",
+        "subtitle": "Disfrutá de las transmisiones en vivo completas de la 56ª Fiesta Nacional del Queso",
+        "watchOnYoutube": "Ver en YouTube",
+        "nights": {
+          "night1": {
+            "title": "Primera Noche (Viernes)",
+            "desc": "Lucio “El Indio” Rojas, Los Bybys y grandes artistas."
+          },
+          "night2": {
+            "title": "Segunda Noche (Sábado)",
+            "desc": "El Chaqueño Palavecino, Néstor Garnica, Q' Lokura y más."
+          },
+          "night3": {
+            "title": "Tercera Noche (Domingo)",
+            "desc": "Lázaro Caballero, Sergio Galleguillo y gran cierre."
+          }
+        }
       }
     },
     "crafts": {
