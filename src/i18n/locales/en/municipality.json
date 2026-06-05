@@ -171,6 +171,13 @@
       "description": "A cuisine that merges local ingredients with ancestral techniques to create dishes that feed the soul."
     }
   },
+  "tales": {
+    "title": "Valley Tales",
+    "subtitle": "Stories, myths and legends that the Calchaquí wind kept in the memory of its people.",
+    "breadcrumb": "Culture & Traditions",
+    "intro": "The oral tradition of Tafí del Valle is filled with witches, mule-spirits and apparitions. These tales, passed down from generation to generation by the fireside, preserve the deep and mysterious soul of our land.",
+    "read": "Read tale"
+  },
   "institutional": {
     "title": "Transparency",
     "subtitle": "Management news, official documents, and open government.",

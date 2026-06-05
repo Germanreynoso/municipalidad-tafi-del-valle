@@ -171,6 +171,13 @@
       "description": "Una cocina que fusiona ingredientes locales con técnicas ancestrales para crear platos que alimentan el alma."
     }
   },
+  "tales": {
+    "title": "Relatos del Valle",
+    "subtitle": "Cuentos, mitos y leyendas que el viento calchaquí guardó en la memoria de su gente.",
+    "breadcrumb": "Cultura y Tradiciones",
+    "intro": "La tradición oral de Tafí del Valle está poblada de brujas, mulánimas y aparecidos. Estos relatos, transmitidos de generación en generación junto al fogón, conservan el alma profunda y misteriosa de nuestra tierra.",
+    "read": "Leer relato"
+  },
   "institutional": {
     "title": "Transparencia",
     "subtitle": "Noticias de gestión, documentos oficiales y gobierno abierto.",

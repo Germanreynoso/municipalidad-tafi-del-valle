@@ -7,6 +7,7 @@ import Home from './pages/Home.jsx';
 import Historia from './pages/Historia.jsx';
 import PerfilValle from './pages/PerfilValle.jsx';
 import Tradiciones from './pages/Tradiciones.jsx';
+import Relatos from './pages/Relatos.jsx';
 import Autoridades from './pages/Autoridades.jsx';
 import CiudadanoPage from './features/ciudadano/CiudadanoPage.jsx';
 import TurismoPage from './features/turismo/TurismoPage.jsx';
@@ -56,6 +57,7 @@ const router = createBrowserRouter([
       { path: '/historia',      element: <Historia /> },
       { path: '/perfil-valle',  element: <PerfilValle /> },
       { path: '/tradiciones',   element: <Tradiciones /> },
+      { path: '/relatos',       element: <Relatos /> },
       { path: '/autoridades',   element: <Autoridades /> },
       { path: '/ordenanzas',    element: <Ordenanzas /> },
       { path: '/ciudadano',     element: <CiudadanoPage /> },

@@ -2,6 +2,7 @@ import { atracciones, eventoDestacado } from '../features/turismo/data/atraccion
 import { gastronomia } from '../features/turismo/data/gastronomia';
 import { alojamientos } from '../features/turismo/data/alojamiento';
 import { actividades } from '../features/turismo/data/cosasHacer';
+import { relatos } from '../data/relatos';
 
 export const searchIndex = [
   // Páginas Estáticas
@@ -10,6 +11,7 @@ export const searchIndex = [
   { title: 'Autoridades', category: 'Municipio', to: '/autoridades', description: 'Cuerpo ejecutivo y legislativo de la municipalidad.' },
   { title: 'Perfil del Valle', category: 'Municipio', to: '/perfil-valle', description: 'Geografía, clima y datos del valle.' },
   { title: 'Fiestas y Tradiciones', category: 'Cultura', to: '/tradiciones', description: 'Calendario de eventos, Fiesta del Queso y más.' },
+  { title: 'Relatos del Valle', category: 'Cultura', to: '/relatos', description: 'Cuentos, mitos y leyendas de Tafí del Valle.' },
   { title: 'Guía de Alojamiento', category: 'Turismo', to: '/turismo/alojamiento', description: 'Hoteles, cabañas y hosterías.' },
   { title: 'Guía de Gastronomía', category: 'Turismo', to: '/turismo/gastronomia', description: 'Restaurantes, peñas y bares.' },
   { title: 'Qué hacer en Tafí', category: 'Turismo', to: '/turismo/que-hacer', description: 'Actividades, trekking y excursiones.' },
@@ -66,6 +68,15 @@ export const searchIndex = [
     category: 'Alojamiento',
     to: '/turismo/alojamiento',
     type: 'hotel'
+  })),
+
+  // Relatos del Valle
+  ...relatos.map(r => ({
+    title: r.titulo,
+    description: r.extracto,
+    category: 'Relatos',
+    to: '/relatos',
+    type: 'relato'
   })),
 
   // Emergencias
