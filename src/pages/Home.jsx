@@ -13,6 +13,7 @@ import heroTafi from '../assets/hero-tafi.jpg';
 import turistaImg from '../assets/turista.jpg';
 import transparenciaImg from '../assets/transparencia.jpg';
 import AmbienteCarousel from '../components/AmbienteCarousel.jsx';
+import NovedadesSection from '../components/NovedadesSection.jsx';
 
 
 export default function Home() {
@@ -157,6 +158,9 @@ export default function Home() {
           </Motion.div>
         </div>
       </section>
+
+      {/* Últimas Novedades (reels de Instagram) */}
+      <NovedadesSection />
 
       {/* Ambiente Carousel Section */}
       <section className="bg-white overflow-hidden border-t border-stone-200">
