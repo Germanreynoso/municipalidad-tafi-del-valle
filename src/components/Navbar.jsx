@@ -13,6 +13,7 @@ export default function Navbar({ onSearchOpen }) {
 
   const navLinks = [
     { label: t('nav.home'), to: '/' },
+    { label: t('nav.news'), to: '/noticias' },
     {
       label: t('nav.municipality'),
       submenu: [

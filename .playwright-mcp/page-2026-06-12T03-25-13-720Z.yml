@@ -1,0 +1,36 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - link "Panel de Prensa" [ref=e7] [cursor=pointer]:
+          - /url: /admin
+        - navigation [ref=e8]:
+          - link "Noticias" [ref=e9] [cursor=pointer]:
+            - /url: /admin
+          - link "Reels" [ref=e10] [cursor=pointer]:
+            - /url: /admin/reels
+      - generic [ref=e11]:
+        - link "Ver sitio" [ref=e12] [cursor=pointer]:
+          - /url: /
+        - button "Salir" [ref=e13]
+  - main [ref=e14]:
+    - generic [ref=e15]:
+      - heading "Reels de Instagram" [level=1] [ref=e16]
+      - paragraph [ref=e17]: Los 3 más recientes aparecen en la portada del sitio como "Últimas novedades".
+      - generic [ref=e18]:
+        - textbox "https://www.instagram.com/reel/..." [ref=e19]
+        - button "+ Agregar reel" [ref=e20]
+      - table [ref=e34]:
+        - rowgroup [ref=e35]:
+          - row "Link Agregado Acciones" [ref=e36]:
+            - columnheader "Link" [ref=e37]
+            - columnheader "Agregado" [ref=e38]
+            - columnheader "Acciones" [ref=e39]
+        - rowgroup [ref=e40]:
+          - row "https://www.instagram.com/reel/DZVPXboj-D1/ 12 de junio de 2026 Borrar" [ref=e41]:
+            - cell "https://www.instagram.com/reel/DZVPXboj-D1/" [ref=e42]:
+              - link "https://www.instagram.com/reel/DZVPXboj-D1/" [ref=e43] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DZVPXboj-D1/
+            - cell "12 de junio de 2026" [ref=e44]
+            - cell "Borrar" [ref=e45]:
+              - button "Borrar" [ref=e46]

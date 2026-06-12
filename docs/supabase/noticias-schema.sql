@@ -17,7 +17,7 @@ create table public.noticias (
   published_at timestamptz,
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now(),
-  author_id uuid references auth.users(id),
+  author_id uuid references auth.users(id) on delete set null,
   constraint noticias_estado_check check (estado in ('borrador','publicado')),
   constraint noticias_categoria_check check (
     categoria in ('Gobierno','Cultura','Turismo','Obras','Comunidad','Eventos')

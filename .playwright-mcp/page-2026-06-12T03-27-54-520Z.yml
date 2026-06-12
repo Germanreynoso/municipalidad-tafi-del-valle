@@ -1,0 +1,7 @@
+- generic [ref=e51]:
+  - heading "Panel de Prensa" [level=1] [ref=e52]
+  - generic [ref=e53]: Email
+  - textbox [ref=e54]
+  - generic [ref=e55]: Contraseña
+  - textbox [ref=e56]
+  - button "Ingresar" [ref=e57]

@@ -1,0 +1,39 @@
+- generic [ref=e11]:
+  - banner [ref=e12]:
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - link "Panel de Prensa" [ref=e15] [cursor=pointer]:
+          - /url: /admin
+        - navigation [ref=e16]:
+          - link "Noticias" [ref=e17] [cursor=pointer]:
+            - /url: /admin
+          - link "Reels" [ref=e18] [cursor=pointer]:
+            - /url: /admin/reels
+      - generic [ref=e19]:
+        - link "Ver sitio" [ref=e20] [cursor=pointer]:
+          - /url: /
+        - button "Salir" [ref=e21]
+  - main [ref=e22]:
+    - generic [ref=e59]:
+      - generic [ref=e60]:
+        - heading "Noticias" [level=1] [ref=e61]
+        - link "+ Nueva noticia" [ref=e62] [cursor=pointer]:
+          - /url: /admin/noticias/nueva
+      - table [ref=e65]:
+        - rowgroup [ref=e66]:
+          - row "Título Categoría Estado Fecha Acciones" [ref=e67]:
+            - columnheader "Título" [ref=e68]
+            - columnheader "Categoría" [ref=e69]
+            - columnheader "Estado" [ref=e70]
+            - columnheader "Fecha" [ref=e71]
+            - columnheader "Acciones" [ref=e72]
+        - rowgroup [ref=e73]:
+          - row "Noticia de prueba (smoke test) Turismo publicado 12 de junio de 2026 Editar Borrar" [ref=e74]:
+            - cell "Noticia de prueba (smoke test)" [ref=e75]
+            - cell "Turismo" [ref=e76]
+            - cell "publicado" [ref=e77]
+            - cell "12 de junio de 2026" [ref=e78]
+            - cell "Editar Borrar" [ref=e79]:
+              - link "Editar" [ref=e80] [cursor=pointer]:
+                - /url: /admin/noticias/c12b6770-cd29-4dd5-8d91-24c3e312a713/editar
+              - button "Borrar" [ref=e81]

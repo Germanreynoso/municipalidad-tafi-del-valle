@@ -1,0 +1,43 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - link "Panel de Prensa" [ref=e7] [cursor=pointer]:
+          - /url: /admin
+        - navigation [ref=e8]:
+          - link "Noticias" [ref=e9] [cursor=pointer]:
+            - /url: /admin
+          - link "Reels" [ref=e10] [cursor=pointer]:
+            - /url: /admin/reels
+      - generic [ref=e11]:
+        - link "Ver sitio" [ref=e12] [cursor=pointer]:
+          - /url: /
+        - button "Salir" [ref=e13]
+  - main [ref=e14]:
+    - generic [ref=e15]:
+      - heading "Reels de Instagram" [level=1] [ref=e16]
+      - paragraph [ref=e17]: Los 3 más recientes aparecen en la portada del sitio como "Últimas novedades".
+      - generic [ref=e18]:
+        - textbox "https://www.instagram.com/reel/..." [ref=e19]
+        - button "+ Agregar reel" [ref=e20]
+      - table [ref=e48]:
+        - rowgroup [ref=e49]:
+          - row "Link Agregado Acciones" [ref=e50]:
+            - columnheader "Link" [ref=e51]
+            - columnheader "Agregado" [ref=e52]
+            - columnheader "Acciones" [ref=e53]
+        - rowgroup [ref=e54]:
+          - row "https://www.instagram.com/reel/DZYAXX1jquI/ 12 de junio de 2026 Borrar" [ref=e55]:
+            - cell "https://www.instagram.com/reel/DZYAXX1jquI/" [ref=e56]:
+              - link "https://www.instagram.com/reel/DZYAXX1jquI/" [ref=e57] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DZYAXX1jquI/
+            - cell "12 de junio de 2026" [ref=e58]
+            - cell "Borrar" [ref=e59]:
+              - button "Borrar" [ref=e60]
+          - row "https://www.instagram.com/reel/DZVPXboj-D1/ 12 de junio de 2026 Borrar" [ref=e61]:
+            - cell "https://www.instagram.com/reel/DZVPXboj-D1/" [ref=e62]:
+              - link "https://www.instagram.com/reel/DZVPXboj-D1/" [ref=e63] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DZVPXboj-D1/
+            - cell "12 de junio de 2026" [ref=e64]
+            - cell "Borrar" [ref=e65]:
+              - button "Borrar" [ref=e66]

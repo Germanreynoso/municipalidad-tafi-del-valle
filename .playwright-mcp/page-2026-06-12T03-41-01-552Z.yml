@@ -1,0 +1,128 @@
+- generic [ref=e3]:
+  - generic [ref=e5]:
+    - link "tafidelvalle.es.tudestino@gmail.com" [ref=e6] [cursor=pointer]:
+      - /url: mailto:tafidelvalle.es.tudestino@gmail.com
+      - img [ref=e7]
+      - text: tafidelvalle.es.tudestino@gmail.com
+    - link "+54 9 3867 607038 (La casa del Turista)" [ref=e11] [cursor=pointer]:
+      - /url: https://wa.me/5493867607038
+      - img [ref=e12]
+      - text: +54 9 3867 607038
+      - generic [ref=e14]: (La casa del Turista)
+  - navigation [ref=e15]:
+    - generic [ref=e17]:
+      - link "Municipalidad de Tafí del Valle" [ref=e18] [cursor=pointer]:
+        - /url: /
+        - img "Municipalidad de Tafí del Valle" [ref=e19]
+      - generic [ref=e20]:
+        - link "Inicio" [ref=e21] [cursor=pointer]:
+          - /url: /
+        - button "Municipio" [ref=e23]:
+          - text: Municipio
+          - img [ref=e24]
+        - button "Turismo" [ref=e27]:
+          - text: Turismo
+          - img [ref=e28]
+        - button "¿Qué buscas?" [ref=e30]:
+          - img [ref=e31]
+          - generic [ref=e34]: ¿Qué buscas?
+        - generic [ref=e35]:
+          - img [ref=e36]
+          - generic [ref=e39]:
+            - button "es" [ref=e40]: es
+            - button "en" [ref=e41]
+  - generic [ref=e116]:
+    - generic [ref=e117]:
+      - generic [ref=e118]:
+        - img "Tafí del Valle" [ref=e119]
+        - button [ref=e121]:
+          - img [ref=e122]
+      - generic [ref=e125]:
+        - heading "¿Sabías que el clima en Tafí es un microclima especial?" [level=3] [ref=e126]
+        - paragraph [ref=e127]: Incluso en verano, las noches son frescas, y en invierno las cumbres suelen cubrirse de nieve, ofreciendo un paisaje alpino único en Tucumán.
+    - img "Mascota"
+  - main [ref=e42]:
+    - generic [ref=e44]:
+      - generic [ref=e46]:
+        - paragraph [ref=e47]:
+          - link "Inicio" [ref=e48] [cursor=pointer]:
+            - /url: /
+          - text: / Noticias
+        - heading "Noticias" [level=1] [ref=e49]
+      - link "NOTICIA DE PRUEBA Turismo 12 de junio de 2026 NOTICIA DE PRUEBA UN CONTEXTO DE PRUEBA Leer más" [ref=e129] [cursor=pointer]:
+        - /url: /noticias/noticia-de-prueba
+        - img "NOTICIA DE PRUEBA" [ref=e131]
+        - generic [ref=e132]:
+          - generic [ref=e133]:
+            - generic [ref=e134]: Turismo
+            - generic [ref=e135]: 12 de junio de 2026
+          - heading "NOTICIA DE PRUEBA" [level=3] [ref=e136]
+          - paragraph [ref=e137]: UN CONTEXTO DE PRUEBA
+          - generic [ref=e138]:
+            - text: Leer más
+            - img [ref=e139]
+  - contentinfo [ref=e52]:
+    - generic [ref=e53]:
+      - link "🏥 Salud Hospital del Valle (03867) 421031 / 427034" [ref=e54] [cursor=pointer]:
+        - /url: tel:03867421031427034
+        - generic [ref=e55]: 🏥
+        - generic [ref=e56]:
+          - paragraph [ref=e57]: Salud
+          - paragraph [ref=e58]: Hospital del Valle
+          - paragraph [ref=e59]: (03867) 421031 / 427034
+      - link "🚔 Seguridad Comisaría Tafí del Valle 03867 421322" [ref=e60] [cursor=pointer]:
+        - /url: tel:03867421322
+        - generic [ref=e61]: 🚔
+        - generic [ref=e62]:
+          - paragraph [ref=e63]: Seguridad
+          - paragraph [ref=e64]: Comisaría Tafí del Valle
+          - paragraph [ref=e65]: 03867 421322
+      - link "🚒 Bomberos Bomberos Voluntarios 100" [ref=e66] [cursor=pointer]:
+        - /url: tel:100
+        - generic [ref=e67]: 🚒
+        - generic [ref=e68]:
+          - paragraph [ref=e69]: Bomberos
+          - paragraph [ref=e70]: Bomberos Voluntarios
+          - paragraph [ref=e71]: "100"
+    - generic [ref=e72]:
+      - generic [ref=e74]:
+        - generic [ref=e75]:
+          - img "Municipalidad de Tafí del Valle" [ref=e77]
+          - paragraph [ref=e78]: Comprometidos con el desarrollo sustentable y la calidad de vida de los habitantes del Valle Sagrado.
+          - generic [ref=e79]:
+            - link "Facebook" [ref=e80] [cursor=pointer]:
+              - /url: https://www.facebook.com/share/1DXwoA8awU/
+              - img [ref=e82]
+            - link "Instagram" [ref=e84] [cursor=pointer]:
+              - /url: https://www.instagram.com/turismoentafidelvalle
+              - img [ref=e86]
+            - link "TikTok" [ref=e89] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@turismoentafidelvalle
+              - img [ref=e91]
+        - generic [ref=e93]:
+          - paragraph [ref=e94]: Municipio
+          - list [ref=e95]:
+            - listitem [ref=e96]:
+              - link "Autoridades" [ref=e97] [cursor=pointer]:
+                - /url: /autoridades
+            - listitem [ref=e98]:
+              - link "Historia" [ref=e99] [cursor=pointer]:
+                - /url: /noticias
+            - listitem [ref=e100]:
+              - link "Ordenanzas" [ref=e101] [cursor=pointer]:
+                - /url: /noticias
+            - listitem [ref=e102]:
+              - link "Concejo Deliberante" [ref=e103] [cursor=pointer]:
+                - /url: /noticias
+        - generic [ref=e104]:
+          - paragraph [ref=e105]: Servicios
+          - list [ref=e106]:
+            - listitem [ref=e107]:
+              - link "Turismo" [ref=e108] [cursor=pointer]:
+                - /url: /turismo
+            - listitem [ref=e109]:
+              - link "Contacto" [ref=e110] [cursor=pointer]:
+                - /url: /noticias
+      - generic [ref=e112]:
+        - paragraph [ref=e113]: © 2026 Municipalidad de Tafí del Valle — Provincia de Tucumán, Argentina
+        - paragraph [ref=e114]: Code & Design with Germán Gonzalo Reynoso

@@ -1,0 +1,32 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - link "Panel de Prensa" [ref=e7] [cursor=pointer]:
+          - /url: /admin
+        - navigation [ref=e8]:
+          - link "Noticias" [ref=e9] [cursor=pointer]:
+            - /url: /admin
+          - link "Reels" [ref=e10] [cursor=pointer]:
+            - /url: /admin/reels
+      - generic [ref=e11]:
+        - link "Ver sitio" [ref=e12] [cursor=pointer]:
+          - /url: /
+        - button "Salir" [ref=e13]
+  - main [ref=e14]:
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - heading "Noticias" [level=1] [ref=e17]
+        - link "+ Nueva noticia" [ref=e18] [cursor=pointer]:
+          - /url: /admin/noticias/nueva
+      - table [ref=e39]:
+        - rowgroup [ref=e40]:
+          - row "Título Categoría Estado Fecha Acciones" [ref=e41]:
+            - columnheader "Título" [ref=e42]
+            - columnheader "Categoría" [ref=e43]
+            - columnheader "Estado" [ref=e44]
+            - columnheader "Fecha" [ref=e45]
+            - columnheader "Acciones" [ref=e46]
+        - rowgroup [ref=e47]:
+          - row "Todavía no hay noticias." [ref=e48]:
+            - cell "Todavía no hay noticias." [ref=e49]

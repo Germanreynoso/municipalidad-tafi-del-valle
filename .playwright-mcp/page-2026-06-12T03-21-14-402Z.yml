@@ -1,0 +1,51 @@
+- generic [ref=e11]:
+  - banner [ref=e12]:
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - link "Panel de Prensa" [ref=e15] [cursor=pointer]:
+          - /url: /admin
+        - navigation [ref=e16]:
+          - link "Noticias" [ref=e17] [cursor=pointer]:
+            - /url: /admin
+          - link "Reels" [ref=e18] [cursor=pointer]:
+            - /url: /admin/reels
+      - generic [ref=e19]:
+        - link "Ver sitio" [ref=e20] [cursor=pointer]:
+          - /url: /
+        - button "Salir" [ref=e21]
+  - main [ref=e22]:
+    - generic [ref=e28]:
+      - heading "Nueva noticia" [level=1] [ref=e29]
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - generic [ref=e32]: Título
+          - textbox [ref=e33]
+        - generic [ref=e34]:
+          - generic [ref=e35]: Extracto
+          - textbox [ref=e36]
+        - generic [ref=e37]:
+          - generic [ref=e38]: Categoría
+          - combobox [ref=e39]:
+            - option "Gobierno" [selected]
+            - option "Cultura"
+            - option "Turismo"
+            - option "Obras"
+            - option "Comunidad"
+            - option "Eventos"
+        - generic [ref=e40]:
+          - generic [ref=e41]: Imagen
+          - button "Choose File" [ref=e43]
+        - generic [ref=e44]:
+          - generic [ref=e45]: Contenido
+          - generic [ref=e46]:
+            - generic [ref=e47]:
+              - button "Negrita" [ref=e48]
+              - button "Cursiva" [ref=e49]
+              - button "Título" [ref=e50]
+              - button "Lista" [ref=e51]
+              - button "Lista num." [ref=e52]
+            - textbox [ref=e54]:
+              - paragraph [ref=e55]
+        - generic [ref=e56]:
+          - button "Guardar borrador" [ref=e57]
+          - button "Publicar" [ref=e58]

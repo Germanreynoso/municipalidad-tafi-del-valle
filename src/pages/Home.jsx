@@ -5,7 +5,6 @@ import { motion as Motion } from 'framer-motion';
 import { fadeUp, stagger, slideLeft } from '../styles/motion.js';
 import PortalCard from '../components/PortalCard.jsx';
 import WeatherWidget from '../components/common/WeatherWidget.jsx';
-import { noticias } from '../features/institucional/data/noticias.js';
 import LocationCard from '../features/turismo/components/LocationCard.jsx';
 import OportunidadesList from '../features/ciudadano/components/OportunidadesList.jsx';
 import somosTodosLogo from '../assets/SOMOS TODOS COLOR.png';
@@ -13,11 +12,11 @@ import heroTafi from '../assets/hero-tafi.jpg';
 import turistaImg from '../assets/turista.jpg';
 import transparenciaImg from '../assets/transparencia.jpg';
 import AmbienteCarousel from '../components/AmbienteCarousel.jsx';
+import NovedadesSection from '../components/NovedadesSection.jsx';
 
 
 export default function Home() {
   const { t, i18n } = useTranslation(['home', 'common']);
-  const noticiasRecientes = noticias.slice(0, 3);
 
   const portals = [
     {
@@ -157,6 +156,9 @@ export default function Home() {
           </Motion.div>
         </div>
       </section>
+
+      {/* Últimas Novedades (reels de Instagram) */}
+      <NovedadesSection />
 
       {/* Ambiente Carousel Section */}
       <section className="bg-white overflow-hidden border-t border-stone-200">

@@ -24,6 +24,11 @@
     "attractions": "Featured attractions",
     "distance": "From Tucumán capital"
   },
+  "news": {
+    "kicker": "Municipal updates",
+    "title": "Latest updates",
+    "cta": "See more on Instagram"
+  },
   "slogan": {
     "text": "\"A management committed to the well-being of every Tafí family, working together for the present and future of our valley.\""
   },
