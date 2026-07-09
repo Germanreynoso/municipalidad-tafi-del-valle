@@ -2,7 +2,9 @@ import { useTranslation } from 'react-i18next';
 import { motion as Motion } from 'framer-motion';
 import { fadeUp, stagger } from '../styles/motion.js';
 import InstagramEmbed from './common/InstagramEmbed.jsx';
-import { novedades, INSTAGRAM_PROFILE } from '../data/novedades.js';
+import { useReels } from '../features/reels/hooks/useReels.js';
+
+const INSTAGRAM_PROFILE = 'https://www.instagram.com/turismoentafidelvalle';
 
 // lucide-react ya no incluye íconos de marcas; glifo de Instagram inline.
 function InstagramIcon({ size = 18 }) {
@@ -27,9 +29,10 @@ function InstagramIcon({ size = 18 }) {
 
 export default function NovedadesSection() {
   const { t } = useTranslation('home');
-  const ultimas = novedades.slice(0, 3);
+  const { reels, loading, error } = useReels({ limit: 3 });
 
-  if (ultimas.length === 0) return null;
+  // Sin reels (o con error) la sección no aparece: la Home sigue intacta.
+  if (loading || error || reels.length === 0) return null;
 
   return (
     <section className="py-24 bg-white overflow-hidden border-t border-stone-200">
@@ -56,9 +59,9 @@ export default function NovedadesSection() {
           whileInView="visible"
           viewport={{ once: true, margin: '-60px' }}
         >
-          {ultimas.map((novedad) => (
-            <Motion.div key={novedad.id} variants={fadeUp} className="w-full flex justify-center">
-              <InstagramEmbed url={novedad.url} />
+          {reels.map((reel) => (
+            <Motion.div key={reel.id} variants={fadeUp} className="w-full flex justify-center">
+              <InstagramEmbed url={reel.url} />
             </Motion.div>
           ))}
         </Motion.div>

@@ -5,7 +5,6 @@ import { motion as Motion } from 'framer-motion';
 import { fadeUp, stagger, slideLeft } from '../styles/motion.js';
 import PortalCard from '../components/PortalCard.jsx';
 import WeatherWidget from '../components/common/WeatherWidget.jsx';
-import { noticias } from '../features/institucional/data/noticias.js';
 import LocationCard from '../features/turismo/components/LocationCard.jsx';
 import OportunidadesList from '../features/ciudadano/components/OportunidadesList.jsx';
 import somosTodosLogo from '../assets/SOMOS TODOS COLOR.png';
@@ -18,7 +17,6 @@ import NovedadesSection from '../components/NovedadesSection.jsx';
 
 export default function Home() {
   const { t, i18n } = useTranslation(['home', 'common']);
-  const noticiasRecientes = noticias.slice(0, 3);
 
   const portals = [
     {

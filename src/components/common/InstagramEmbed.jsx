@@ -19,12 +19,6 @@ function loadEmbedScript() {
   });
 }
 
-// Instagram exige el permalink sin query params y con barra final.
-function normalizePermalink(url) {
-  const clean = url.split('?')[0];
-  return clean.endsWith('/') ? clean : `${clean}/`;
-}
-
 export default function InstagramEmbed({ url }) {
   useEffect(() => {
     let cancelled = false;
@@ -36,12 +30,10 @@ export default function InstagramEmbed({ url }) {
     };
   }, [url]);
 
-  const permalink = normalizePermalink(url);
-
   return (
     <blockquote
       className="instagram-media"
-      data-instgrm-permalink={permalink}
+      data-instgrm-permalink={url}
       data-instgrm-version="14"
       style={{
         background: '#fff',
@@ -55,8 +47,8 @@ export default function InstagramEmbed({ url }) {
       }}
     >
       {/* Fallback visible hasta que embed.js procesa el blockquote */}
-      <a href={permalink} target="_blank" rel="noopener noreferrer">
-        {permalink}
+      <a href={url} target="_blank" rel="noopener noreferrer">
+        {url}
       </a>
     </blockquote>
   );

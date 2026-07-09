@@ -17,6 +17,15 @@ import GastronomiaPage from './features/turismo/GastronomiaPage.jsx';
 import GuiasPage from './features/turismo/GuiasPage.jsx';
 import Ordenanzas from './pages/Ordenanzas.jsx';
 import InstitucionalPage from './features/institucional/InstitucionalPage.jsx';
+import { AuthProvider } from './features/admin/auth/AuthContext.jsx';
+import ProtectedRoute from './features/admin/ProtectedRoute.jsx';
+import AdminLayout from './features/admin/AdminLayout.jsx';
+import LoginPage from './features/admin/LoginPage.jsx';
+import NoticiasAdminPage from './features/admin/NoticiasAdminPage.jsx';
+import NoticiaEditorPage from './features/admin/NoticiaEditorPage.jsx';
+import ReelsAdminPage from './features/admin/ReelsAdminPage.jsx';
+import NoticiasPage from './features/noticias/NoticiasPage.jsx';
+import NoticiaDetallePage from './features/noticias/NoticiaDetallePage.jsx';
 
 import { useState } from 'react';
 import GlobalSearch from './components/common/GlobalSearch.jsx';
@@ -67,10 +76,34 @@ const router = createBrowserRouter([
       { path: '/turismo/gastronomia', element: <GastronomiaPage /> },
       { path: '/turismo/guias',       element: <GuiasPage /> },
       { path: '/institucional', element: <InstitucionalPage /> },
+      { path: '/noticias',       element: <NoticiasPage /> },
+      { path: '/noticias/:slug', element: <NoticiaDetallePage /> },
+    ],
+  },
+  {
+    path: '/admin/login',
+    element: <LoginPage />,
+  },
+  {
+    path: '/admin',
+    element: (
+      <ProtectedRoute>
+        <AdminLayout />
+      </ProtectedRoute>
+    ),
+    children: [
+      { index: true, element: <NoticiasAdminPage /> },
+      { path: 'noticias/nueva', element: <NoticiaEditorPage /> },
+      { path: 'noticias/:id/editar', element: <NoticiaEditorPage /> },
+      { path: 'reels', element: <ReelsAdminPage /> },
     ],
   },
 ]);
 
 export default function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
+  );
 }

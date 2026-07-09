@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { noticias, documentos } from './data/noticias.js';
-import NoticiaCard from './components/NoticiaCard.jsx';
+import { documentos } from './data/noticias.js';
 import DocumentoItem from './components/DocumentoItem.jsx';
+import { useNoticias } from '../noticias/hooks/useNoticias.js';
+import NoticiaCard from '../noticias/components/NoticiaCard.jsx';
 
 export default function InstitucionalPage() {
   const { t } = useTranslation(['municipality', 'common']);
+  const { noticias, loading } = useNoticias({ modo: 'publicas', limit: 4 });
 
   return (
     <div>
@@ -36,7 +38,11 @@ export default function InstitucionalPage() {
               {t('municipality:institutional.newsTitle')}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {noticias.map((n) => <NoticiaCard key={n.id} {...n} />)}
+              {loading && <p className="text-stone font-body">Cargando noticias…</p>}
+              {!loading && noticias.length === 0 && (
+                <p className="text-stone font-body">No hay noticias publicadas.</p>
+              )}
+              {noticias.map((n) => <NoticiaCard key={n.id} noticia={n} />)}
             </div>
           </div>
           
