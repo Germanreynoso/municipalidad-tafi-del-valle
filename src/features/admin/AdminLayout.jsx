@@ -18,7 +18,8 @@ export default function AdminLayout() {
             <Link to="/admin" className="font-black text-stone-dark font-heading">Panel de Prensa</Link>
             <nav className="flex items-center gap-4 text-sm font-body">
               <Link to="/admin" className="font-semibold text-stone-dark hover:opacity-70">Noticias</Link>
-              <Link to="/admin/reels" className="font-semibold text-stone-dark hover:opacity-70">Reels</Link>
+              <Link to="/admin/reels" className="font-semibold text-stone-dark hover:opacity-70">Redes</Link>
+              <Link to="/admin/medios" className="font-semibold text-stone-dark hover:opacity-70">En los medios</Link>
             </nav>
           </div>
           <div className="flex items-center gap-4">

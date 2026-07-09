@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { motion as Motion } from 'framer-motion';
 import { fadeUp, stagger } from '../styles/motion.js';
-import InstagramEmbed from './common/InstagramEmbed.jsx';
+import SocialEmbed from './common/SocialEmbed.jsx';
 import { useReels } from '../features/reels/hooks/useReels.js';
 
 const INSTAGRAM_PROFILE = 'https://www.instagram.com/turismoentafidelvalle';
@@ -61,7 +61,7 @@ export default function NovedadesSection() {
         >
           {reels.map((reel) => (
             <Motion.div key={reel.id} variants={fadeUp} className="w-full flex justify-center">
-              <InstagramEmbed url={reel.url} />
+              <SocialEmbed url={reel.url} />
             </Motion.div>
           ))}
         </Motion.div>

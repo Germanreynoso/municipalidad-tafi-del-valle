@@ -1,25 +1,12 @@
 import { supabase } from '../../../lib/supabase.js';
+import { validarSocialUrl, normalizarSocialUrl } from '../socialUrl.js';
 
 const TABLA = 'reels';
 
+// La validación/normalización vive en socialUrl.js (Instagram + Facebook).
 // Debe coincidir con el CHECK constraint reels_url_check de la tabla.
-export const REEL_URL_REGEX = /^https:\/\/(www\.)?instagram\.com\/(reel|p)\//;
-
-export function validarReelUrl(url) {
-  if (!url || !url.trim()) {
-    return { ok: false, error: 'Pegá el link del reel.' };
-  }
-  if (!REEL_URL_REGEX.test(url.trim())) {
-    return { ok: false, error: 'El link debe ser de un reel o post de Instagram (https://www.instagram.com/reel/...).' };
-  }
-  return { ok: true };
-}
-
-// Instagram exige el permalink sin query params y con barra final.
-export function normalizarReelUrl(url) {
-  const clean = url.trim().split('?')[0];
-  return clean.endsWith('/') ? clean : `${clean}/`;
-}
+export const validarReelUrl = validarSocialUrl;
+export const normalizarReelUrl = normalizarSocialUrl;
 
 export async function listReels({ limit } = {}) {
   let query = supabase

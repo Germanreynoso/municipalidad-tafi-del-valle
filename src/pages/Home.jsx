@@ -13,6 +13,7 @@ import turistaImg from '../assets/turista.jpg';
 import transparenciaImg from '../assets/transparencia.jpg';
 import AmbienteCarousel from '../components/AmbienteCarousel.jsx';
 import NovedadesSection from '../components/NovedadesSection.jsx';
+import MencionesSection from '../components/MencionesSection.jsx';
 
 
 export default function Home() {
@@ -157,8 +158,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Últimas Novedades (reels de Instagram) */}
+      {/* Últimas Novedades (publicaciones de Instagram y Facebook) */}
       <NovedadesSection />
+
+      {/* Tafí en los medios (notas de prensa externas) */}
+      <MencionesSection />
 
       {/* Ambiente Carousel Section */}
       <section className="bg-white overflow-hidden border-t border-stone-200">

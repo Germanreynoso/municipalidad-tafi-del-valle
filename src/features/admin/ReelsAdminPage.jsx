@@ -38,9 +38,10 @@ export default function ReelsAdminPage() {
 
   return (
     <div>
-      <h1 className="text-3xl font-black text-stone-dark font-heading mb-2">Reels de Instagram</h1>
+      <h1 className="text-3xl font-black text-stone-dark font-heading mb-2">Redes sociales</h1>
       <p className="font-body text-stone mb-8 text-sm">
-        Los 3 más recientes aparecen en la portada del sitio como "Últimas novedades".
+        Reels y posts de Instagram, y publicaciones públicas de Facebook. Las 3 más recientes
+        aparecen en la portada del sitio como "Últimas novedades".
       </p>
 
       <div
@@ -48,7 +49,7 @@ export default function ReelsAdminPage() {
         style={{ boxShadow: 'var(--shadow-card)' }}
       >
         <label className="block text-sm font-semibold mb-1.5 font-body text-stone-dark">
-          Link del reel
+          Link de la publicación
         </label>
         <form onSubmit={agregar} className="flex flex-col sm:flex-row gap-3">
           <input
@@ -63,11 +64,13 @@ export default function ReelsAdminPage() {
             className="px-5 py-2.5 rounded-xl font-bold text-white font-body disabled:opacity-60"
             style={{ backgroundColor: 'var(--color-earth)' }}
           >
-            {guardando ? 'Guardando…' : '+ Agregar reel'}
+            {guardando ? 'Guardando…' : '+ Agregar'}
           </button>
         </form>
         <p className="text-xs text-stone mt-2 font-body">
-          Pegá el link del reel desde Instagram (botón Compartir → Copiar enlace).
+          <strong>Instagram:</strong> botón Compartir → Copiar enlace.{' '}
+          <strong>Facebook:</strong> abrí la publicación en el navegador y copiá la dirección
+          completa de la barra (los links que empiezan con facebook.com/share/ no sirven).
         </p>
         {formError && <p className="text-sm text-red-600 mt-2 font-body">{formError}</p>}
       </div>

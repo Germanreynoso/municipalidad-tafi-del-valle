@@ -24,6 +24,7 @@ import LoginPage from './features/admin/LoginPage.jsx';
 import NoticiasAdminPage from './features/admin/NoticiasAdminPage.jsx';
 import NoticiaEditorPage from './features/admin/NoticiaEditorPage.jsx';
 import ReelsAdminPage from './features/admin/ReelsAdminPage.jsx';
+import MencionesAdminPage from './features/admin/MencionesAdminPage.jsx';
 import NoticiasPage from './features/noticias/NoticiasPage.jsx';
 import NoticiaDetallePage from './features/noticias/NoticiaDetallePage.jsx';
 
@@ -96,6 +97,7 @@ const router = createBrowserRouter([
       { path: 'noticias/nueva', element: <NoticiaEditorPage /> },
       { path: 'noticias/:id/editar', element: <NoticiaEditorPage /> },
       { path: 'reels', element: <ReelsAdminPage /> },
+      { path: 'medios', element: <MencionesAdminPage /> },
     ],
   },
 ]);
