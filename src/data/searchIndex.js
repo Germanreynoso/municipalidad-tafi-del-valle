@@ -15,6 +15,7 @@ export const searchIndex = [
   { title: 'Guía de Alojamiento', category: 'Turismo', to: '/turismo/alojamiento', description: 'Hoteles, cabañas y hosterías.' },
   { title: 'Guía de Gastronomía', category: 'Turismo', to: '/turismo/gastronomia', description: 'Restaurantes, peñas y bares.' },
   { title: 'Qué hacer en Tafí', category: 'Turismo', to: '/turismo/que-hacer', description: 'Actividades, trekking y excursiones.' },
+  { title: 'Tafí nevado', category: 'Turismo', to: '/turismo', description: 'Galería de fotos de la nieve en invierno: cerros, pinares, rutas y calles del valle.' },
   
   // Atracciones
   ...atracciones.map(a => ({

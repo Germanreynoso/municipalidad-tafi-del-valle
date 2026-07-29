@@ -21,6 +21,29 @@
     "highlights": "Imperdibles de Tafí",
     "events": "Eventos"
   },
+  "snow": {
+    "kicker": "Invierno en el valle",
+    "titleLine1": "Cuando la nieve",
+    "titleLine2": "baja al valle",
+    "lead": "Cada invierno el frío gana la altura y Tafí amanece blanco. Los cerros asoman sobre el mar de nubes, los pinares se cubren de escarcha y la Villa se queda en silencio. Estas son algunas postales de esos días.",
+    "openPhoto": "Ampliar foto",
+    "close": "Cerrar el visor",
+    "prev": "Foto anterior",
+    "next": "Foto siguiente",
+    "counter": "{{current}} de {{total}}",
+    "viewer": "Galería de fotos de Tafí nevado",
+    "photos": {
+      "cerroNubes": "Los cerros nevados asoman sobre el mar de nubes",
+      "pinarCerro": "El pinar y las laderas del cerro, cubiertos de blanco",
+      "caminoPinar": "Un camino se pierde entre los pinos y la niebla",
+      "mojones": "Los mojones del borde del camino se confunden con la nieve",
+      "rutaValle": "La ruta hacia el valle, despejada entre campos nevados",
+      "calleVilla": "Una avenida de la Villa bajo los árboles escarchados",
+      "pastizalNiebla": "Arbustos de altura escarchados en medio de la niebla",
+      "avenidaArboles": "El centro de Tafí amanece nevado",
+      "portonEstancia": "El portón de una estancia cubierto por la nevada"
+    }
+  },
   "categories": {
     "all": "todos",
     "naturaleza": "naturaleza",

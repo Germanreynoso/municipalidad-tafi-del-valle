@@ -21,6 +21,29 @@
     "highlights": "Tafí's Highlights",
     "events": "Events"
   },
+  "snow": {
+    "kicker": "Winter in the valley",
+    "titleLine1": "When the snow",
+    "titleLine2": "reaches the valley",
+    "lead": "Every winter the cold wins the altitude and Tafí wakes up white. The peaks rise above a sea of clouds, the pine woods turn to frost and the village falls silent. These are a few postcards from those days.",
+    "openPhoto": "Open photo",
+    "close": "Close viewer",
+    "prev": "Previous photo",
+    "next": "Next photo",
+    "counter": "{{current}} of {{total}}",
+    "viewer": "Photo gallery of Tafí under snow",
+    "photos": {
+      "cerroNubes": "Snow-capped peaks rising above a sea of clouds",
+      "pinarCerro": "Pine woods and hillsides turned white",
+      "caminoPinar": "A track disappearing into the pines and the fog",
+      "mojones": "Roadside posts blending into the snow",
+      "rutaValle": "The road into the valley, clear between snowy fields",
+      "calleVilla": "An avenue in the village under frosted trees",
+      "pastizalNiebla": "Highland shrubs frosted over in the mist",
+      "avenidaArboles": "Downtown Tafí waking up under snow",
+      "portonEstancia": "A ranch gate covered by the snowfall"
+    }
+  },
   "categories": {
     "all": "all",
     "naturaleza": "nature",

@@ -10,6 +10,7 @@ import AtraccionModal from './components/AtraccionModal.jsx';
 import CalendarioEventos from './components/CalendarioEventos.jsx';
 import WeatherWidget from '../../components/common/WeatherWidget.jsx';
 import LocationSection from './components/LocationSection.jsx';
+import NevadaGallery from './components/NevadaGallery.jsx';
 import turismoHeroImg from '../../assets/turismo-hero.jpeg';
 
 const categorias = ['all', 'naturaleza', 'cultura', 'aventura', 'gastronomía'];
@@ -72,8 +73,8 @@ export default function TurismoPage() {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
+
         {/* Quick Access Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
           <Link 
@@ -165,7 +166,12 @@ export default function TurismoPage() {
             ))}
           </div>
         </div>
+      </div>
 
+      {/* Tafí nevado: galería a ancho completo, fuera del contenedor */}
+      <NevadaGallery />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Evento Destacado / Banner */}
         <EventosBanner evento={eventoDestacado} />
 
