@@ -251,6 +251,12 @@
         "duracion": "3 a 4 horas",
         "dificultad": "Baja",
         "direccion": "Diferentes estancias del valle"
+      },
+      "rumitafi": {
+        "nombre": "Rumi Tafí del Valle",
+        "descripcion": "-Viví la aventura de Escalar en roca\n-Escalada + senderismo",
+        "duracion": "A convenir",
+        "dificultad": "Media"
       }
     }
   },

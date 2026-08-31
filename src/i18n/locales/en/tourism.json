@@ -251,6 +251,12 @@
         "duracion": "3 to 4 hours",
         "dificultad": "Low",
         "direccion": "Various estates in the valley"
+      },
+      "rumitafi": {
+        "nombre": "Rumi Tafí del Valle",
+        "descripcion": "-Live the adventure of rock climbing\n-Climbing + hiking",
+        "duracion": "To be arranged",
+        "dificultad": "Medium"
       }
     }
   },

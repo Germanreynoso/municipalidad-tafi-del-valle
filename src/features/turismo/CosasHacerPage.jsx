@@ -148,7 +148,7 @@ export default function CosasHacerPage() {
                   <h3 className="text-2xl font-bold text-stone-800 font-heading mb-3 group-hover:text-emerald-600 transition-colors leading-tight">
                     {t(`activities.places.${act.id}.nombre`)}
                   </h3>
-                  <p className="text-stone-500 font-body leading-relaxed mb-4 flex-grow">
+                  <p className="text-stone-500 font-body leading-relaxed mb-4 flex-grow whitespace-pre-line">
                     {t(`activities.places.${act.id}.descripcion`)}
                   </p>
 

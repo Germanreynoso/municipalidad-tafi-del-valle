@@ -27,6 +27,12 @@ export const actividades = [
     id: 'rutadelqueso',
     categoria: 'cultura',
     image: '/assets/queso-tafi/producto.png',
+  },
+  {
+    id: 'rumitafi',
+    categoria: 'aventura',
+    image: '/assets/turismo/actividades/rumitafi.jpg',
+    instagram: 'https://www.instagram.com/rumitafidelvalle/',
   }
 ];
 
